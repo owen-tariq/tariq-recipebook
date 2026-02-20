@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Recipes</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+<div class="subtitle">COLLECTION</div>
+<div class="recipe-title">Signature Recipes</div>
+<input type="text" id="searchInput" class="search-bar" placeholder="Search recipes..." onkeyup="filterRecipes()">
+
+<div class="recipe-list">
+
+<div class="recipe-card" onclick="location.href='beef.html'">
+<img src="beef.jpg">
+<h3>Bengali Beef Curry</h3><div class='recipe-meta'>Prep: 15 min | Cook: 50 min | Traditional</div>
+</div>
+
+<div class="recipe-card" onclick="location.href='pulao.html'">
+<img src="pulao.jpg">
+<h3>Plain Pulao (Sada Polao)</h3><div class='recipe-meta'>Prep: 10 min | Cook: 25 min | Everyday</div>
+</div>
+
+
+<div class="recipe-card" onclick="location.href='rui.html'">
+<img src="rui.jpg">
+<h3>Bengali Rui Fish Curry</h3><div class='recipe-meta'>Prep: 15 min | Cook: 30 min | Traditional</div>
+</div>
+
+</div>
+</div>
+
+
+<script>
+function filterRecipes(){
+let input=document.getElementById('searchInput').value.toLowerCase();
+let cards=document.getElementsByClassName('recipe-card');
+for(let i=0;i<cards.length;i++){
+let text=cards[i].innerText.toLowerCase();
+cards[i].style.display=text.includes(input)?'block':'none';
+}
+}
+</script>
+<div class="footer-signature">Made with love by Tariq — 2026</div>
+</body>
+
+</html>
