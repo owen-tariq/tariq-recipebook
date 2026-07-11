@@ -1274,6 +1274,8 @@ function initPlayer() {
   let isPlaying = false;
   let parsedLyrics = [];
   let currentLyricIndex = -1;
+  let isShuffle = false;
+  let repeatMode = 1; // 0 = off, 1 = all, 2 = one
   const audio = new Audio(tracks[currentTrackIndex].src);
 
   const playerHTML = `
@@ -1309,6 +1311,8 @@ function initPlayer() {
             </div>
             <!-- Side Menu -->
             <div class="ipod-side-menu">
+              <button class="side-menu-btn" id="btn-shuffle" title="Shuffle">🔀</button>
+              <button class="side-menu-btn" id="btn-repeat" title="Repeat">🔁</button>
               <button class="side-menu-btn" id="btn-show-lyrics" title="Lyrics">💬</button>
               <button class="side-menu-btn" id="btn-show-playlist" title="Playlist">≡</button>
               <button class="side-menu-btn" id="btn-show-search" title="Search">🔍</button>
@@ -1397,6 +1401,38 @@ function initPlayer() {
   const btnShowLyrics = document.getElementById('btn-show-lyrics');
   const btnShowPlaylist = document.getElementById('btn-show-playlist');
   const btnShowSearch = document.getElementById('btn-show-search');
+  const btnShuffle = document.getElementById('btn-shuffle');
+  const btnRepeat = document.getElementById('btn-repeat');
+
+  // Default button styles
+  btnShuffle.style.opacity = '0.5';
+  btnShuffle.style.transition = 'all 0.2s';
+  btnRepeat.style.opacity = '1';
+  btnRepeat.style.transition = 'all 0.2s';
+  btnRepeat.style.transform = 'scale(1.1)';
+
+  btnShuffle.addEventListener('click', () => {
+    isShuffle = !isShuffle;
+    btnShuffle.style.opacity = isShuffle ? '1' : '0.5';
+    btnShuffle.style.transform = isShuffle ? 'scale(1.1)' : 'scale(1)';
+  });
+
+  btnRepeat.addEventListener('click', () => {
+    repeatMode = (repeatMode + 1) % 3;
+    if (repeatMode === 0) {
+      btnRepeat.style.opacity = '0.5';
+      btnRepeat.textContent = '🔁';
+      btnRepeat.style.transform = 'scale(1)';
+    } else if (repeatMode === 1) {
+      btnRepeat.style.opacity = '1';
+      btnRepeat.textContent = '🔁';
+      btnRepeat.style.transform = 'scale(1.1)';
+    } else {
+      btnRepeat.style.opacity = '1';
+      btnRepeat.textContent = '🔂';
+      btnRepeat.style.transform = 'scale(1.1)';
+    }
+  });
   
   const playlistContainer = document.getElementById('playlist-container');
   const playlistsMenuContainer = document.getElementById('playlists-menu-container');
@@ -1607,7 +1643,20 @@ function initPlayer() {
   function pauseTrack() { audio.pause(); isPlaying = false; }
 
   playPauseBtn.addEventListener('click', () => { if (isPlaying) pauseTrack(); else playTrack(); });
-  nextBtn.addEventListener('click', () => { currentTrackIndex = (currentTrackIndex + 1) % tracks.length; loadTrack(currentTrackIndex); });
+  nextBtn.addEventListener('click', () => { 
+    if (isShuffle) {
+      currentTrackIndex = Math.floor(Math.random() * tracks.length);
+    } else {
+      if (repeatMode === 0 && currentTrackIndex === tracks.length - 1) {
+        currentTrackIndex = 0;
+        loadTrack(currentTrackIndex);
+        pauseTrack();
+        return;
+      }
+      currentTrackIndex = (currentTrackIndex + 1) % tracks.length; 
+    }
+    loadTrack(currentTrackIndex); 
+  });
   prevBtn.addEventListener('click', () => { currentTrackIndex = (currentTrackIndex - 1 + tracks.length) % tracks.length; loadTrack(currentTrackIndex); });
 
   audio.addEventListener('timeupdate', () => {
@@ -1648,7 +1697,16 @@ function initPlayer() {
   });
 
   audio.addEventListener('loadedmetadata', () => { totalTimeEl.textContent = formatTime(audio.duration); });
-  audio.addEventListener('ended', () => { nextBtn.click(); });
+  audio.addEventListener('ended', () => { 
+    if (repeatMode === 2) {
+      audio.currentTime = 0;
+      audio.play();
+    } else if (repeatMode === 0 && currentTrackIndex === tracks.length - 1 && !isShuffle) {
+      pauseTrack();
+    } else {
+      nextBtn.click(); 
+    }
+  });
 
   progressBar.addEventListener('click', (e) => {
     const width = progressBar.clientWidth;
