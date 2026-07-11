@@ -258,7 +258,8 @@ function initPlayer() {
       lyricsContent.innerHTML = '<div class="lyric-line" style="margin-top: 30px;">Loading...</div>';
 
       if (window.jsmediatags) {
-        jsmediatags.read(encodeURI(trackUrl), {
+        const absoluteUrl = new URL(trackUrl, window.location.href).href;
+        jsmediatags.read(absoluteUrl, {
           onSuccess: function(tag) {
             try {
               const picture = tag.tags.picture;
