@@ -399,7 +399,7 @@ function initPlayer() {
 
         </div>
 
-        <!-- LYRICS OVERLAY -->
+        <!-- LYRICS OVERLAY (Moved outside screen-content to prevent scrolling with nowplaying) -->
         <div class="ipod-lyrics-view" id="lyrics-view">
           <img class="lyrics-dynamic-bg" id="lyrics-dynamic-bg" src="">
           <div class="lyrics-overlay-dimmer"></div>
