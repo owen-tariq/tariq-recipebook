@@ -13,13 +13,13 @@ function initPlayer() {
     "tracks": [
       {
         "title": "34+35",
-        "src": "music/Cooking Mix/34+35 - Ariana Grande.mp3",
+        "src": "music/Cooking Mix/34 35 - Ariana Grande.mp3",
         "artist": "Unknown Artist",
         "cover": "https://placehold.co/400x400/333/FFF?text=Music"
       },
       {
         "title": "Annihilate (Spider",
-        "src": "music/Cooking Mix/Annihilate (Spider-Man Across the Spider-Verse) (Metro Boomin & Swae Lee, Lil Wayne, Offset) - Metro Boomin.mp3",
+        "src": "music/Cooking Mix/Annihilate - Metro Boomin.mp3",
         "artist": "Unknown Artist",
         "cover": "https://placehold.co/400x400/333/FFF?text=Music"
       },
