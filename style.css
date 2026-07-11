@@ -631,13 +631,21 @@ h1, h2, h3, .recipe-title, .section-title {
   display: flex;
   flex-direction: column;
   padding: 12px;
-  overflow-y: auto;
+  overflow: hidden;
   transform: translateY(100%);
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+#lyrics-content {
+  flex: 1;
+  overflow-y: auto;
   scrollbar-width: none;
   scroll-behavior: smooth;
+  padding-bottom: 80px; /* Space for the last line to scroll up */
+  padding-top: 20px;
+  position: relative;
+  z-index: 2;
 }
-.ipod-lyrics-view::-webkit-scrollbar { display: none; }
+#lyrics-content::-webkit-scrollbar { display: none; }
 .ipod-lyrics-view.active { transform: translateY(0); }
 
 .lyrics-dynamic-bg {
