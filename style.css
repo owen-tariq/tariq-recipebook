@@ -372,13 +372,13 @@ h1, h2, h3, .recipe-title, .section-title {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  width: 280px;
-  height: 440px;
-  background: #f0f0f0;
-  border: 1px solid #d1d5db;
+  width: 290px;
+  height: 480px;
+  background: #333333;
+  border: 1px solid #111;
   border-radius: 24px;
   padding: 16px;
-  box-shadow: inset -2px -2px 10px rgba(0,0,0,0.05), inset 2px 2px 10px rgba(255,255,255,1), 0 15px 40px rgba(0,0,0,0.3);
+  box-shadow: inset -2px -2px 10px rgba(0,0,0,0.3), inset 2px 2px 10px rgba(255,255,255,0.1), 0 15px 40px rgba(0,0,0,0.5);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -412,49 +412,65 @@ h1, h2, h3, .recipe-title, .section-title {
 }
 .ipod-screen {
   width: 100%;
-  height: 180px;
-  background: var(--recipe-glow-alt, #1f2937); /* Fallback dark */
+  height: 200px;
+  background: var(--recipe-glow-alt, #1f2937);
   background-image: radial-gradient(circle at top left, var(--recipe-glow, #374151), var(--recipe-glow-alt, #111827));
   border: 4px solid #111;
   border-radius: 12px;
   padding: 0;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  box-shadow: inset 0 0 15px rgba(0,0,0,0.5);
+  box-shadow: inset 0 0 15px rgba(0,0,0,0.7);
   color: #fff;
   overflow: hidden;
   position: relative;
 }
 .ipod-header {
-  font-size: 0.65rem;
-  font-weight: 700;
-  background: rgba(0, 0, 0, 0.2);
+  font-size: 0.6rem;
+  font-weight: 500;
+  background: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   color: rgba(255, 255, 255, 0.9);
-  text-align: center;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
-  padding: 4px 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 4px 10px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  z-index: 20;
 }
-.ipod-header::before {
-  content: '▶';
-  font-size: 0.55rem;
-}
-.ipod-header::after {
-  content: '🔋';
-  font-size: 0.75rem;
-  margin-top: -2px;
-}
+.header-left { display: flex; align-items: center; gap: 4px; font-weight: 700;}
+.header-center { font-weight: 700; }
+.header-right { display: flex; align-items: center; gap: 4px; }
+
 .ipod-screen-content {
-  padding: 12px;
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+/* VIEWS */
+.ipod-view {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  padding: 10px;
   display: flex;
   flex-direction: column;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+.ipod-view::-webkit-scrollbar { display: none; }
+.ipod-view.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* NOW PLAYING VIEW */
+#view-nowplaying {
   justify-content: flex-end;
-  height: 100%;
 }
 .ipod-now-playing {
   display: flex;
@@ -463,17 +479,18 @@ h1, h2, h3, .recipe-title, .section-title {
   margin-bottom: 12px;
 }
 .ipod-album-art {
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   border-radius: 6px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
   object-fit: cover;
-  background: #333;
+  background: #222;
 }
 .ipod-track-info {
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  flex: 1;
 }
 .player-title {
   font-size: 0.95rem;
@@ -491,7 +508,7 @@ h1, h2, h3, .recipe-title, .section-title {
 }
 .progress-container {
   width: 100%;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
 }
 .progress-bar {
   width: 100%;
@@ -507,17 +524,14 @@ h1, h2, h3, .recipe-title, .section-title {
   border-radius: 6px;
   width: 0%;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 0; left: 0;
   box-shadow: 0 0 8px rgba(255,255,255,0.5);
 }
 .progress-fill::after {
   content: '';
   position: absolute;
-  right: -4px;
-  top: -2px;
-  width: 10px;
-  height: 10px;
+  right: -4px; top: -2px;
+  width: 10px; height: 10px;
   background: #fff;
   border-radius: 50%;
   box-shadow: 0 1px 3px rgba(0,0,0,0.5);
@@ -530,45 +544,151 @@ h1, h2, h3, .recipe-title, .section-title {
   color: rgba(255,255,255,0.7);
 }
 
+/* FLOATING GREEN MENU */
+.ipod-side-menu {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(74, 222, 128, 0.85); /* Apple Music Green */
+  backdrop-filter: blur(5px);
+  padding: 8px 4px;
+  border-radius: 12px 0 0 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: -2px 0 10px rgba(0,0,0,0.3);
+}
+.side-menu-btn {
+  background: none;
+  border: none;
+  color: #000;
+  font-size: 1rem;
+  cursor: pointer;
+  opacity: 0.8;
+}
+.side-menu-btn:hover { opacity: 1; }
+
+/* PLAYLIST VIEW */
+.playlist-header {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+.playlist-art {
+  width: 40px; height: 40px; border-radius: 4px; object-fit: cover;
+}
+.playlist-info {
+  display: flex; flex-direction: column; justify-content: center;
+}
+.playlist-title { font-weight: 700; font-size: 0.85rem; }
+.playlist-subtitle { font-size: 0.65rem; color: rgba(255,255,255,0.6); }
+.track-list {
+  display: flex; flex-direction: column; gap: 2px;
+}
+.track-item {
+  display: flex;
+  align-items: center;
+  padding: 6px 8px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.75rem;
+}
+.track-item:hover, .track-item.playing {
+  background: rgba(255,255,255,0.2);
+}
+.track-item-num {
+  width: 20px; color: rgba(255,255,255,0.5); font-size: 0.65rem;
+}
+.track-item-title { flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+/* SEARCH VIEW */
+.search-header {
+  font-weight: 700;
+  font-size: 0.85rem;
+  margin-bottom: 8px;
+}
+.search-input {
+  width: 100%;
+  padding: 6px 12px;
+  border-radius: 12px;
+  border: none;
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+  font-family: inherit;
+  font-size: 0.75rem;
+  margin-bottom: 10px;
+}
+.search-input:focus { outline: none; background: rgba(255,255,255,0.25); }
+
+/* LYRICS VIEW */
+.ipod-lyrics-view {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0,0,0,0.85);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  z-index: 30;
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  overflow-y: auto;
+  transform: translateY(100%);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  scrollbar-width: none;
+}
+.ipod-lyrics-view::-webkit-scrollbar { display: none; }
+.ipod-lyrics-view.active { transform: translateY(0); }
+.lyric-line {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 12px;
+  line-height: 1.4;
+  text-align: center;
+}
+.lyric-line:first-child { color: #fff; font-size: 0.95rem; }
+.lyrics-close-hint {
+  font-size: 0.6rem; color: #999; text-align: center; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px; font-weight: 700;
+}
+
+/* WHEEL */
 .ipod-wheel {
-  width: 190px;
-  height: 190px;
-  background: #fff;
+  width: 200px;
+  height: 200px;
+  background: #1a1a1a;
   border-radius: 50%;
   margin-top: 25px;
   position: relative;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1), inset 0 2px 5px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.5), inset 0 2px 5px rgba(255,255,255,0.05);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .wheel-btn {
   position: absolute;
-  color: #9ca3af;
+  color: #888;
   font-size: 0.85rem;
   font-weight: 700;
   cursor: pointer;
   transition: color 0.1s;
 }
-.wheel-btn:active {
-  color: #374151;
-}
+.wheel-btn:active { color: #fff; }
 .wheel-menu { top: 16px; letter-spacing: 1px;}
 .wheel-prev { left: 16px; font-size: 1.2rem; top: 50%; transform: translateY(-50%); margin-top: -2px;}
 .wheel-next { right: 16px; font-size: 1.2rem; top: 50%; transform: translateY(-50%); margin-top: -2px;}
 .wheel-play { bottom: 16px; font-size: 1.1rem; letter-spacing: -2px; }
 
 .wheel-center {
-  width: 76px;
-  height: 76px;
-  background: #f3f4f6;
+  width: 80px;
+  height: 80px;
+  background: #2a2a2a;
   border-radius: 50%;
-  box-shadow: inset 0 2px 6px rgba(0,0,0,0.1), 0 1px 2px rgba(255,255,255,1);
+  box-shadow: inset 0 2px 6px rgba(0,0,0,0.5), 0 1px 2px rgba(255,255,255,0.1);
   cursor: pointer;
 }
-.wheel-center:active {
-  background: #e5e7eb;
-}
+.wheel-center:active { background: #222; }
 
 #music-toggle-btn {
   position: fixed;
@@ -598,56 +718,4 @@ h1, h2, h3, .recipe-title, .section-title {
   transform: translateY(-3px);
   box-shadow: 0 15px 40px var(--accent-glow);
 }
-#music-toggle-btn.hidden {
-  opacity: 0;
-  pointer-events: none;
-  transform: translateY(20px);
-}
-
-/* IPOD LYRICS VIEW */
-.ipod-lyrics-view {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.85);
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
-  z-index: 10;
-  display: flex;
-  flex-direction: column;
-  padding: 12px;
-  overflow-y: auto;
-  transform: translateY(100%);
-  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  scrollbar-width: none;
-}
-.ipod-lyrics-view::-webkit-scrollbar {
-  display: none;
-}
-.ipod-lyrics-view.active {
-  transform: translateY(0);
-}
-.lyric-line {
-  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
-  font-size: 0.85rem;
-  font-weight: 700;
-  color: rgba(255,255,255,0.7);
-  margin-bottom: 12px;
-  line-height: 1.4;
-  text-align: center;
-}
-.lyric-line:first-child {
-  color: #fff;
-  font-size: 0.95rem;
-}
-.lyrics-close-hint {
-  font-size: 0.6rem;
-  color: #999;
-  text-align: center;
-  margin-bottom: 15px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: 700;
-}
+#music-toggle-btn.hidden { opacity: 0; pointer-events: none; transform: translateY(20px); }
