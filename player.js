@@ -208,6 +208,14 @@ function initPlayer() {
     }
   });
 
+  const closeHint = document.querySelector('.lyrics-close-hint');
+  if (closeHint) {
+    closeHint.style.cursor = 'pointer';
+    closeHint.addEventListener('click', () => {
+      lyricsView.classList.remove('active');
+    });
+  }
+
   toggleBtn.addEventListener('click', () => {
     toggleBtn.classList.add('hidden');
     player.classList.remove('hidden');
