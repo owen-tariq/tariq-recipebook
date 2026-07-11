@@ -1,0 +1,25 @@
+{
+  "name": "tariq-recipebook",
+  "version": "1.0.0",
+  "description": "made entirely by chatgpt and gemini",
+  "main": "player.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/owen-tariq/tariq-recipebook.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/owen-tariq/tariq-recipebook/issues"
+  },
+  "homepage": "https://github.com/owen-tariq/tariq-recipebook#readme",
+  "dependencies": {
+    "express": "^5.2.1",
+    "jsmediatags": "^3.9.7",
+    "puppeteer": "^25.3.0"
+  }
+}
