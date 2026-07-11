@@ -197,7 +197,13 @@ function initPlayer() {
 
   btnShowPlaylist.addEventListener('click', () => { showView(viewPlaylist); renderPlaylist(); });
   btnShowSearch.addEventListener('click', () => { showView(viewSearch); renderSearch(); searchInput.focus(); });
-  btnShowLyrics.addEventListener('click', () => { lyricsView.classList.add('active'); });
+  btnShowLyrics.addEventListener('click', () => { 
+    lyricsView.classList.add('active'); 
+    if (currentLyricIndex !== -1) {
+      const activeEl = document.getElementById('lyric-' + currentLyricIndex);
+      if (activeEl) setTimeout(() => activeEl.scrollIntoView({ behavior: 'smooth', block: 'center' }), 100);
+    }
+  });
   
   menuBtn.addEventListener('click', () => {
     // Menu acts as back button or toggle
@@ -206,6 +212,8 @@ function initPlayer() {
     } else {
       showView(viewNowPlaying);
     }
+    // Force reset screen scroll just in case
+    document.querySelector('.ipod-screen').scrollTop = 0;
   });
 
   const closeHint = document.querySelector('.lyrics-close-hint');
@@ -213,6 +221,7 @@ function initPlayer() {
     closeHint.style.cursor = 'pointer';
     closeHint.addEventListener('click', () => {
       lyricsView.classList.remove('active');
+      document.querySelector('.ipod-screen').scrollTop = 0;
     });
   }
 
@@ -386,7 +395,9 @@ function initPlayer() {
         const newEl = document.getElementById('lyric-' + activeIndex);
         if (newEl) {
           newEl.classList.add('active-lyric');
-          newEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          if (lyricsView.classList.contains('active')) {
+            newEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
         }
       }
     }
