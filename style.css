@@ -677,7 +677,9 @@ h1, h2, h3, .recipe-title, .section-title {
   font-size: 1.15rem;
   font-weight: 800;
   color: rgba(255, 255, 255, 0.35);
-  margin-bottom: 24px;
+  margin: 0 auto 24px auto;
+  width: 80%;
+  word-wrap: break-word;
   line-height: 1.4;
   text-align: center;
   transform: scale(0.9);
