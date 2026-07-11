@@ -401,6 +401,8 @@ function initPlayer() {
 
         <!-- LYRICS OVERLAY -->
         <div class="ipod-lyrics-view" id="lyrics-view">
+          <img class="lyrics-dynamic-bg" id="lyrics-dynamic-bg" src="">
+          <div class="lyrics-overlay-dimmer"></div>
           <div class="lyrics-close-hint">Press MENU to close</div>
           <div id="lyrics-content"></div>
         </div>
@@ -486,6 +488,7 @@ function initPlayer() {
   const searchInput = document.getElementById('search-input');
   const searchResultsContainer = document.getElementById('search-results-container');
   const lyricsContent = document.getElementById('lyrics-content');
+  const lyricsDynamicBg = document.getElementById('lyrics-dynamic-bg');
   const clockEl = document.getElementById('ipod-clock');
 
   // Clock
@@ -601,6 +604,7 @@ function initPlayer() {
       artistEl.textContent = "Cooking Mix";
       artEl.src = "https://placehold.co/100x100/333/FFF?text=Mix";
       playlistArtHeader.src = artEl.src;
+      if (lyricsDynamicBg) lyricsDynamicBg.src = artEl.src;
       lyricsContent.innerHTML = '<div class="lyric-line" style="margin-top: 30px;">Loading...</div>';
 
       if (window.jsmediatags) {
@@ -615,6 +619,7 @@ function initPlayer() {
                 const src = URL.createObjectURL(blob);
                 artEl.src = src;
                 playlistArtHeader.src = src;
+                if (lyricsDynamicBg) lyricsDynamicBg.src = src;
               }
 
               if (tag.tags.title) titleEl.textContent = tag.tags.title;
@@ -655,7 +660,12 @@ function initPlayer() {
                    lyricsContent.innerHTML = '<div class="lyric-line" style="margin-top: 30px;">No lyrics embedded.</div>';
                 }
               } else {
-                 lyricsContent.innerHTML = '<div class="lyric-line" style="margin-top: 30px;">No lyrics embedded.</div>';
+                 if (lyricsContent) {
+                  lyricsContent.innerHTML = '<div class="lyric-line" style="margin-top: 30px; opacity: 0.5;">Lyrics not available</div>';
+                }
+                artEl.src = tracks[currentTrackIndex].cover;
+                playlistArtHeader.src = tracks[currentTrackIndex].cover;
+                if (lyricsDynamicBg) lyricsDynamicBg.src = tracks[currentTrackIndex].cover;
               }
             } catch (innerErr) {
               console.error(innerErr);
