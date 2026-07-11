@@ -1,5 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Playlist
+  const script = document.createElement('script');
+  script.src = "https://cdnjs.cloudflare.com/ajax/libs/jsmediatags/3.9.5/jsmediatags.min.js";
+  script.onload = initPlayer;
+  document.head.appendChild(script);
+});
+
+function initPlayer() {
   const tracks = [
     { title: "Lofi Cooking Mix 1", src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" },
     { title: "Lofi Cooking Mix 2", src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" },
@@ -9,7 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
   let isPlaying = false;
   const audio = new Audio(tracks[currentTrackIndex].src);
 
-  // Inject HTML
   const playerHTML = `
     <button id="music-toggle-btn">🎵 Listen to Cooking Mix</button>
     <div id="music-player" class="hidden ipod-theme">
@@ -21,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <img src="chicken.jpg" alt="Cover" class="ipod-album-art" id="ipod-art" onerror="this.src='https://placehold.co/100x100/333/FFF?text=Mix'">
             <div class="ipod-track-info">
               <div class="player-title" id="track-title">${tracks[currentTrackIndex].title}</div>
-              <div class="player-artist">Cooking Mix</div>
+              <div class="player-artist" id="track-artist">Cooking Mix</div>
             </div>
           </div>
           <div class="progress-container">
@@ -34,10 +39,15 @@ document.addEventListener('DOMContentLoaded', () => {
             <span id="total-time">0:00</span>
           </div>
         </div>
+
+        <div class="ipod-lyrics-view" id="lyrics-view">
+          <div class="lyrics-close-hint">Press MENU to close</div>
+          <div id="lyrics-content"></div>
+        </div>
       </div>
 
       <div class="ipod-wheel">
-        <div class="wheel-btn wheel-menu">MENU</div>
+        <div class="wheel-btn wheel-menu" id="menu-btn">MENU</div>
         <div class="wheel-btn wheel-prev" id="prev-btn">⏮</div>
         <div class="wheel-btn wheel-next" id="next-btn">⏭</div>
         <div class="wheel-btn wheel-play" id="play-pause-btn">▶⏸</div>
@@ -45,7 +55,10 @@ document.addEventListener('DOMContentLoaded', () => {
       </div>
     </div>
   `;
-  document.body.insertAdjacentHTML('beforeend', playerHTML);
+  
+  if (!document.getElementById('music-toggle-btn')) {
+    document.body.insertAdjacentHTML('beforeend', playerHTML);
+  }
 
   const toggleBtn = document.getElementById('music-toggle-btn');
   const player = document.getElementById('music-player');
@@ -53,13 +66,17 @@ document.addEventListener('DOMContentLoaded', () => {
   const playPauseBtn = document.getElementById('play-pause-btn');
   const prevBtn = document.getElementById('prev-btn');
   const nextBtn = document.getElementById('next-btn');
+  const menuBtn = document.getElementById('menu-btn');
   const progressBar = document.getElementById('progress-bar');
   const progressFill = document.getElementById('progress-fill');
   const currTimeEl = document.getElementById('curr-time');
   const totalTimeEl = document.getElementById('total-time');
   const titleEl = document.getElementById('track-title');
+  const artistEl = document.getElementById('track-artist');
+  const artEl = document.getElementById('ipod-art');
+  const lyricsView = document.getElementById('lyrics-view');
+  const lyricsContent = document.getElementById('lyrics-content');
 
-  // Toggle player
   toggleBtn.addEventListener('click', () => {
     toggleBtn.classList.add('hidden');
     player.classList.remove('hidden');
@@ -71,6 +88,10 @@ document.addEventListener('DOMContentLoaded', () => {
     toggleBtn.classList.remove('hidden');
   });
 
+  menuBtn.addEventListener('click', () => {
+    lyricsView.classList.toggle('active');
+  });
+
   function formatTime(seconds) {
     if (isNaN(seconds)) return "0:00";
     const m = Math.floor(seconds / 60);
@@ -78,9 +99,62 @@ document.addEventListener('DOMContentLoaded', () => {
     return `${m}:${s < 10 ? '0' : ''}${s}`;
   }
 
+  function loadMetadata(trackUrl) {
+    titleEl.textContent = tracks[currentTrackIndex].title;
+    artistEl.textContent = "Cooking Mix";
+    artEl.src = "https://placehold.co/100x100/333/FFF?text=Mix";
+    lyricsContent.innerHTML = '<div class="lyric-line" style="margin-top: 30px;">Loading...</div>';
+
+    if (window.jsmediatags) {
+      jsmediatags.read(trackUrl, {
+        onSuccess: function(tag) {
+          // Artwork
+          const picture = tag.tags.picture;
+          if (picture) {
+            let base64String = "";
+            for (let i = 0; i < picture.data.length; i++) {
+                base64String += String.fromCharCode(picture.data[i]);
+            }
+            const base64 = btoa(base64String);
+            artEl.src = "data:" + picture.format + ";base64," + base64;
+          }
+
+          // Title & Artist
+          if (tag.tags.title) titleEl.textContent = tag.tags.title;
+          if (tag.tags.artist) artistEl.textContent = tag.tags.artist;
+
+          // Lyrics
+          const lyricsTag = tag.tags.lyrics || tag.tags.USLT;
+          lyricsContent.innerHTML = '';
+          if (lyricsTag) {
+            let lyricsText = lyricsTag.lyrics ? lyricsTag.lyrics : lyricsTag;
+            if (typeof lyricsText === 'object') {
+              lyricsText = lyricsText.text || Object.values(lyricsText).join('\n');
+            }
+            const lines = lyricsText.split('\n');
+            lines.forEach(line => {
+              if (line.trim() !== '') {
+                const div = document.createElement('div');
+                div.className = 'lyric-line';
+                div.textContent = line;
+                lyricsContent.appendChild(div);
+              }
+            });
+          } else {
+             lyricsContent.innerHTML = '<div class="lyric-line" style="margin-top: 30px;">No lyrics embedded.</div>';
+          }
+        },
+        onError: function(error) {
+          console.log("Error reading tags: ", error);
+          lyricsContent.innerHTML = '<div class="lyric-line" style="margin-top: 30px;">No lyrics embedded.</div>';
+        }
+      });
+    }
+  }
+
   function loadTrack(index) {
     audio.src = tracks[index].src;
-    titleEl.textContent = tracks[index].title;
+    loadMetadata(tracks[index].src);
     audio.load();
     if (isPlaying) audio.play();
   }
@@ -135,17 +209,17 @@ document.addEventListener('DOMContentLoaded', () => {
     audio.currentTime = (clickX / width) * duration;
   });
 
+  // Initial metadata load
+  loadMetadata(tracks[currentTrackIndex].src);
+
   // SEAMLESS ROUTER
   document.addEventListener('click', async (e) => {
     let href = null;
-    
-    // Check for standard anchor links
     const link = e.target.closest('a');
     if (link && link.href && link.href.startsWith(window.location.origin)) {
       href = link.href;
     }
     
-    // Check for recipe cards with onclick
     const clickableDiv = e.target.closest('.recipe-card');
     if (clickableDiv) {
       const onclickStr = clickableDiv.getAttribute('onclick');
@@ -205,5 +279,4 @@ document.addEventListener('DOMContentLoaded', () => {
       window.location.href = url;
     }
   }
-
-});
+}

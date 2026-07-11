@@ -603,3 +603,51 @@ h1, h2, h3, .recipe-title, .section-title {
   pointer-events: none;
   transform: translateY(20px);
 }
+
+/* IPOD LYRICS VIEW */
+.ipod-lyrics-view {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.85);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  overflow-y: auto;
+  transform: translateY(100%);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  scrollbar-width: none;
+}
+.ipod-lyrics-view::-webkit-scrollbar {
+  display: none;
+}
+.ipod-lyrics-view.active {
+  transform: translateY(0);
+}
+.lyric-line {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 12px;
+  line-height: 1.4;
+  text-align: center;
+}
+.lyric-line:first-child {
+  color: #fff;
+  font-size: 0.95rem;
+}
+.lyrics-close-hint {
+  font-size: 0.6rem;
+  color: #999;
+  text-align: center;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
