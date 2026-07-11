@@ -31,7 +31,7 @@ box-shadow:0 20px 60px rgba(0,0,0,0.08);
 .recipe-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:50px;margin-top:50px;}
 .recipe-card{text-align:center;cursor:pointer;transition:0.3s;}
 .recipe-card:hover{transform:translateY(-6px);}
-.recipe-card img{width:100%;border-radius:12px;margin-bottom:15px;}
+.recipe-card img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:12px;margin-bottom:15px;}
 .recipe-card h3{font-family:'Playfair Display',serif;font-size:1.4rem;}
 
 /* RECIPE PAGE */
