@@ -509,7 +509,12 @@ function initPlayer() {
     lyricsView.classList.add('active'); 
     if (currentLyricIndex !== -1) {
       const activeEl = document.getElementById('lyric-' + currentLyricIndex);
-      if (activeEl) setTimeout(() => activeEl.scrollIntoView({ behavior: 'smooth', block: 'center' }), 100);
+      if (activeEl) {
+        setTimeout(() => {
+          const offset = activeEl.offsetTop - (lyricsContent.clientHeight / 2) + (activeEl.clientHeight / 2);
+          lyricsContent.scrollTo({ top: offset, behavior: 'smooth' });
+        }, 100);
+      }
     }
   });
   
@@ -746,7 +751,8 @@ function initPlayer() {
         if (newEl) {
           newEl.classList.add('active-lyric');
           if (lyricsView.classList.contains('active')) {
-            newEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            const offset = newEl.offsetTop - (lyricsContent.clientHeight / 2) + (newEl.clientHeight / 2);
+            lyricsContent.scrollTo({ top: offset, behavior: 'smooth' });
           }
         }
       }
