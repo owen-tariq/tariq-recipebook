@@ -6,58 +6,1270 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function initPlayer() {
-  const tracks = [
-    { title: "34+35", src: "music/34+35 - Ariana Grande.mp3", artist: "Unknown Artist", cover: "https://placehold.co/400x400/333/FFF?text=Music" },
-    { title: "Annihilate (Spider", src: "music/Annihilate (Spider-Man Across the Spider-Verse) (Metro Boomin & Swae Lee, Lil Wayne, Offset) - Metro Boomin.mp3", artist: "Unknown Artist", cover: "https://placehold.co/400x400/333/FFF?text=Music" },
-    { title: "As It Was", src: "music/As It Was - Harry Styles.mp3", artist: "Unknown Artist", cover: "https://placehold.co/400x400/333/FFF?text=Music" },
-    { title: "As Long As You Love Me", src: "music/As Long As You Love Me - Justin Bieber.mp3", artist: "Unknown Artist", cover: "https://placehold.co/400x400/333/FFF?text=Music" },
-    { title: "Babydoll", src: "music/Babydoll - Dominic Fike.mp3", artist: "Unknown Artist", cover: "https://placehold.co/400x400/333/FFF?text=Music" },
-    { title: "Borderline", src: "music/Borderline - Tame Impala.mp3", artist: "Unknown Artist", cover: "https://placehold.co/400x400/333/FFF?text=Music" },
-    { title: "Bound 2", src: "music/Bound 2 - Kanye West.mp3", artist: "Unknown Artist", cover: "https://placehold.co/400x400/333/FFF?text=Music" },
-    { title: "Chanel", src: "music/Chanel - Frank Ocean.mp3", artist: "Unknown Artist", cover: "https://placehold.co/400x400/333/FFF?text=Music" },
-    { title: "Cheri Cheri Lady", src: "music/Cheri Cheri Lady - Modern Talking.mp3", artist: "Unknown Artist", cover: "https://placehold.co/400x400/333/FFF?text=Music" },
-    { title: "Dancing In The Flames", src: "music/Dancing In The Flames - The Weeknd.mp3", artist: "Unknown Artist", cover: "https://placehold.co/400x400/333/FFF?text=Music" },
-    { title: "Espresso", src: "music/Espresso - Sabrina Carpenter.mp3", artist: "Unknown Artist", cover: "https://placehold.co/400x400/333/FFF?text=Music" },
-    { title: "For Cryin' Out Loud!", src: "music/For Cryin' Out Loud! - FINNEAS.mp3", artist: "Unknown Artist", cover: "https://placehold.co/400x400/333/FFF?text=Music" },
-    { title: "Girl You Loud", src: "music/Girl You Loud - Chris Brown.mp3", artist: "Unknown Artist", cover: "https://placehold.co/400x400/333/FFF?text=Music" },
-    { title: "Heartbeat", src: "music/Heartbeat - Childish Gambino.mp3", artist: "Unknown Artist", cover: "https://placehold.co/400x400/333/FFF?text=Music" },
-    { title: "Hummer", src: "music/Hummer - Tame Impala.mp3", artist: "Unknown Artist", cover: "https://placehold.co/400x400/333/FFF?text=Music" },
-    { title: "I Just Might", src: "music/I Just Might - Bruno Mars.mp3", artist: "Unknown Artist", cover: "https://placehold.co/400x400/333/FFF?text=Music" },
-    { title: "I KNOW", src: "music/I KNOW - Travis Scott.mp3", artist: "Unknown Artist", cover: "https://placehold.co/400x400/333/FFF?text=Music" },
-    { title: "In My Room", src: "music/In My Room - Frank Ocean.mp3", artist: "Unknown Artist", cover: "https://placehold.co/400x400/333/FFF?text=Music" },
-    { title: "Kiss Me More (feat. SZA)", src: "music/Kiss Me More (feat. SZA) - Doja Cat.mp3", artist: "Unknown Artist", cover: "https://placehold.co/400x400/333/FFF?text=Music" },
-    { title: "Lady Of Namek", src: "music/Lady Of Namek - Tory Lanez.mp3", artist: "Unknown Artist", cover: "https://placehold.co/400x400/333/FFF?text=Music" },
-    { title: "Les", src: "music/Les - Childish Gambino.mp3", artist: "Unknown Artist", cover: "https://placehold.co/400x400/333/FFF?text=Music" },
-    { title: "Life Is Good (feat. Drake)", src: "music/Life Is Good (feat. Drake) - Future.mp3", artist: "Unknown Artist", cover: "https://placehold.co/400x400/333/FFF?text=Music" },
-    { title: "Locked out of Heaven", src: "music/Locked out of Heaven - Bruno Mars.mp3", artist: "Unknown Artist", cover: "https://placehold.co/400x400/333/FFF?text=Music" },
-    { title: "Lost in the Fire (feat. The Weeknd)", src: "music/Lost in the Fire (feat. The Weeknd) - Gesaffelstein.mp3", artist: "Unknown Artist", cover: "https://placehold.co/400x400/333/FFF?text=Music" },
-    { title: "Maps", src: "music/Maps - Maroon 5.mp3", artist: "Unknown Artist", cover: "https://placehold.co/400x400/333/FFF?text=Music" },
-    { title: "Moth To A Flame (with The Weeknd)", src: "music/Moth To A Flame (with The Weeknd) - Swedish House Mafia.mp3", artist: "Unknown Artist", cover: "https://placehold.co/400x400/333/FFF?text=Music" },
-    { title: "Mount Everest", src: "music/Mount Everest - Labrinth.mp3", artist: "Unknown Artist", cover: "https://placehold.co/400x400/333/FFF?text=Music" },
-    { title: "My Old Ways", src: "music/My Old Ways - Tame Impala.mp3", artist: "Unknown Artist", cover: "https://placehold.co/400x400/333/FFF?text=Music" },
-    { title: "NIGHTS LIKE THIS", src: "music/NIGHTS LIKE THIS - The Kid LAROI.mp3", artist: "Unknown Artist", cover: "https://placehold.co/400x400/333/FFF?text=Music" },
-    { title: "Neverender", src: "music/Neverender - Justice.mp3", artist: "Unknown Artist", cover: "https://placehold.co/400x400/333/FFF?text=Music" },
-    { title: "No Idea", src: "music/No Idea - Don Toliver.mp3", artist: "Unknown Artist", cover: "https://placehold.co/400x400/333/FFF?text=Music" },
-    { title: "No Pole", src: "music/No Pole - Don Toliver.mp3", artist: "Unknown Artist", cover: "https://placehold.co/400x400/333/FFF?text=Music" },
-    { title: "One Of The Girls (with JENNIE, Lily Rose Depp)", src: "music/One Of The Girls (with JENNIE, Lily Rose Depp) - The Weeknd.mp3", artist: "Unknown Artist", cover: "https://placehold.co/400x400/333/FFF?text=Music" },
-    { title: "Oxytocin", src: "music/Oxytocin - Billie Eilish.mp3", artist: "Unknown Artist", cover: "https://placehold.co/400x400/333/FFF?text=Music" },
-    { title: "Paint The Town Red", src: "music/Paint The Town Red - Doja Cat.mp3", artist: "Unknown Artist", cover: "https://placehold.co/400x400/333/FFF?text=Music" },
-    { title: "Passionfruit", src: "music/Passionfruit - Drake.mp3", artist: "Unknown Artist", cover: "https://placehold.co/400x400/333/FFF?text=Music" },
-    { title: "Risk It All", src: "music/Risk It All - Bruno Mars.mp3", artist: "Unknown Artist", cover: "https://placehold.co/400x400/333/FFF?text=Music" },
-    { title: "SLOW DANCING IN THE DARK", src: "music/SLOW DANCING IN THE DARK - Joji.mp3", artist: "Unknown Artist", cover: "https://placehold.co/400x400/333/FFF?text=Music" },
-    { title: "Strangers", src: "music/Strangers - Kenya Grace.mp3", artist: "Unknown Artist", cover: "https://placehold.co/400x400/333/FFF?text=Music" },
-    { title: "Swang", src: "music/Swang - Rae Sremmurd.mp3", artist: "Unknown Artist", cover: "https://placehold.co/400x400/333/FFF?text=Music" },
-    { title: "Swimming Pools (Drank)", src: "music/Swimming Pools (Drank) - Kendrick Lamar.mp3", artist: "Unknown Artist", cover: "https://placehold.co/400x400/333/FFF?text=Music" },
-    { title: "São Paulo (feat. Anitta)", src: "music/São Paulo (feat. Anitta) - The Weeknd.mp3", artist: "Unknown Artist", cover: "https://placehold.co/400x400/333/FFF?text=Music" },
-    { title: "The Machine", src: "music/The Machine - Reed Wonder.mp3", artist: "Unknown Artist", cover: "https://placehold.co/400x400/333/FFF?text=Music" },
-    { title: "They Don't Care About Us", src: "music/They Don't Care About Us - Michael Jackson.mp3", artist: "Unknown Artist", cover: "https://placehold.co/400x400/333/FFF?text=Music" },
-    { title: "Watermelon Sugar", src: "music/Watermelon Sugar - Harry Styles.mp3", artist: "Unknown Artist", cover: "https://placehold.co/400x400/333/FFF?text=Music" },
-    { title: "We Are The People", src: "music/We Are The People - Empire Of The Sun.mp3", artist: "Unknown Artist", cover: "https://placehold.co/400x400/333/FFF?text=Music" },
-    { title: "When Did You Get Hot", src: "music/When Did You Get Hot - Sabrina Carpenter.mp3", artist: "Unknown Artist", cover: "https://placehold.co/400x400/333/FFF?text=Music" },
-    { title: "Which One (feat. Central Cee)", src: "music/Which One (feat. Central Cee) - Drake.mp3", artist: "Unknown Artist", cover: "https://placehold.co/400x400/333/FFF?text=Music" },
-    { title: "bloodline", src: "music/bloodline - Ariana Grande.mp3", artist: "Unknown Artist", cover: "https://placehold.co/400x400/333/FFF?text=Music" },
-    { title: "seaside_demo", src: "music/seaside_demo - SEB.mp3", artist: "Unknown Artist", cover: "https://placehold.co/400x400/333/FFF?text=Music" },
-  ];
+  const playlists = [
+  {
+    "id": "cooking_mix",
+    "name": "Cooking Mix",
+    "tracks": [
+      {
+        "title": "34+35",
+        "src": "music/Cooking Mix/34+35 - Ariana Grande.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Annihilate (Spider",
+        "src": "music/Cooking Mix/Annihilate (Spider-Man Across the Spider-Verse) (Metro Boomin & Swae Lee, Lil Wayne, Offset) - Metro Boomin.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "As It Was",
+        "src": "music/Cooking Mix/As It Was - Harry Styles.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "As Long As You Love Me",
+        "src": "music/Cooking Mix/As Long As You Love Me - Justin Bieber.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Babydoll",
+        "src": "music/Cooking Mix/Babydoll - Dominic Fike.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Borderline",
+        "src": "music/Cooking Mix/Borderline - Tame Impala.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Bound 2",
+        "src": "music/Cooking Mix/Bound 2 - Kanye West.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Chanel",
+        "src": "music/Cooking Mix/Chanel - Frank Ocean.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Cheri Cheri Lady",
+        "src": "music/Cooking Mix/Cheri Cheri Lady - Modern Talking.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Dancing In The Flames",
+        "src": "music/Cooking Mix/Dancing In The Flames - The Weeknd.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Espresso",
+        "src": "music/Cooking Mix/Espresso - Sabrina Carpenter.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "For Cryin' Out Loud!",
+        "src": "music/Cooking Mix/For Cryin' Out Loud! - FINNEAS.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Girl You Loud",
+        "src": "music/Cooking Mix/Girl You Loud - Chris Brown.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Heartbeat",
+        "src": "music/Cooking Mix/Heartbeat - Childish Gambino.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Hummer",
+        "src": "music/Cooking Mix/Hummer - Tame Impala.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "I Just Might",
+        "src": "music/Cooking Mix/I Just Might - Bruno Mars.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "I KNOW",
+        "src": "music/Cooking Mix/I KNOW - Travis Scott.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "In My Room",
+        "src": "music/Cooking Mix/In My Room - Frank Ocean.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Kiss Me More (feat. SZA)",
+        "src": "music/Cooking Mix/Kiss Me More (feat. SZA) - Doja Cat.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Lady Of Namek",
+        "src": "music/Cooking Mix/Lady Of Namek - Tory Lanez.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Les",
+        "src": "music/Cooking Mix/Les - Childish Gambino.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Life Is Good (feat. Drake)",
+        "src": "music/Cooking Mix/Life Is Good (feat. Drake) - Future.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Locked out of Heaven",
+        "src": "music/Cooking Mix/Locked out of Heaven - Bruno Mars.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Lost in the Fire (feat. The Weeknd)",
+        "src": "music/Cooking Mix/Lost in the Fire (feat. The Weeknd) - Gesaffelstein.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Maps",
+        "src": "music/Cooking Mix/Maps - Maroon 5.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Moth To A Flame (with The Weeknd)",
+        "src": "music/Cooking Mix/Moth To A Flame (with The Weeknd) - Swedish House Mafia.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Mount Everest",
+        "src": "music/Cooking Mix/Mount Everest - Labrinth.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "My Old Ways",
+        "src": "music/Cooking Mix/My Old Ways - Tame Impala.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "NIGHTS LIKE THIS",
+        "src": "music/Cooking Mix/NIGHTS LIKE THIS - The Kid LAROI.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Neverender",
+        "src": "music/Cooking Mix/Neverender - Justice.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "No Idea",
+        "src": "music/Cooking Mix/No Idea - Don Toliver.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "No Pole",
+        "src": "music/Cooking Mix/No Pole - Don Toliver.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "One Of The Girls (with JENNIE, Lily Rose Depp)",
+        "src": "music/Cooking Mix/One Of The Girls (with JENNIE, Lily Rose Depp) - The Weeknd.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Oxytocin",
+        "src": "music/Cooking Mix/Oxytocin - Billie Eilish.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Paint The Town Red",
+        "src": "music/Cooking Mix/Paint The Town Red - Doja Cat.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Passionfruit",
+        "src": "music/Cooking Mix/Passionfruit - Drake.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Risk It All",
+        "src": "music/Cooking Mix/Risk It All - Bruno Mars.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "SLOW DANCING IN THE DARK",
+        "src": "music/Cooking Mix/SLOW DANCING IN THE DARK - Joji.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Strangers",
+        "src": "music/Cooking Mix/Strangers - Kenya Grace.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Swang",
+        "src": "music/Cooking Mix/Swang - Rae Sremmurd.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Swimming Pools (Drank)",
+        "src": "music/Cooking Mix/Swimming Pools (Drank) - Kendrick Lamar.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "São Paulo (feat. Anitta)",
+        "src": "music/Cooking Mix/São Paulo (feat. Anitta) - The Weeknd.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "The Machine",
+        "src": "music/Cooking Mix/The Machine - Reed Wonder.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "They Don't Care About Us",
+        "src": "music/Cooking Mix/They Don't Care About Us - Michael Jackson.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Watermelon Sugar",
+        "src": "music/Cooking Mix/Watermelon Sugar - Harry Styles.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "We Are The People",
+        "src": "music/Cooking Mix/We Are The People - Empire Of The Sun.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "When Did You Get Hot",
+        "src": "music/Cooking Mix/When Did You Get Hot - Sabrina Carpenter.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Which One (feat. Central Cee)",
+        "src": "music/Cooking Mix/Which One (feat. Central Cee) - Drake.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "bloodline",
+        "src": "music/Cooking Mix/bloodline - Ariana Grande.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "seaside_demo",
+        "src": "music/Cooking Mix/seaside_demo - SEB.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      }
+    ]
+  },
+  {
+    "id": "bangla",
+    "name": "Bangla",
+    "tracks": [
+      {
+        "title": "Aaj Pasha",
+        "src": "music/Bangla/Aaj Pasha - Kaya.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Aami Sudhu Cheyechi Tomay",
+        "src": "music/Bangla/Aami Sudhu Cheyechi Tomay - Shadaab Hashmi.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Achena Maya",
+        "src": "music/Bangla/Achena Maya - Arfin Rumey.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Adho Rate Jodi Ghum Venge Jay",
+        "src": "music/Bangla/Adho Rate Jodi Ghum Venge Jay - Rizia Parveen.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Ailaina Ailainare Bondhu",
+        "src": "music/Bangla/Ailaina Ailainare Bondhu - Israt Jahan Jui.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Ajhor Bristy",
+        "src": "music/Bangla/Ajhor Bristy - Balam.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Akangkha",
+        "src": "music/Bangla/Akangkha - Habib Wahid.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Amar Hridoy",
+        "src": "music/Bangla/Amar Hridoy - Srikanta Acharya.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Amar Hridoy Ekta Ayna",
+        "src": "music/Bangla/Amar Hridoy Ekta Ayna - Original Motion Picture Soundtrack - Andrew Kishore.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Amay Dio Call",
+        "src": "music/Bangla/Amay Dio Call - Alvee.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Amer Achaar",
+        "src": "music/Bangla/Amer Achaar - Ujjal Barman.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Ami Nei",
+        "src": "music/Bangla/Ami Nei - Bappa Mazumder.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Ami Tomar Moner Vitor",
+        "src": "music/Bangla/Ami Tomar Moner Vitor - Habib Wahid.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Asbar Kale",
+        "src": "music/Bangla/Asbar Kale - James.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Ashi Boley Gelo",
+        "src": "music/Bangla/Ashi Boley Gelo - Kaya.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Baburam Sapure",
+        "src": "music/Bangla/Baburam Sapure - Sanat Sinha.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Baje Shobhab",
+        "src": "music/Bangla/Baje Shobhab - Rehaan Rasul.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Batashe Kan Pete Thaki",
+        "src": "music/Bangla/Batashe Kan Pete Thaki - Arfin Rumey.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Behula",
+        "src": "music/Bangla/Behula - Shunno.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Beni Khuley",
+        "src": "music/Bangla/Beni Khuley - Muza.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Beqarar Karke Hamen Yun Na Jaiye",
+        "src": "music/Bangla/Beqarar Karke Hamen Yun Na Jaiye - Hemant Kumar.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Bhalo Lage Na",
+        "src": "music/Bangla/Bhalo Lage Na - Hridoy Khan.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Bhalobasha Chay Na",
+        "src": "music/Bangla/Bhalobasha Chay Na - Sayera Reza.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Bhalobasha Chayna",
+        "src": "music/Bangla/Bhalobasha Chayna - Club Mix - Sayera Reza.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Bhalobasha Ki",
+        "src": "music/Bangla/Bhalobasha Ki - Hridoy Khan.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Bhober Pagol",
+        "src": "music/Bangla/Bhober Pagol - Nigar Sumi.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Bishom Piriti",
+        "src": "music/Bangla/Bishom Piriti - Doly Sayontoni.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Bojhena Shey Bojhena",
+        "src": "music/Bangla/Bojhena Shey Bojhena - Arijit Singh.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Bolbona Go Ar Kono Din",
+        "src": "music/Bangla/Bolbona Go Ar Kono Din - Baul Sukumar.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Bolona",
+        "src": "music/Bangla/Bolona - Munna Islam.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Borka Pora Meye",
+        "src": "music/Bangla/Borka Pora Meye - Sharif Uddin.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Boshonto Batase",
+        "src": "music/Bangla/Boshonto Batase - Shah Abdul Karim.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Bristi Tomake Dilam",
+        "src": "music/Bangla/Bristi Tomake Dilam - Srikanta Acharya.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Chaad Tara",
+        "src": "music/Bangla/Chaad Tara - Miles.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Chander Batti",
+        "src": "music/Bangla/Chander Batti - Biplob.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Chumki Choleche",
+        "src": "music/Bangla/Chumki Choleche - Md Robin.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Dhar Dharina",
+        "src": "music/Bangla/Dhar Dharina - Sayera Reza.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Dil Ki Doya Hoyna",
+        "src": "music/Bangla/Dil Ki Doya Hoyna - Mizan.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Dil Laga Liya Maine",
+        "src": "music/Bangla/Dil Laga Liya Maine - Nadeem Shravan.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Disco Bandor",
+        "src": "music/Bangla/Disco Bandor - Fuad.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Dj Waley Babu (feat. Aastha Gill)",
+        "src": "music/Bangla/Dj Waley Babu (feat. Aastha Gill) - Badshah.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Dola De Re",
+        "src": "music/Bangla/Dola De Re - Fuad.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Dure Kothao",
+        "src": "music/Bangla/Dure Kothao - Tausif.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Ebhabeo Phire Asha Jaye",
+        "src": "music/Bangla/Ebhabeo Phire Asha Jaye - Chandrabindoo.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Ek Akash Tara",
+        "src": "music/Bangla/Ek Akash Tara - Ayub Bachchu.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Ek Jibone Eto Prem",
+        "src": "music/Bangla/Ek Jibone Eto Prem - Shahid.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Ek Mutho Roddur",
+        "src": "music/Bangla/Ek Mutho Roddur - Balam.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Ek Nojor Na Dekhle",
+        "src": "music/Bangla/Ek Nojor Na Dekhle - Baby Naznin.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Ek Shundori Maiya",
+        "src": "music/Bangla/Ek Shundori Maiya - Jisan Khan Shuvo.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Ekaki Mon",
+        "src": "music/Bangla/Ekaki Mon - Balam.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Ekjone",
+        "src": "music/Bangla/Ekjone - Habib Wahid.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Ekta Chilo Sonar Konna",
+        "src": "music/Bangla/Ekta Chilo Sonar Konna - Subir Nandi.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Fagunero Mohonaye 2.0",
+        "src": "music/Bangla/Fagunero Mohonaye 2.0 - Antara Nandy.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Fande Poriya",
+        "src": "music/Bangla/Fande Poriya - Bangla Mentalz.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Get It Done",
+        "src": "music/Bangla/Get It Done - Productivity FM.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Ghuri",
+        "src": "music/Bangla/Ghuri - Lutfor Hasan.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Ghuri Tumi Kar Akashe Oro",
+        "src": "music/Bangla/Ghuri Tumi Kar Akashe Oro - Lutfor Hasan.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Girlfriend Er Biya",
+        "src": "music/Bangla/Girlfriend Er Biya - Pritom Hasan.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Hariye Fela Bhalobasha",
+        "src": "music/Bangla/Hariye Fela Bhalobasha - Habib Wahid.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "He Jubok",
+        "src": "music/Bangla/He Jubok - Doly Sayontoni.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Hoteo Pare Ei Dekha",
+        "src": "music/Bangla/Hoteo Pare Ei Dekha - James Nagar Baul.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Jao Pakhi Bolo Tare",
+        "src": "music/Bangla/Jao Pakhi Bolo Tare - Chandana Majumder.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Jao Pakhi Bolo Tare",
+        "src": "music/Bangla/Jao Pakhi Bolo Tare - Krishnokoli Islam.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Je Pakhi",
+        "src": "music/Bangla/Je Pakhi - Dhruba Guha.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Je Rajar Rani Nai",
+        "src": "music/Bangla/Je Rajar Rani Nai - Pagla Imran.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Jodi Bou Shajogo",
+        "src": "music/Bangla/Jodi Bou Shajogo - Palash Sajjad.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Jol Pore Pata Nore",
+        "src": "music/Bangla/Jol Pore Pata Nore - Kumar Biswajit.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Kalo Joton Kalo Roton",
+        "src": "music/Bangla/Kalo Joton Kalo Roton - Sagar.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Kaya",
+        "src": "music/Bangla/Kaya - Acid Pauli.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Kaya Den",
+        "src": "music/Bangla/Kaya Den - Khyoda Mema.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Keno ei Nishshongota",
+        "src": "music/Bangla/Keno ei Nishshongota - Souls.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Khairun Lo",
+        "src": "music/Bangla/Khairun Lo - Momtaz Begum.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Khoka",
+        "src": "music/Bangla/Khoka - Pritom Hasan.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Khujechi Toke Raat Berate",
+        "src": "music/Bangla/Khujechi Toke Raat Berate - Jeet Gannguli.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Ki Nesha",
+        "src": "music/Bangla/Ki Nesha - Balam.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Kichu Kotha Akashe Pathaio",
+        "src": "music/Bangla/Kichu Kotha Akashe Pathaio - Arfin Rumey.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Kobitar Gaan",
+        "src": "music/Bangla/Kobitar Gaan - Hasan Joy.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Koshto Pete Bhalobashi",
+        "src": "music/Bangla/Koshto Pete Bhalobashi - Ayub Bachchu.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Kotha Diye Jao",
+        "src": "music/Bangla/Kotha Diye Jao - Tanveer Evan.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Kotha Koiyo Na",
+        "src": "music/Bangla/Kotha Koiyo Na - Emon Chowdhury.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Koutuhol",
+        "src": "music/Bangla/Koutuhol - Habib Wahid.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Krishno",
+        "src": "music/Bangla/Krishno - Kaya.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Kuhu Shurey Moner Agun",
+        "src": "music/Bangla/Kuhu Shurey Moner Agun - Helal.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "La petite fille de la mer",
+        "src": "music/Bangla/La petite fille de la mer - Remastered - Vangelis.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Laage Ura Dhura (From Toofan )",
+        "src": "music/Bangla/Laage Ura Dhura (From Toofan ) - Pritom Hasan.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Lal Bondhu Neel Bondhu",
+        "src": "music/Bangla/Lal Bondhu Neel Bondhu - Hasan.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Local Bus",
+        "src": "music/Bangla/Local Bus - Momtaz Begum.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Local Bus",
+        "src": "music/Bangla/Local Bus - Pritom Hasan.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Lolona",
+        "src": "music/Bangla/Lolona - Shiekh Sadi.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Lukochuri",
+        "src": "music/Bangla/Lukochuri - Balam.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Mati Hobore",
+        "src": "music/Bangla/Mati Hobore - Faisal Bin Asik.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Maya",
+        "src": "music/Bangla/Maya - Helal.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Mayabi Ei Raate",
+        "src": "music/Bangla/Mayabi Ei Raate - Hasib Reza.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Megha Re",
+        "src": "music/Bangla/Megha Re - Mitraz.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Mere Naseeb Mein",
+        "src": "music/Bangla/Mere Naseeb Mein - From Naseeb - Lata Mangeshkar.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Mere Rang Mein Rangne Wali",
+        "src": "music/Bangla/Mere Rang Mein Rangne Wali - S. P. Balasubrahmanyam.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Moha Jadu Coke Studio Bangla",
+        "src": "music/Bangla/Moha Jadu Coke Studio Bangla - Habib Wahid.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Mon Mane Na",
+        "src": "music/Bangla/Mon Mane Na - Zubeen Garg.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Mon Pajor",
+        "src": "music/Bangla/Mon Pajor - Kazi Shuvo.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Mon Shudhu Mon Chuyeche",
+        "src": "music/Bangla/Mon Shudhu Mon Chuyeche - Souls.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Nantu Ghotok",
+        "src": "music/Bangla/Nantu Ghotok - Momtaz.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Nilanjana",
+        "src": "music/Bangla/Nilanjana - I (Se Pratham Prem - Lal Phite Sada Moja) - Nachiketa Chakraborty.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Nilanjana",
+        "src": "music/Bangla/Nilanjana - I - Se Pratham Prem Lal Phite Sada Moja - Nachiketa Chakraborty.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Nitol Paye",
+        "src": "music/Bangla/Nitol Paye - Fuad.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "O Bondhu Lal Golapi",
+        "src": "music/Bangla/O Bondhu Lal Golapi - Sharif Uddin.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "O Tunir Maa",
+        "src": "music/Bangla/O Tunir Maa - Promit Kumar.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "O bondhu lal gulapi",
+        "src": "music/Bangla/O bondhu lal gulapi - Lofi version - Sharif Uddin.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Obujh Bhalobasha",
+        "src": "music/Bangla/Obujh Bhalobasha - Hridoy Khan.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Ogo Bideshini",
+        "src": "music/Bangla/Ogo Bideshini - Andrew Kishore.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Oporadhi",
+        "src": "music/Bangla/Oporadhi - Arman Alif.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Pagla Hawa",
+        "src": "music/Bangla/Pagla Hawa - James.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Pagol Chara Duniya Chole Na",
+        "src": "music/Bangla/Pagol Chara Duniya Chole Na - Nigar Sumi.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Pangkha",
+        "src": "music/Bangla/Pangkha - Momtaz.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Phire To Pabona (Acoustic)",
+        "src": "music/Bangla/Phire To Pabona (Acoustic) - Raj Thillaiyampalam.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Phire To Pabona",
+        "src": "music/Bangla/Phire To Pabona - Hridoy Khan.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Pori",
+        "src": "music/Bangla/Pori - Bappa Mazumder.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Pyar Hua Iqrar Hua",
+        "src": "music/Bangla/Pyar Hua Iqrar Hua - Manna Dey.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Rag Koiro Na Moner Manush",
+        "src": "music/Bangla/Rag Koiro Na Moner Manush - Original Motion Picture Soundtrack - Shilpi Biswas.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Rod Aaji",
+        "src": "music/Bangla/Rod Aaji - Zubeen Garg.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Rupbane Nache Komor Dulaiya",
+        "src": "music/Bangla/Rupbane Nache Komor Dulaiya - Original Motion Picture Soundtrack - Mila.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Sadhu Baba Sadhu Baba",
+        "src": "music/Bangla/Sadhu Baba Sadhu Baba - Promit Kumar.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Sathi Bhalobasa",
+        "src": "music/Bangla/Sathi Bhalobasa - Miss Jojo.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Saudebaazi",
+        "src": "music/Bangla/Saudebaazi - Prashant Ingole.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Shaokat Mach Chor (শওকাত মাছ চোর)",
+        "src": "music/Bangla/Shaokat Mach Chor (শওকাত মাছ চোর) - AKASH GOLDER.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Shat Paker Jibon",
+        "src": "music/Bangla/Shat Paker Jibon - Farabee.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Shohag",
+        "src": "music/Bangla/Shohag - Tanishk Bagchi.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Shokhi Valobasha Kare Koy",
+        "src": "music/Bangla/Shokhi Valobasha Kare Koy - Milon.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Shona Phaki",
+        "src": "music/Bangla/Shona Phaki - Wahed.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Shorboto Mongolo Radhe",
+        "src": "music/Bangla/Shorboto Mongolo Radhe - Chanchal Chowdhury.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Sohena Jatona",
+        "src": "music/Bangla/Sohena Jatona - Arfin Rumey.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Sokhi Valobasha Kare Koy Returns",
+        "src": "music/Bangla/Sokhi Valobasha Kare Koy Returns - Muhammad Milon.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Somoy Gele",
+        "src": "music/Bangla/Somoy Gele - Band Lalon.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Srabon",
+        "src": "music/Bangla/Srabon - Fuad.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Sraboner Megh Gulo",
+        "src": "music/Bangla/Sraboner Megh Gulo - Mejbah Rahman.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Tadpaoge Tadpa Lo",
+        "src": "music/Bangla/Tadpaoge Tadpa Lo - Lata Mangeshkar.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Tanveer Evan Mashup, Vol. 2",
+        "src": "music/Bangla/Tanveer Evan Mashup, Vol. 2 - Tanveer Evan.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Taray Taray Rotiye Debo",
+        "src": "music/Bangla/Taray Taray Rotiye Debo - James Nagar Baul.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Temptation",
+        "src": "music/Bangla/Temptation - Kool.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Teri Saanson Mein (From Karle Pyaar Karle )",
+        "src": "music/Bangla/Teri Saanson Mein (From Karle Pyaar Karle ) - Arijit Singh.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Tikatulir More Ekta Hall Royeche",
+        "src": "music/Bangla/Tikatulir More Ekta Hall Royeche - Sanjoy Sen.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Timeless (Taylor’s Version) (From The Vault)",
+        "src": "music/Bangla/Timeless (Taylor’s Version) (From The Vault) - Taylor Swift.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Tomar Akash Duti Chokhe",
+        "src": "music/Bangla/Tomar Akash Duti Chokhe - Anwesha Dutta Gupta.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Tomar Akash Duti Chokhe",
+        "src": "music/Bangla/Tomar Akash Duti Chokhe - Divyaa Roy.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Tomar Chokhe Dekhle",
+        "src": "music/Bangla/Tomar Chokhe Dekhle - Ayub Bachchu.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Tomar Jonno",
+        "src": "music/Bangla/Tomar Jonno - Balam.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Tomar Preme",
+        "src": "music/Bangla/Tomar Preme - Cfu36.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Tomay Dekhle Mone Hoy",
+        "src": "music/Bangla/Tomay Dekhle Mone Hoy - Andrew Kishore.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Tor Jonno",
+        "src": "music/Bangla/Tor Jonno - Arnob.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Tor Moner Pinjiray",
+        "src": "music/Bangla/Tor Moner Pinjiray - Jisan Khan Shuvo.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Tu Har Lamha",
+        "src": "music/Bangla/Tu Har Lamha - Bobby-Imran.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Tujhe Sochta Hoon",
+        "src": "music/Bangla/Tujhe Sochta Hoon - Pritam.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Tujhe Yaad Na Meri Aayee",
+        "src": "music/Bangla/Tujhe Yaad Na Meri Aayee - Jatin-Lalit.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Tumi Aaj Kotha Diyecho",
+        "src": "music/Bangla/Tumi Aaj Kotha Diyecho - Runa Laila.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Tumi Akasher Buke",
+        "src": "music/Bangla/Tumi Akasher Buke - Khalid.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Tumi Chader Jochona Naw",
+        "src": "music/Bangla/Tumi Chader Jochona Naw - Sabina Yasmin.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Tumi Eshechile Porshu",
+        "src": "music/Bangla/Tumi Eshechile Porshu - Andrew Kishore.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Tumpa",
+        "src": "music/Bangla/Tumpa - Arob Dey Chowdhuri.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      },
+      {
+        "title": "Yeh Raaten Yeh Mausam",
+        "src": "music/Bangla/Yeh Raaten Yeh Mausam - Kishore Kumar.mp3",
+        "artist": "Unknown Artist",
+        "cover": "https://placehold.co/400x400/333/FFF?text=Music"
+      }
+    ]
+  }
+];
+  let currentPlaylistIndex = 0;
+  let tracks = playlists[currentPlaylistIndex].tracks;
   let currentTrackIndex = 0;
   let isPlaying = false;
   let parsedLyrics = [];
@@ -65,7 +1277,7 @@ function initPlayer() {
   const audio = new Audio(tracks[currentTrackIndex].src);
 
   const playerHTML = `
-    <button id="music-toggle-btn">🎵 Listen to Cooking Mix</button>
+    <button id="music-toggle-btn">🎵 Listen to Music</button>
     <div id="music-player" class="hidden ipod-theme">
       <button class="player-close" id="close-player">×</button>
       <div class="ipod-screen">
@@ -83,7 +1295,7 @@ function initPlayer() {
               <img src="chicken.jpg" alt="Cover" class="ipod-album-art" id="ipod-art" onerror="this.src='https://placehold.co/100x100/333/FFF?text=Mix'">
               <div class="ipod-track-info">
                 <div class="player-title" id="track-title">${tracks[currentTrackIndex].title}</div>
-                <div class="player-artist" id="track-artist">Cooking Mix</div>
+                <div class="player-artist" id="track-artist">${playlists[currentPlaylistIndex].name}</div>
               </div>
             </div>
             <div class="progress-container">
@@ -108,7 +1320,7 @@ function initPlayer() {
             <div class="playlist-header">
               <img src="chicken.jpg" class="playlist-art" id="playlist-art-header">
               <div class="playlist-info">
-                <div class="playlist-title">Cooking Mix</div>
+                <div class="playlist-title" id="playlist-title-header">Cooking Mix</div>
                 <div class="playlist-subtitle">R&B/Soul • 2026</div>
               </div>
             </div>
@@ -122,6 +1334,14 @@ function initPlayer() {
             <div class="search-header">Top Results</div>
             <input type="text" class="search-input" id="search-input" placeholder="Q Search songs...">
             <div class="track-list" id="search-results-container">
+               <!-- Rendered via JS -->
+            </div>
+          </div>
+
+          <!-- VIEW: PLAYLISTS MENU -->
+          <div class="ipod-view" id="view-playlists-menu">
+            <div class="search-header">Playlists</div>
+            <div class="track-list" id="playlists-menu-container">
                <!-- Rendered via JS -->
             </div>
           </div>
@@ -171,6 +1391,7 @@ function initPlayer() {
   const viewNowPlaying = document.getElementById('view-nowplaying');
   const viewPlaylist = document.getElementById('view-playlist');
   const viewSearch = document.getElementById('view-search');
+  const viewPlaylistsMenu = document.getElementById('view-playlists-menu');
   const lyricsView = document.getElementById('lyrics-view');
   
   const btnShowLyrics = document.getElementById('btn-show-lyrics');
@@ -178,6 +1399,7 @@ function initPlayer() {
   const btnShowSearch = document.getElementById('btn-show-search');
   
   const playlistContainer = document.getElementById('playlist-container');
+  const playlistsMenuContainer = document.getElementById('playlists-menu-container');
   const searchInput = document.getElementById('search-input');
   const searchResultsContainer = document.getElementById('search-results-container');
   const lyricsContent = document.getElementById('lyrics-content');
@@ -191,11 +1413,11 @@ function initPlayer() {
 
   // View Navigation
   function showView(viewEl) {
-    [viewNowPlaying, viewPlaylist, viewSearch].forEach(v => v.classList.remove('active'));
+    [viewNowPlaying, viewPlaylist, viewSearch, viewPlaylistsMenu].forEach(v => v.classList.remove('active'));
     viewEl.classList.add('active');
   }
 
-  btnShowPlaylist.addEventListener('click', () => { showView(viewPlaylist); renderPlaylist(); });
+  btnShowPlaylist.addEventListener('click', () => { showView(viewPlaylistsMenu); renderPlaylistsMenu(); });
   btnShowSearch.addEventListener('click', () => { showView(viewSearch); renderSearch(); searchInput.focus(); });
   btnShowLyrics.addEventListener('click', () => { 
     lyricsView.classList.add('active'); 
@@ -209,8 +1431,13 @@ function initPlayer() {
     // Menu acts as back button or toggle
     if (lyricsView.classList.contains('active')) {
       lyricsView.classList.remove('active');
-    } else {
+    } else if (viewPlaylist.classList.contains('active')) {
+      showView(viewPlaylistsMenu);
+    } else if (viewSearch.classList.contains('active') || viewPlaylistsMenu.classList.contains('active')) {
       showView(viewNowPlaying);
+    } else {
+      showView(viewPlaylistsMenu);
+      renderPlaylistsMenu();
     }
     // Force reset screen scroll just in case
     document.querySelector('.ipod-screen').scrollTop = 0;
@@ -236,6 +1463,23 @@ function initPlayer() {
   });
 
   // Render Lists
+  function renderPlaylistsMenu() {
+    playlistsMenuContainer.innerHTML = '';
+    playlists.forEach((p, i) => {
+      const el = document.createElement('div');
+      el.className = 'track-item';
+      el.innerHTML = `<div class="track-item-title" style="margin-left:8px;font-weight:bold;">${p.name}</div><div style="font-size:10px;color:#aaa;">${p.tracks.length} songs</div>`;
+      el.addEventListener('click', () => {
+        currentPlaylistIndex = i;
+        tracks = playlists[currentPlaylistIndex].tracks;
+        document.getElementById('playlist-title-header').textContent = p.name;
+        renderPlaylist();
+        showView(viewPlaylist);
+      });
+      playlistsMenuContainer.appendChild(el);
+    });
+  }
+
   function renderList(container, trackArray) {
     container.innerHTML = '';
     trackArray.forEach((t, i) => {
@@ -415,7 +1659,7 @@ function initPlayer() {
 
   loadMetadata(tracks[currentTrackIndex].src);
 
-  // SEAMLESS ROUTER (Kept as before)
+  // SEAMLESS ROUTER
   document.addEventListener('click', async (e) => {
     let href = null;
     const link = e.target.closest('a');
@@ -434,10 +1678,10 @@ function initPlayer() {
     }
     if (href && !href.includes('#')) {
       e.preventDefault();
-      if (clickableDiv) e.stopPropagation();
+      e.stopPropagation();
       await navigateTo(href);
     }
-  });
+  }, true); // Use capture phase to intercept before inline onclick fires
 
   window.addEventListener('popstate', async () => { await navigateTo(window.location.href, true); });
 
