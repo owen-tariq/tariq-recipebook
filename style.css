@@ -544,28 +544,26 @@ h1, h2, h3, .recipe-title, .section-title {
   color: rgba(255,255,255,0.7);
 }
 
-/* FLOATING GREEN MENU */
+/* FLOATING GREEN MENU -> HORIZONTAL BOTTOM BAR */
 .ipod-side-menu {
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(74, 222, 128, 0.85); /* Apple Music Green */
-  backdrop-filter: blur(5px);
-  padding: 8px 4px;
-  border-radius: 12px 0 0 12px;
   display: flex;
-  flex-direction: column;
-  gap: 12px;
-  box-shadow: -2px 0 10px rgba(0,0,0,0.3);
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  background: rgba(74, 222, 128, 0.15); /* Subtle green background */
+  padding: 6px 12px;
+  border-radius: 16px;
+  margin-top: auto; /* Push it to the bottom */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 .side-menu-btn {
   background: none;
   border: none;
-  color: #000;
-  font-size: 1rem;
+  color: #fff;
+  font-size: 1.1rem;
   cursor: pointer;
   opacity: 0.8;
+  padding: 2px;
 }
 .side-menu-btn:hover { opacity: 1; }
 
