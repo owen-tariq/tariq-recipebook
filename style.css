@@ -341,3 +341,28 @@ h1, h2, h3, .recipe-title, .section-title {
   color: var(--text-muted);
   text-align: center;
 }
+
+/* Mobile Optimizations */
+@media (max-width: 600px) {
+  .cover h1 {
+    font-size: 2.8rem;
+  }
+  .recipe-title {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+  }
+  .top-section {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+      "img img"
+      "prep cook";
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+  .ingredients, .steps {
+    padding: 24px;
+  }
+  .section-title {
+    font-size: 1.5rem;
+  }
+}
