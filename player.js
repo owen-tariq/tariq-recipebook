@@ -250,57 +250,72 @@ function initPlayer() {
   }
 
   function loadMetadata(trackUrl) {
-    titleEl.textContent = tracks[currentTrackIndex].title;
-    artistEl.textContent = "Cooking Mix";
-    artEl.src = "https://placehold.co/100x100/333/FFF?text=Mix";
-    playlistArtHeader.src = artEl.src;
-    lyricsContent.innerHTML = '<div class="lyric-line" style="margin-top: 30px;">Loading...</div>';
+    try {
+      titleEl.textContent = tracks[currentTrackIndex].title;
+      artistEl.textContent = "Cooking Mix";
+      artEl.src = "https://placehold.co/100x100/333/FFF?text=Mix";
+      playlistArtHeader.src = artEl.src;
+      lyricsContent.innerHTML = '<div class="lyric-line" style="margin-top: 30px;">Loading...</div>';
 
-    if (window.jsmediatags) {
-      jsmediatags.read(trackUrl, {
-        onSuccess: function(tag) {
-          const picture = tag.tags.picture;
-          if (picture) {
-            const byteArray = new Uint8Array(picture.data);
-            const blob = new Blob([byteArray], { type: picture.format });
-            const src = URL.createObjectURL(blob);
-            artEl.src = src;
-            playlistArtHeader.src = src;
-          }
-
-          if (tag.tags.title) titleEl.textContent = tag.tags.title;
-          if (tag.tags.artist) artistEl.textContent = tag.tags.artist;
-
-          const lyricsTag = tag.tags.lyrics || tag.tags.USLT;
-          lyricsContent.innerHTML = '';
-          if (lyricsTag) {
-            let lyricsText = lyricsTag.lyrics ? lyricsTag.lyrics : lyricsTag;
-            if (typeof lyricsText === 'object') {
-              lyricsText = lyricsText.text || Object.values(lyricsText).join('\n');
-            }
-            const lines = lyricsText.split('\n');
-            lines.forEach(line => {
-              if (line.trim() !== '') {
-                const div = document.createElement('div');
-                div.className = 'lyric-line';
-                div.textContent = line;
-                lyricsContent.appendChild(div);
+      if (window.jsmediatags) {
+        jsmediatags.read(encodeURI(trackUrl), {
+          onSuccess: function(tag) {
+            try {
+              const picture = tag.tags.picture;
+              if (picture) {
+                const byteArray = new Uint8Array(picture.data);
+                const blob = new Blob([byteArray], { type: picture.format });
+                const src = URL.createObjectURL(blob);
+                artEl.src = src;
+                playlistArtHeader.src = src;
               }
-            });
-          } else {
-             lyricsContent.innerHTML = '<div class="lyric-line" style="margin-top: 30px;">No lyrics embedded.</div>';
+
+              if (tag.tags.title) titleEl.textContent = tag.tags.title;
+              if (tag.tags.artist) artistEl.textContent = tag.tags.artist;
+
+              const lyricsTag = tag.tags.lyrics || tag.tags.USLT;
+              lyricsContent.innerHTML = '';
+              if (lyricsTag) {
+                let lyricsText = lyricsTag.lyrics ? lyricsTag.lyrics : lyricsTag;
+                if (typeof lyricsText === 'object') {
+                  lyricsText = lyricsText.text || Object.values(lyricsText).join('\\n');
+                }
+                const lines = lyricsText.split('\\n');
+                lines.forEach(line => {
+                  if (line.trim() !== '') {
+                    const div = document.createElement('div');
+                    div.className = 'lyric-line';
+                    div.textContent = line;
+                    lyricsContent.appendChild(div);
+                  }
+                });
+              } else {
+                 lyricsContent.innerHTML = '<div class="lyric-line" style="margin-top: 30px;">No lyrics embedded.</div>';
+              }
+            } catch (innerErr) {
+              console.error(innerErr);
+              lyricsContent.innerHTML = '<div class="lyric-line" style="margin-top: 30px;">No lyrics embedded.</div>';
+            }
+          },
+          onError: function(err) {
+            console.error("jsmediatags error:", err);
+            lyricsContent.innerHTML = '<div class="lyric-line" style="margin-top: 30px;">No lyrics embedded.</div>';
           }
-        },
-        onError: function() {
-          lyricsContent.innerHTML = '<div class="lyric-line" style="margin-top: 30px;">No lyrics embedded.</div>';
-        }
-      });
+        });
+      }
+    } catch (e) {
+      console.error("loadMetadata error:", e);
+      lyricsContent.innerHTML = '<div class="lyric-line" style="margin-top: 30px;">No lyrics embedded.</div>';
     }
   }
 
   function loadTrack(index) {
     audio.src = tracks[index].src;
-    loadMetadata(tracks[index].src);
+    try {
+      loadMetadata(tracks[index].src);
+    } catch (e) {
+      console.error(e);
+    }
     audio.load();
     if (isPlaying) audio.play();
     renderPlaylist();
