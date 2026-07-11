@@ -17,7 +17,13 @@ document.addEventListener('DOMContentLoaded', () => {
       <div class="ipod-screen">
         <div class="ipod-header">Now Playing</div>
         <div class="ipod-screen-content">
-          <div class="player-title" id="track-title">${tracks[currentTrackIndex].title}</div>
+          <div class="ipod-now-playing">
+            <img src="chicken.jpg" alt="Cover" class="ipod-album-art" id="ipod-art" onerror="this.src='https://placehold.co/100x100/333/FFF?text=Mix'">
+            <div class="ipod-track-info">
+              <div class="player-title" id="track-title">${tracks[currentTrackIndex].title}</div>
+              <div class="player-artist">Cooking Mix</div>
+            </div>
+          </div>
           <div class="progress-container">
             <div class="progress-bar" id="progress-bar">
               <div class="progress-fill" id="progress-fill"></div>
