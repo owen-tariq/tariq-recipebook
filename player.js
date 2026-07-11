@@ -261,12 +261,9 @@ function initPlayer() {
         onSuccess: function(tag) {
           const picture = tag.tags.picture;
           if (picture) {
-            let base64String = "";
-            for (let i = 0; i < picture.data.length; i++) {
-                base64String += String.fromCharCode(picture.data[i]);
-            }
-            const base64 = btoa(base64String);
-            const src = "data:" + picture.format + ";base64," + base64;
+            const byteArray = new Uint8Array(picture.data);
+            const blob = new Blob([byteArray], { type: picture.format });
+            const src = URL.createObjectURL(blob);
             artEl.src = src;
             playlistArtHeader.src = src;
           }
