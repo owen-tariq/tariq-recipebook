@@ -16,15 +16,17 @@ document.addEventListener('DOMContentLoaded', () => {
       <button class="player-close" id="close-player">×</button>
       <div class="ipod-screen">
         <div class="ipod-header">Now Playing</div>
-        <div class="player-title" id="track-title">${tracks[currentTrackIndex].title}</div>
-        <div class="progress-container">
-          <div class="progress-bar" id="progress-bar">
-            <div class="progress-fill" id="progress-fill"></div>
+        <div class="ipod-screen-content">
+          <div class="player-title" id="track-title">${tracks[currentTrackIndex].title}</div>
+          <div class="progress-container">
+            <div class="progress-bar" id="progress-bar">
+              <div class="progress-fill" id="progress-fill"></div>
+            </div>
           </div>
-        </div>
-        <div class="time-container">
-          <span id="curr-time">0:00</span>
-          <span id="total-time">0:00</span>
+          <div class="time-container">
+            <span id="curr-time">0:00</span>
+            <span id="total-time">0:00</span>
+          </div>
         </div>
       </div>
 
@@ -126,4 +128,76 @@ document.addEventListener('DOMContentLoaded', () => {
     const duration = audio.duration;
     audio.currentTime = (clickX / width) * duration;
   });
+
+  // SEAMLESS ROUTER
+  document.addEventListener('click', async (e) => {
+    let href = null;
+    
+    // Check for standard anchor links
+    const link = e.target.closest('a');
+    if (link && link.href && link.href.startsWith(window.location.origin)) {
+      href = link.href;
+    }
+    
+    // Check for recipe cards with onclick
+    const clickableDiv = e.target.closest('.recipe-card');
+    if (clickableDiv) {
+      const onclickStr = clickableDiv.getAttribute('onclick');
+      if (onclickStr && onclickStr.includes('location.href')) {
+        const match = onclickStr.match(/'([^']+)'/);
+        if (match && match[1]) {
+          href = new URL(match[1], window.location.href).href;
+        }
+      }
+    }
+
+    if (href && !href.includes('#')) {
+      e.preventDefault();
+      if (clickableDiv) e.stopPropagation();
+      await navigateTo(href);
+    }
+  });
+
+  window.addEventListener('popstate', async () => {
+    await navigateTo(window.location.href, true);
+  });
+
+  async function navigateTo(url, isPopState = false) {
+    try {
+      const response = await fetch(url);
+      const htmlText = await response.text();
+      
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(htmlText, 'text/html');
+      
+      const newContainer = doc.querySelector('.container');
+      const oldContainer = document.querySelector('.container');
+      
+      const newBody = doc.querySelector('body');
+      const recipeGlow = newBody.style.getPropertyValue('--recipe-glow');
+      const recipeGlowAlt = newBody.style.getPropertyValue('--recipe-glow-alt');
+      
+      if (recipeGlow) document.body.style.setProperty('--recipe-glow', recipeGlow);
+      if (recipeGlowAlt) document.body.style.setProperty('--recipe-glow-alt', recipeGlowAlt);
+      
+      document.title = doc.title;
+      
+      oldContainer.style.opacity = '0';
+      oldContainer.style.transition = 'opacity 0.2s ease';
+      
+      setTimeout(() => {
+        oldContainer.innerHTML = newContainer.innerHTML;
+        window.scrollTo(0, 0);
+        oldContainer.style.opacity = '1';
+        
+        if (!isPopState) {
+          window.history.pushState({}, '', url);
+        }
+      }, 200);
+      
+    } catch (error) {
+      window.location.href = url;
+    }
+  }
+
 });
