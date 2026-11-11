@@ -14,5 +14,8 @@ jobs:
       - name: Syntax and data validation
         run: |
           node --check hf.js
+          node --check reuse.js
+          node --check discovery.js
           node --check api/recipe-photo.js
+          node --check scripts/validate-recipes.js
           node scripts/validate-recipes.js
