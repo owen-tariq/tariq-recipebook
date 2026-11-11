@@ -1,5 +1,5 @@
 'use strict';
-const HF_DATA='data/hellofresh-recipes.json';
+const HF_DATA='data/hellofresh-recipes.json?v=2';
 const HF_FAV='tariq-favorite-meals-v1',HF_SHOP='tariq-shopping-meals-v1';
 const $=(sel,el=document)=>el.querySelector(sel);
 const esc=s=>String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -7,16 +7,31 @@ const safeList=k=>{try{let x=JSON.parse(localStorage.getItem(k)||'[]');return Ar
 const saveList=(k,arr)=>localStorage.setItem(k,JSON.stringify(arr));
 const isFavorite=id=>safeList(HF_FAV).includes(Number(id));
 function toggleFavorite(id){let f=safeList(HF_FAV);f=f.includes(id)?f.filter(x=>x!==id):[...f,id];saveList(HF_FAV,f);return f.includes(id)}
-function photo(id){return '/api/recipe-photo?id='+encodeURIComponent(id)}
-function attachPhotos(root=document){root.querySelectorAll('img[data-hf-photo]').forEach(img=>{const id=Number(img.dataset.hfPhoto);const tag=img.closest('.hf-card-image')?.querySelector('[data-photo-status]')||document.querySelector('[data-photo-status]');img.addEventListener('error',()=>{img.src='photo-unverified.svg';img.dataset.photoOk='no';if(tag)tag.textContent='Photo not verified'},{once:true});img.addEventListener('load',()=>{if(img.dataset.photoOk!=='no'&&tag)tag.textContent='HelloFresh photo' });img.src=photo(id)})}
+function photo(id){const r=allRecipes.find(x=>x.id===Number(id));return r?.photo||('/api/recipe-photo?id='+encodeURIComponent(id))}
+function attachPhotos(root=document){
+ root.querySelectorAll('img[data-hf-photo]').forEach(img=>{
+  const id=Number(img.dataset.hfPhoto),r=allRecipes.find(x=>x.id===id);
+  const tag=img.closest('.hf-card-image')?.querySelector('[data-photo-status]')||img.parentElement?.querySelector('[data-photo-status]');
+  const candidates=[r?.photo,r?.photo?.replace('q_78%2Cw_960','q_100%2Cw_3840'),'/api/recipe-photo?id='+encodeURIComponent(id)].filter(Boolean);
+  let attempt=0;
+  const next=()=>{
+   if(attempt<candidates.length){img.src=candidates[attempt++];return;}
+   img.removeEventListener('error',next);img.src='photo-unverified.svg';img.alt='Official HelloFresh dish photo unavailable';
+   if(tag)tag.textContent='Image unavailable — official source linked';
+  };
+  img.addEventListener('error',next);
+  img.addEventListener('load',()=>{if(!img.src.endsWith('photo-unverified.svg')&&tag)tag.textContent='Official HelloFresh photo'});
+  next();
+ });
+}
 let allRecipes=[];
 function isSourceVerified(r){return !r.adapted}
 function hasNutrition(r){return !r.adapted&&Number.isFinite(r.protein)&&Number.isFinite(r.kcal)}
 function categoryFromName(r){return r.category||'Other'}
-function imageHTML(r){return '<div class="hf-card-image"><img data-hf-photo="'+r.id+'" alt="Photo for '+esc(r.title)+' (only shown if verified; otherwise a clearly labelled placeholder)" loading="lazy"><span class="hf-card-type" data-photo-status>Checking photo…</span></div>'}
+function imageHTML(r){return '<div class="hf-card-image"><img data-hf-photo="'+r.id+'" alt="Official HelloFresh Canada photo of '+esc(r.title)+'" loading="lazy"><span class="hf-card-type" data-photo-status>Official photo</span></div>'}
 function cardHTML(r){return '<article class="hf-card">'+
 imageHTML(r)+'<button class="hf-card-save '+(isFavorite(r.id)?'active':'')+'" type="button" data-fave="'+r.id+'" aria-label="'+(isFavorite(r.id)?'Remove from favourites':'Add to favourites')+'">♥</button>'+
-'<div class="hf-card-info"><div class="hf-card-category">'+esc(categoryFromName(r))+'</div><h3><a href="meal.html?id='+r.id+'">'+esc(r.title)+'</a></h3><div class="hf-card-bottom"><span>⏱ '+esc(r.minutes)+' min</span>'+(hasNutrition(r)?'<span>'+r.protein+'g protein</span><span>'+r.kcal+' kcal</span>':'')+'</div><p class="hf-card-adaptation">'+(r.adapted?'Independent home adaptation':'Source-listed ingredients; home cooking steps')+'</p></div></article>'}
+'<div class="hf-card-info"><div class="hf-card-category">'+esc(categoryFromName(r))+'</div><h3><a href="meal.html?id='+r.id+'">'+esc(r.title)+'</a></h3><div class="hf-card-bottom"><span>⏱ '+esc(r.minutes)+' min</span>'+(hasNutrition(r)?'<span>'+r.protein+'g protein</span><span>'+r.kcal+' kcal</span>':'')+'</div><p class="hf-card-adaptation">'+(r.adapted?'Unverified adaptation':'HelloFresh Canada recipe · summarized steps')+'</p></div></article>'}
 function initCatalogue(){const grid=$('#recipeGrid'),search=$('#search'),cat=$('#category'),sort=$('#sort'),more=$('#showMore'),count=$('#recipeCount');if(!grid)return;
 let active='all',visible=12;
 function render(){let term=search.value.trim().toLowerCase(),sel=cat.value;
@@ -54,11 +69,11 @@ function initDetail(){const area=$('#recipeDetail');if(!area)return;const id=Num
 if(!r){area.innerHTML='<p class="hf-empty">Recipe not found. <a href="hellofresh.html">Browse recipes</a>.</p>';return}
 document.title=r.title+" • Tariq's Recipe Book";
 area.innerHTML='<p class="hf-breadcrumb"><a href="hellofresh.html">← All meal-kit recipes</a></p>'+
-'<section class="hf-detail-hero"><div><img class="hf-detail-photo" data-hf-photo="'+r.id+'" alt="Verified meal photo or an explicit unavailable-photo placeholder"><p class="hf-card-adaptation" data-photo-status>Checking official photo…</p></div>'+
+'<section class="hf-detail-hero"><div><img class="hf-detail-photo" data-hf-photo="'+r.id+'" alt="Verified meal photo or an explicit unavailable-photo placeholder"><p class="hf-card-adaptation" data-photo-status>Official HelloFresh photo</p></div>'+
 '<div class="hf-detail-summary"><p class="hf-eyebrow">'+esc(r.category)+' · 2-PORTION RECIPE</p><h1>'+esc(r.title)+'</h1><p>Easy-to-follow personal home cooking card. Ingredients can be scaled for your household.</p>'+
 '<div class="hf-info-pills"><span>⏱ '+r.minutes+' min</span><span>2 portions</span>'+(hasNutrition(r)?'<span>'+r.protein+'g protein/serving</span><span>'+r.kcal+' kcal/serving</span>':'')+'</div>'+
 '<div class="hf-detail-actions"><a class="hf-secondary" href="plan.html?start='+r.id+'">♻ Cook Next / Reuse Ingredients</a><button class="hf-primary" id="addShopping" type="button">＋ Add to shopping list</button><button class="hf-secondary" id="favoriteDetail" type="button">♥ Favourite</button><button class="hf-secondary" id="printRecipe" type="button">Print</button></div>'+
-'<div class="hf-disclosure"><strong>'+(r.adapted?'Home adaptation — NOT an official HelloFresh recipe.':'Source ingredients checked; cooking steps are independently summarized.')+'</strong> '+(r.adapted?'Quantities and nutrition are not verified against the HelloFresh recipe page.':'Nutrition may change with halal substitutions.')+'</div></div></section>'+
+'<div class="hf-disclosure"><strong>'+(r.adapted?'Unverified adaptation':'HelloFresh Canada ingredient list; cooking steps summarized for home use.')+'</strong> '+(r.adapted?'Unverified quantities':'Published nutrition may change with halal substitutions.')+'</div></div></section>'+
 '<section class="hf-detail-cols"><div class="hf-panel"><h2>Ingredients</h2><div class="hf-serving"><strong>How many portions?</strong><select id="portions"><option value="1">1 portion</option><option value="2" selected>2 portions</option><option value="4">4 portions</option></select></div><ul id="ingredientsList">'+ingredientHTML(r,2)+'</ul><div class="hf-warning"><strong>Halal check</strong><p>'+esc(r.halal)+'</p></div></div><div class="hf-panel"><h2>Cooking steps</h2><ol class="hf-steps">'+stepHTML(r)+'</ol><p class="hf-card-adaptation">Cooking methods are personal summaries, not copied HelloFresh instructions. All quantities originally represent two portions.</p>'+(r.source?'<p><a href="'+esc(r.source)+'" target="_blank" rel="noopener noreferrer">'+(r.adapted?'Browse HelloFresh category inspiration ↗':'View matched HelloFresh recipe ↗')+'</a></p>':'')+'</div></section>';
 attachPhotos(area);
 $('#portions').addEventListener('change',e=>{$('#ingredientsList').innerHTML=ingredientHTML(r,Number(e.target.value))});
@@ -77,4 +92,4 @@ area.innerHTML='<div class="hf-panel"><h2>Grocery checklist</h2><p>Ingredients a
 area.querySelectorAll('[data-remove]').forEach(b=>b.addEventListener('click',()=>{saveList(HF_SHOP,safeList(HF_SHOP).filter(id=>id!==Number(b.dataset.remove)));render()}))}
 $('#clearShopping')?.addEventListener('click',()=>{if(confirm('Clear all selected recipes?')){saveList(HF_SHOP,[]);render()}});
 $('#printShopping')?.addEventListener('click',()=>window.print());render()}
-(async()=>{try{const response=await fetch(HF_DATA);if(!response.ok)throw new Error('Data file is unavailable');allRecipes=await response.json();if(!Array.isArray(allRecipes)||allRecipes.length!==78)throw new Error('Recipe collection incomplete');initCatalogue();initDetail();initShopping()}catch(e){const err='<div class="hf-empty">Could not load the recipe library. Please refresh or check the site deployment. '+esc(e.message)+'</div>';['#recipeGrid','#recipeDetail','#shoppingArea'].forEach(sel=>{let el=$(sel);if(el)el.innerHTML=err});console.error(e)}})();
+(async()=>{try{const response=await fetch(HF_DATA);if(!response.ok)throw new Error('Data file is unavailable');allRecipes=await response.json();if(!Array.isArray(allRecipes)||allRecipes.length===0||allRecipes.some(r=>!r.photo||!r.verifiedSource||r.adapted))throw new Error('Recipe collection incomplete');initCatalogue();initDetail();initShopping()}catch(e){const err='<div class="hf-empty">Could not load the recipe library. Please refresh or check the site deployment. '+esc(e.message)+'</div>';['#recipeGrid','#recipeDetail','#shoppingArea'].forEach(sel=>{let el=$(sel);if(el)el.innerHTML=err});console.error(e)}})();
