@@ -2294,5 +2294,709 @@
       "Divide chicken among tortillas, then top with creamy sesame slaw."
     ],
     "halal": "Choose halal chicken and check tortillas, mayonnaise and seasonings. HelloFresh's gochujang and soy sauce can contain alcohol; use halal-certified gochujang and alcohol-free soy sauce."
+  },
+  {
+    "id": 96,
+    "title": "Creamy Chicken Pasta",
+    "category": "Chicken",
+    "minutes": 30,
+    "kcal": 840,
+    "protein": 53,
+    "adapted": false,
+    "verifiedSource": true,
+    "sourceType": "official-hellofresh-canada",
+    "source": "https://www.hellofresh.ca/recipes/creamy-chicken-pasta-63e20b3e7e12b2524f0fd72b",
+    "photo": "https://media.hellofresh.com/q_78%2Cw_960%2Cf_auto%2Cc_limit%2Cfl_lossy/recipes/image/pates-au-poulet-et-sauce-cremeuse-2deb8461.jpg",
+    "ingredients": [
+      {
+        "quantity": "310 g",
+        "name": "Chicken breast tenders"
+      },
+      {
+        "quantity": "170 g",
+        "name": "Spaghetti"
+      },
+      {
+        "quantity": "56 mL",
+        "name": "Cream"
+      },
+      {
+        "quantity": "1 tbsp",
+        "name": "Cream sauce spice blend"
+      },
+      {
+        "quantity": "1/4 cup",
+        "name": "Parmesan cheese, shredded"
+      },
+      {
+        "quantity": "1",
+        "name": "Chicken broth concentrate"
+      },
+      {
+        "quantity": "56 g",
+        "name": "Baby spinach"
+      },
+      {
+        "quantity": "56 g",
+        "name": "Chopped onion"
+      },
+      {
+        "quantity": "1 tsp",
+        "name": "Garlic salt"
+      }
+    ],
+    "steps": [
+      "Boil a pot of salted water and cook spaghetti until al dente, reserving a cup of cooking water.",
+      "Pat chicken dry and cut into bite-sized pieces; chop onion and rinse spinach.",
+      "Sear chicken with garlic salt in a little oil until golden and 74°C inside, then set aside.",
+      "Soften onion in the pan, stir in cream sauce spice blend, cream and halal-certified chicken broth concentrate.",
+      "Add spinach and cooked spaghetti, tossing with a splash of pasta water; return chicken and heat through.",
+      "Serve in two bowls and finish with Parmesan; cool and refrigerate leftovers promptly."
+    ],
+    "halal": "Choose halal chicken, alcohol-free halal broth and Parmesan with microbial/vegetarian rennet."
+  },
+  {
+    "id": 97,
+    "title": "Curried Chicken Penne",
+    "category": "Chicken",
+    "minutes": 25,
+    "kcal": 850,
+    "protein": 54,
+    "adapted": false,
+    "verifiedSource": true,
+    "sourceType": "official-hellofresh-canada",
+    "source": "https://www.hellofresh.ca/recipes/curried-chicken-penne-646c212f27f417e87c095b9a",
+    "photo": "https://media.hellofresh.com/q_78%2Cw_960%2Cf_auto%2Cc_limit%2Cfl_lossy/recipes/image/pennes-de-poulet-au-cari-9693a704.jpg",
+    "ingredients": [
+      {
+        "quantity": "2",
+        "name": "Chicken breasts"
+      },
+      {
+        "quantity": "1/2 cup",
+        "name": "Tikka sauce"
+      },
+      {
+        "quantity": "170 g",
+        "name": "Penne pasta"
+      },
+      {
+        "quantity": "28 g",
+        "name": "Baby spinach"
+      },
+      {
+        "quantity": "28 g",
+        "name": "Crispy shallots"
+      },
+      {
+        "quantity": "170 g",
+        "name": "Carrots"
+      }
+    ],
+    "steps": [
+      "Bring a large pot of salted water to a boil and cook penne until al dente.",
+      "Slice chicken into strips and peel carrots into thin half-moons.",
+      "Sear chicken in oil until cooked through to 74°C, then temporarily remove.",
+      "Stir-fry carrot in the same pan until tender; add tikka sauce and a splash of pasta water.",
+      "Fold in spinach, chicken and cooked penne, simmering until coated and spinach wilts.",
+      "Serve topped with crispy shallots and divide into two portions."
+    ],
+    "halal": "Use halal chicken and inspect tikka sauce for alcohol or meat-derived ingredients; check crispy shallots."
+  },
+  {
+    "id": 98,
+    "title": "Chicken al Limone and Linguine",
+    "category": "Chicken",
+    "minutes": 20,
+    "kcal": 860,
+    "protein": 55,
+    "adapted": false,
+    "verifiedSource": true,
+    "sourceType": "official-hellofresh-canada",
+    "source": "https://www.hellofresh.ca/recipes/chicken-and-linguine-al-limone-660c9d9f89478f02ad0ade1a",
+    "photo": "https://media.hellofresh.com/q_78%2Cw_960%2Cf_auto%2Cc_limit%2Cfl_lossy/recipes/image/HF_Y24_R1003_W38_CA_RC160146-1_Main_low-c83ed9cf.jpg",
+    "ingredients": [
+      {
+        "quantity": "2",
+        "name": "Chicken breasts"
+      },
+      {
+        "quantity": "227 g",
+        "name": "Fresh linguine"
+      },
+      {
+        "quantity": "1",
+        "name": "Sweet bell pepper"
+      },
+      {
+        "quantity": "1",
+        "name": "Lemon"
+      },
+      {
+        "quantity": "113 mL",
+        "name": "Cream"
+      },
+      {
+        "quantity": "56 g",
+        "name": "Baby spinach"
+      },
+      {
+        "quantity": "1/4 cup",
+        "name": "Parmesan cheese"
+      },
+      {
+        "quantity": "1 tsp",
+        "name": "Garlic salt"
+      }
+    ],
+    "steps": [
+      "Boil salted water for linguine; zest lemon and cut pepper into strips.",
+      "Pat chicken breasts dry and season with garlic salt and pepper.",
+      "Cook chicken in a skillet, turning until 74°C at the centre; transfer to a clean plate.",
+      "Cook linguine in boiling water, reserving some starchy pasta water; sauté pepper in the chicken skillet.",
+      "Add cream, lemon zest, lemon juice and a little pasta water to the peppers; wilt spinach.",
+      "Toss linguine with creamy lemon sauce, slice chicken and place on top; finish with Parmesan."
+    ],
+    "halal": "Buy halal chicken and cheese with vegetarian/microbial rennet; confirm the packaged cream and seasonings."
+  },
+  {
+    "id": 99,
+    "title": "Chicken Chow Mein-Style Noodles",
+    "category": "Chicken",
+    "minutes": 30,
+    "kcal": 820,
+    "protein": 44,
+    "adapted": false,
+    "verifiedSource": true,
+    "sourceType": "official-hellofresh-canada",
+    "source": "https://www.hellofresh.ca/recipes/chicken-chow-mein-style-noodles-65a642780db02dbb4e07d400",
+    "photo": "https://media.hellofresh.com/q_78%2Cw_960%2Cf_auto%2Cc_limit%2Cfl_lossy/recipes/image/nouilles-style-chow-mein-au-poulet-38a48cc5.jpg",
+    "ingredients": [
+      {
+        "quantity": "280 g",
+        "name": "Chicken thighs"
+      },
+      {
+        "quantity": "200 g",
+        "name": "Chow mein noodles"
+      },
+      {
+        "quantity": "1",
+        "name": "Shanghai bok choy"
+      },
+      {
+        "quantity": "1 tbsp",
+        "name": "Moo shu spice blend"
+      },
+      {
+        "quantity": "4 tbsp",
+        "name": "Vegetarian oyster sauce"
+      },
+      {
+        "quantity": "1",
+        "name": "Carrot"
+      },
+      {
+        "quantity": "4 tbsp",
+        "name": "Honey-garlic sauce"
+      },
+      {
+        "quantity": "28 g",
+        "name": "Chopped peanuts"
+      }
+    ],
+    "steps": [
+      "Cut chicken into bite-size pieces and season with half the moo shu spice blend.",
+      "Slice carrot into half-moons and chop Shanghai bok choy into bite-size pieces.",
+      "Toast peanuts in a dry pan until fragrant and set them aside.",
+      "Cook chow mein noodles in boiling water according to package directions; drain.",
+      "Stir-fry chicken to 74°C, then add carrot and bok choy; stir in honey-garlic sauce, vegetarian oyster sauce and remaining spice.",
+      "Toss noodles with the chicken and vegetables; sprinkle with peanuts and divide into two bowls."
+    ],
+    "halal": "Use halal chicken and verify vegetarian oyster sauce, honey-garlic sauce and spice blends for alcohol/halal suitability."
+  },
+  {
+    "id": 100,
+    "title": "Butter Chicken Curry with Basmati Rice",
+    "category": "Chicken",
+    "minutes": 35,
+    "kcal": 1250,
+    "protein": 48,
+    "adapted": false,
+    "verifiedSource": true,
+    "sourceType": "official-hellofresh-canada",
+    "source": "https://www.hellofresh.ca/recipes/butter-chicken-curry-658a25ec5b43ef9c9a0330fd",
+    "photo": "https://media.hellofresh.com/q_78%2Cw_960%2Cf_auto%2Cc_limit%2Cfl_lossy/recipes/image/cari-de-poulet-au-beurre-8db80e07.jpg",
+    "ingredients": [
+      {
+        "quantity": "280 g",
+        "name": "Chicken thighs"
+      },
+      {
+        "quantity": "1 tbsp",
+        "name": "Indian spice blend"
+      },
+      {
+        "quantity": "1/2 cup",
+        "name": "Tikka sauce"
+      },
+      {
+        "quantity": "1",
+        "name": "Yellow onion"
+      },
+      {
+        "quantity": "1 tbsp",
+        "name": "Garlic puree"
+      },
+      {
+        "quantity": "2",
+        "name": "Tomatoes"
+      },
+      {
+        "quantity": "3/4 cup",
+        "name": "Basmati rice"
+      },
+      {
+        "quantity": "2",
+        "name": "Flatbreads"
+      },
+      {
+        "quantity": "56 mL",
+        "name": "Cream"
+      }
+    ],
+    "steps": [
+      "Heat oven to 230°C and bring 1¼ cups water to boil. Add basmati rice, cover and simmer 12–14 minutes.",
+      "Chop onion and tomatoes; pat chicken thighs dry and cut into pieces.",
+      "Brown chicken with Indian spice blend in a little oil until 74°C inside.",
+      "Soften onion and garlic in the pan, then stir in chopped tomatoes and tikka sauce; simmer until slightly reduced.",
+      "Stir in cream and cooked chicken; gently simmer until the butter chicken sauce coats the meat.",
+      "Warm flatbreads in oven and serve with rice and chicken. This is a higher-calorie meal per original listing."
+    ],
+    "halal": "Use halal chicken and halal-suitable tikka sauce and flatbreads; verify spice blends. At 1,250 kcal/serving this is not a low-calorie choice."
+  },
+  {
+    "id": 101,
+    "title": "Dilly Chicken Thighs and Tomato Orzo",
+    "category": "Chicken",
+    "minutes": 25,
+    "kcal": 700,
+    "protein": 43,
+    "adapted": false,
+    "verifiedSource": true,
+    "sourceType": "official-hellofresh-canada",
+    "source": "https://www.hellofresh.ca/recipes/dilly-chicken-thighs-and-tomato-orzo-668b63246b6e4f7872081058",
+    "photo": "https://media.hellofresh.com/q_78%2Cw_960%2Cf_auto%2Cc_limit%2Cfl_lossy/recipes/image/HF_Y24_R1003_W36_CA_RC158835-1_MAIN_low-97bc7a9e.jpg",
+    "ingredients": [
+      {
+        "quantity": "280 g",
+        "name": "Chicken thighs"
+      },
+      {
+        "quantity": "1 tsp",
+        "name": "Dill-garlic spice blend"
+      },
+      {
+        "quantity": "170 g",
+        "name": "Orzo"
+      },
+      {
+        "quantity": "4 tbsp",
+        "name": "Tomato sauce base"
+      },
+      {
+        "quantity": "1/2",
+        "name": "Yellow onion"
+      },
+      {
+        "quantity": "56 g",
+        "name": "Baby spinach"
+      },
+      {
+        "quantity": "1/4 cup",
+        "name": "Feta cheese"
+      },
+      {
+        "quantity": "1/2 tbsp",
+        "name": "Chicken stock powder"
+      }
+    ],
+    "steps": [
+      "Boil salted water and cook the orzo until tender; reserve a little pasta water.",
+      "Cut onion and prepare baby spinach; season thighs with dill-garlic spices.",
+      "Sear chicken until browned, finish cooking until 74°C and transfer to a plate.",
+      "Soften onion in the same pan, add tomato sauce base, halal stock powder and a little pasta water.",
+      "Fold in the cooked orzo and spinach; stir until spinach wilts and sauce coats the pasta.",
+      "Serve tomato orzo with chicken thighs on top and crumble feta over the bowls."
+    ],
+    "halal": "Choose halal chicken and stock powder. Verify feta rennet and the tomato sauce base."
+  },
+  {
+    "id": 102,
+    "title": "Shrimp Diavolo Linguine",
+    "category": "Shrimp",
+    "minutes": 25,
+    "kcal": 668,
+    "protein": 40,
+    "adapted": false,
+    "verifiedSource": true,
+    "sourceType": "official-hellofresh-canada",
+    "source": "https://www.hellofresh.ca/recipes/shrimp-diavolo-linguine-61c07bdbb2e60607946ad746",
+    "photo": "https://media.hellofresh.com/q_78%2Cw_960%2Cf_auto%2Cc_limit%2Cfl_lossy/recipes/image/linguines-aux-crevettes-fra-diavolo-d0842cb1.jpg",
+    "ingredients": [
+      {
+        "quantity": "285 g",
+        "name": "Shrimp"
+      },
+      {
+        "quantity": "56 g",
+        "name": "Chopped onion"
+      },
+      {
+        "quantity": "370 mL",
+        "name": "Crushed tomatoes with garlic and onion"
+      },
+      {
+        "quantity": "1 tsp",
+        "name": "Chili flakes"
+      },
+      {
+        "quantity": "1 tbsp",
+        "name": "Italian seasoning"
+      },
+      {
+        "quantity": "170 g",
+        "name": "Linguine"
+      },
+      {
+        "quantity": "56 g",
+        "name": "Baby spinach"
+      },
+      {
+        "quantity": "1/4 cup",
+        "name": "Parmesan cheese"
+      },
+      {
+        "quantity": "1",
+        "name": "Lemon"
+      }
+    ],
+    "steps": [
+      "Boil linguine until al dente and save a little pasta water.",
+      "Pat shrimp dry, remove any tails, and finely slice the lemon.",
+      "Soften chopped onion in a little oil; add chili flakes and Italian seasoning.",
+      "Add crushed tomatoes and simmer briefly, then stir in spinach until it wilts.",
+      "Sauté shrimp separately until pink, opaque and cooked through to 74°C; toss into tomato sauce with linguine.",
+      "Finish with a squeeze of lemon, pasta water as needed and Parmesan; serve two portions."
+    ],
+    "halal": "Check Parmesan for microbial/vegetarian rennet. Verify canned tomato sauce and spices contain no cooking wine."
+  },
+  {
+    "id": 103,
+    "title": "Shrimp and Pesto Penne",
+    "category": "Shrimp",
+    "minutes": 25,
+    "kcal": 820,
+    "protein": 39,
+    "adapted": false,
+    "verifiedSource": true,
+    "sourceType": "official-hellofresh-canada",
+    "source": "https://www.hellofresh.ca/recipes/shrimp-and-pesto-penne-625ffdd88e8f6221b26e4756",
+    "photo": "https://media.hellofresh.com/q_78%2Cw_960%2Cf_auto%2Cc_limit%2Cfl_lossy/recipes/image/pennes-aux-crevettes-et-au-pesto-a464b073.jpg",
+    "ingredients": [
+      {
+        "quantity": "285 g",
+        "name": "Shrimp"
+      },
+      {
+        "quantity": "170 g",
+        "name": "Penne pasta"
+      },
+      {
+        "quantity": "56 g",
+        "name": "Chopped yellow onion"
+      },
+      {
+        "quantity": "160 g",
+        "name": "Tomato"
+      },
+      {
+        "quantity": "1 tbsp",
+        "name": "Garlic puree"
+      },
+      {
+        "quantity": "56 g",
+        "name": "Baby spinach"
+      },
+      {
+        "quantity": "1/4 cup",
+        "name": "Parmesan cheese"
+      },
+      {
+        "quantity": "28 g",
+        "name": "Walnuts"
+      },
+      {
+        "quantity": "1/4 cup",
+        "name": "Basil pesto"
+      }
+    ],
+    "steps": [
+      "Cook penne in boiling salted water until al dente; reserve a little pasta water.",
+      "Chop tomato and onion; wash spinach and pat shrimp dry.",
+      "Toast walnuts briefly in a dry pan and set aside.",
+      "Sauté onion, garlic and tomato in oil until fragrant, then add shrimp and cook through to 74°C.",
+      "Mix basil pesto, cooked penne, a little pasta water and spinach into the shrimp mixture; warm until greens wilt.",
+      "Top both servings with grated Parmesan and toasted walnuts."
+    ],
+    "halal": "Check basil pesto and Parmesan for vegetarian/microbial rennet and packaged sauce for alcohol."
+  },
+  {
+    "id": 104,
+    "title": "Shrimp Teriyaki Dinner",
+    "category": "Shrimp",
+    "minutes": 30,
+    "kcal": 690,
+    "protein": 31,
+    "adapted": false,
+    "verifiedSource": true,
+    "sourceType": "official-hellofresh-canada",
+    "source": "https://www.hellofresh.ca/recipes/shrimp-teriyaki-dinner-65fe1dff3a5b3388b3864662",
+    "photo": "https://media.hellofresh.com/q_78%2Cw_960%2Cf_auto%2Cc_limit%2Cfl_lossy/recipes/image/ce9f8aa0-80fd-5fbd-abf8-61881e088f73-c3081609.jpg",
+    "ingredients": [
+      {
+        "quantity": "285 g",
+        "name": "Shrimp"
+      },
+      {
+        "quantity": "3/4 cup",
+        "name": "Jasmine rice"
+      },
+      {
+        "quantity": "1",
+        "name": "Sweet bell pepper"
+      },
+      {
+        "quantity": "113 g",
+        "name": "Snow peas"
+      },
+      {
+        "quantity": "56 g",
+        "name": "Edamame"
+      },
+      {
+        "quantity": "4 tbsp",
+        "name": "Ginger sauce"
+      },
+      {
+        "quantity": "2 tbsp",
+        "name": "Soy sauce"
+      },
+      {
+        "quantity": "1 tbsp",
+        "name": "Honey"
+      },
+      {
+        "quantity": "1 tbsp",
+        "name": "Sesame seeds"
+      },
+      {
+        "quantity": "1 tbsp",
+        "name": "Garlic puree"
+      }
+    ],
+    "steps": [
+      "Simmer jasmine rice in about 1¼ cups water until tender, then rest covered.",
+      "Slice bell pepper and trim snow peas; pat shrimp dry.",
+      "Mix ginger sauce with soy sauce, honey and a splash of water for a teriyaki-style glaze.",
+      "Toast sesame seeds in a dry pan, then sauté bell pepper, snow peas and edamame in oil.",
+      "Add shrimp and cook until pink, opaque and 74°C; add garlic puree and glaze and simmer briefly.",
+      "Serve glazed shrimp and vegetables over rice, topped with sesame seeds."
+    ],
+    "halal": "Use alcohol-free soy sauce and inspect ginger/teriyaki sauces, which may contain cooking wine."
+  },
+  {
+    "id": 105,
+    "title": "Mediterranean-Style Shrimp and Pesto Orzo",
+    "category": "Shrimp",
+    "minutes": 25,
+    "kcal": 820,
+    "protein": null,
+    "adapted": false,
+    "verifiedSource": true,
+    "sourceType": "official-hellofresh-canada",
+    "source": "https://www.hellofresh.ca/recipes/mediterranean-shrimp-and-orzo-65ef9b70d4f950689014735f",
+    "photo": "https://media.hellofresh.com/q_78%2Cw_960%2Cf_auto%2Cc_limit%2Cfl_lossy/recipes/image/d082e5ae-33af-4380-8249-ab42191c9c11-3a3cbadc.jpg",
+    "ingredients": [
+      {
+        "quantity": "285 g",
+        "name": "Shrimp"
+      },
+      {
+        "quantity": "170 g",
+        "name": "Orzo"
+      },
+      {
+        "quantity": "1",
+        "name": "Sweet bell pepper"
+      },
+      {
+        "quantity": "1",
+        "name": "Zucchini"
+      },
+      {
+        "quantity": "1 tbsp",
+        "name": "Garlic puree"
+      },
+      {
+        "quantity": "1/4 cup",
+        "name": "Sun-dried tomato pesto"
+      },
+      {
+        "quantity": "2 tbsp",
+        "name": "Yogurt sauce"
+      },
+      {
+        "quantity": "1/4 cup",
+        "name": "Feta cheese"
+      },
+      {
+        "quantity": "7 g",
+        "name": "Parsley"
+      },
+      {
+        "quantity": "1 tbsp",
+        "name": "Mediterranean spice blend"
+      }
+    ],
+    "steps": [
+      "Boil orzo in salted water until tender, saving a little cooking water.",
+      "Cut bell pepper and zucchini into bite-size pieces, chop parsley and pat shrimp dry.",
+      "Sauté bell pepper and zucchini until lightly golden; add garlic puree and Mediterranean spice blend.",
+      "Pan-cook shrimp separately until opaque and 74°C, then combine with vegetables.",
+      "Toss cooked orzo with sun-dried tomato pesto and a splash of pasta water, followed by the shrimp and vegetables.",
+      "Serve with yogurt sauce, feta and fresh parsley."
+    ],
+    "halal": "Check sun-dried tomato pesto and feta for microbial/vegetarian rennet; verify yogurt sauce and spice blend."
+  },
+  {
+    "id": 106,
+    "title": "Garlicky Sun-Dried Tomato Shrimp",
+    "category": "Shrimp",
+    "minutes": 25,
+    "kcal": 750,
+    "protein": 38,
+    "adapted": false,
+    "verifiedSource": true,
+    "sourceType": "official-hellofresh-canada",
+    "source": "https://www.hellofresh.ca/recipes/creamy-sun-dried-tomato-shrimp-660c9d839b244e4ad68f4d80",
+    "photo": "https://media.hellofresh.com/q_78%2Cw_960%2Cf_auto%2Cc_limit%2Cfl_lossy/recipes/image/6d8c28f1-c262-4d77-a172-306ee23b944e-3ddfd37b.jpg",
+    "ingredients": [
+      {
+        "quantity": "285 g",
+        "name": "Shrimp"
+      },
+      {
+        "quantity": "1 tbsp",
+        "name": "Garlic puree"
+      },
+      {
+        "quantity": "170 g",
+        "name": "Orzo"
+      },
+      {
+        "quantity": "1/2 cup",
+        "name": "Sun-dried tomato pesto"
+      },
+      {
+        "quantity": "56 g",
+        "name": "Green peas"
+      },
+      {
+        "quantity": "1",
+        "name": "Sweet bell pepper"
+      },
+      {
+        "quantity": "2 g",
+        "name": "Garlic salt"
+      },
+      {
+        "quantity": "1/4 cup",
+        "name": "Parmesan cheese"
+      }
+    ],
+    "steps": [
+      "Bring salted water to a boil and cook orzo until tender; add peas near the end.",
+      "Cut bell pepper into thin strips and pat shrimp dry.",
+      "Sauté pepper in a large skillet until softened, then stir in garlic puree.",
+      "Add shrimp and cook until opaque and 74°C throughout.",
+      "Reduce heat and stir in sun-dried tomato pesto and a splash of cooking water until creamy.",
+      "Fold in drained orzo and peas and finish with Parmesan and garlic salt."
+    ],
+    "halal": "Choose sun-dried tomato pesto and Parmesan made with vegetarian/microbial rennet; check sauces for alcohol."
+  },
+  {
+    "id": 107,
+    "title": "Shrimp and Salmon Fusilli",
+    "category": "Salmon",
+    "minutes": 35,
+    "kcal": 970,
+    "protein": 65,
+    "adapted": false,
+    "verifiedSource": true,
+    "sourceType": "official-hellofresh-canada",
+    "source": "https://www.hellofresh.ca/recipes/shrimp-and-salmon-fusilli-657839dd2d72b595680b136b",
+    "photo": "https://media.hellofresh.com/q_78%2Cw_960%2Cf_auto%2Cc_limit%2Cfl_lossy/recipes/image/fusillis-aux-crevettes-et-au-saumon-3f03d5b6.jpg",
+    "ingredients": [
+      {
+        "quantity": "285 g",
+        "name": "Shrimp"
+      },
+      {
+        "quantity": "170 g",
+        "name": "Fusilli pasta"
+      },
+      {
+        "quantity": "1",
+        "name": "Sweet bell pepper"
+      },
+      {
+        "quantity": "370 mL",
+        "name": "Crushed tomatoes with garlic and onion"
+      },
+      {
+        "quantity": "1/4 cup",
+        "name": "Parmesan cheese"
+      },
+      {
+        "quantity": "28 g",
+        "name": "Baby spinach"
+      },
+      {
+        "quantity": "1 tbsp",
+        "name": "Balsamic glaze"
+      },
+      {
+        "quantity": "1.5 tsp",
+        "name": "Italian seasoning"
+      },
+      {
+        "quantity": "1/2 tsp",
+        "name": "Garlic salt"
+      },
+      {
+        "quantity": "250 g",
+        "name": "Skin-on salmon"
+      }
+    ],
+    "steps": [
+      "Boil fusilli in a pot of salted water until al dente, then drain.",
+      "Cut pepper and rinse spinach; pat salmon and shrimp dry and season with garlic salt.",
+      "Cook salmon until the centre reaches 70°C, then cut into bite-size flakes.",
+      "Sauté peppers, add crushed tomatoes and Italian seasoning and simmer; fold in spinach.",
+      "Cook shrimp separately until opaque and 74°C, then add salmon, shrimp and fusilli to tomato sauce.",
+      "Finish with Parmesan and a little balsamic glaze; divide between two bowls."
+    ],
+    "halal": "Check balsamic glaze for wine-derived alcohol if avoiding it; use vegetarian-rennet Parmesan. Salmon and shrimp are the proteins here."
   }
 ]
