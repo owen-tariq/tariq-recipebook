@@ -1,5 +1,5 @@
 'use strict';
-const HF_DATA='data/hellofresh-recipes.json';
+const HF_DATA='data/hellofresh-recipes.json?v=2';
 const HF_FAV='tariq-favorite-meals-v1',HF_SHOP='tariq-shopping-meals-v1';
 const $=(sel,el=document)=>el.querySelector(sel);
 const esc=s=>String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
