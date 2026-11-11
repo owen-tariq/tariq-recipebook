@@ -92,3 +92,6 @@
   .site-nav .site-random-link:hover:not([aria-current="page"]) { background: transparent; color: var(--accent); }
   .hf-page .site-nav .site-random-link:hover:not([aria-current="page"]) { background: transparent; color: #246139; }
 }
+
+.hf-hero-actions { display:flex; align-items:center; gap:11px; flex-wrap:wrap; margin-top:22px; }
+.hf-hero-actions .hf-secondary { background:#fff9; }
