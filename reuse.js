@@ -155,12 +155,25 @@ function updatePage(plan){
  const add=$('#addPlanShopping');if(add)add.addEventListener('click',()=>{let previous=[];try{previous=JSON.parse(localStorage.getItem(SHOP)||'[]');if(!Array.isArray(previous))previous=[]}catch{};const saved=[...new Set([...previous,...plan.map(x=>x.id)])];localStorage.setItem(SHOP,JSON.stringify(saved));add.textContent='✓ Added — open Shopping List';add.onclick=()=>{location.href='shopping.html'}});
  $('#copyPlan').addEventListener('click',async()=>{const text='COOK NEXT — '+plan.map(r=>r.title).join(' → ')+'\n\n'+summaryList(groups);try{await navigator.clipboard.writeText(text);$('#copyPlan').textContent='Copied!'}catch{window.prompt('Copy this list:',text)}});
  $('#printPlan').addEventListener('click',()=>window.print());
- area.querySelectorAll('[data-alt]').forEach(btn=>btn.addEventListener('click',()=>{const candidate=byId(btn.dataset.alt);if(!candidate)return;const size=Number($('#planSize').value);const follow=makePlan(candidate,Math.max(1,size-1),$('#sameProtein').checked);planned=[primary,...follow].slice(0,size);localStorage.setItem(SAVED,JSON.stringify(planned.map(x=>x.id)));updatePage(planned);window.scrollTo({top:area.getBoundingClientRect().top+window.scrollY-20,behavior:'smooth'})}));
+ area.querySelectorAll('[data-alt]').forEach(btn=>btn.addEventListener('click',()=>{const candidate=byId(btn.dataset.alt);if(!candidate)return;const size=Number($('#planSize').value);const follow=[candidate],excluded=new Set([primary.id,candidate.id]);while(follow.length<size-1){const options=ranking(primary,follow[follow.length-1],excluded,$('#sameProtein').checked);if(!options.length)break;follow.push(options[0].recipe);excluded.add(options[0].recipe.id)}planned=[primary,...follow].slice(0,size);localStorage.setItem(SAVED,JSON.stringify(planned.map(x=>x.id)));updatePage(planned);window.scrollTo({top:area.getBoundingClientRect().top+window.scrollY-20,behavior:'smooth'})}));
+}
+function initIngredientLookup(){
+ const selector=$('#ingredientLookup'),area=$('#ingredientLookupResults');if(!selector||!area)return;
+ const choices=new Map();
+ for(const r of recipes){const seen=new Set();for(const ing of r.ingredients){const info=ingredientInfo(ing.name);if(seen.has(info.key))continue;seen.add(info.key);let current=choices.get(info.key);if(!current){current={...info,recipes:[]};choices.set(info.key,current)}current.recipes.push(r)}}
+ const sorted=[...choices.values()].sort((a,b)=>b.recipes.length-a.recipes.length||a.label.localeCompare(b.label));
+ selector.innerHTML=sorted.map(v=>'<option value="'+E(v.key)+'">'+E(v.label)+' ('+v.recipes.length+' recipes)</option>').join('');
+ const first=sorted.find(v=>v.key==='rice');if(first)selector.value=first.key;
+ const render=()=>{
+ const found=choices.get(selector.value);if(!found)return;
+ area.innerHTML='<div class="reuse-lookup-summary">'+found.recipes.length+' of '+recipes.length+' recipe cards list '+E(found.label.toLowerCase())+'</div>'+(found.caution?'<p class="reuse-limited">'+E(found.caution)+'</p>':'')+'<ul class="reuse-lookup-items">'+found.recipes.map(r=>'<li><a href="meal.html?id='+r.id+'">'+E(r.title)+'</a> <small> · <a href="plan.html?start='+r.id+'">Plan from here</a></small>'+(r.adapted?'<small> · home adaptation</small>':'')+'</li>').join('')+'</ul>';
+ };
+ selector.addEventListener('change',render);render();
 }
 async function init(){
  if(!$('#planStart'))return;
  try{const response=await fetch(DATA);if(!response.ok)throw new Error('Unable to load recipes');recipes=await response.json();if(!Array.isArray(recipes)||recipes.length!==78)throw new Error('Recipe data is incomplete');
- const start=$('#planStart');start.innerHTML=recipes.map(r=>'<option value="'+r.id+'">'+E(r.title)+' ('+E(r.category)+')</option>').join('');
+ initIngredientLookup(); const start=$('#planStart');start.innerHTML=recipes.map(r=>'<option value="'+r.id+'">'+E(r.title)+' ('+E(r.category)+')</option>').join('');
  let query=Number(new URLSearchParams(location.search).get('start'));let saved=null;try{saved=JSON.parse(localStorage.getItem(SAVED)||'null')}catch{}
  const initial=byId(query)||byId(Array.isArray(saved)?saved[0]:null)||byId(40)||recipes[0];start.value=initial.id;
  const draw=()=>{const head=byId(start.value);if(!head)return;planned=makePlan(head,Number($('#planSize').value),$('#sameProtein').checked);localStorage.setItem(SAVED,JSON.stringify(planned.map(x=>x.id)));updatePage(planned);$('#reuseStatus').textContent='Showing '+planned.length+' recipes with matched groceries';};
