@@ -1,5 +1,5 @@
 'use strict';
-const HF_DATA='data/hellofresh-recipes.json?v=2';
+const HF_DATA='data/hellofresh-recipes.json?v=3';
 const HF_FAV='tariq-favorite-meals-v1',HF_SHOP='tariq-shopping-meals-v1';
 const $=(sel,el=document)=>el.querySelector(sel);
 const esc=s=>String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -38,7 +38,7 @@ function render(){let term=search.value.trim().toLowerCase(),sel=cat.value;
 let results=allRecipes.filter(r=>{
 let catPass=sel==='all'||categoryFromName(r)===sel;
 let q=(r.title+' '+r.category+' '+r.ingredients.map(x=>x.name).join(' ')).toLowerCase();
-let filterPass=active==='all'||(active==='quick'&&r.minutes<=30)||(active==='protein'&&hasNutrition(r)&&r.protein>=40)||(active==='calories'&&hasNutrition(r)&&r.kcal<=650)||(active==='official'&&!r.adapted)||(active==='favorites'&&isFavorite(r.id));
+let filterPass=active==='all'||(active==='new'&&r.id>=79)||(active==='quick'&&r.minutes<=30)||(active==='protein'&&hasNutrition(r)&&r.protein>=40)||(active==='calories'&&hasNutrition(r)&&r.kcal<=650)||(active==='official'&&!r.adapted)||(active==='favorites'&&isFavorite(r.id));
 return catPass&&q.includes(term)&&filterPass});
 const sortby=sort.value;
 if(sortby==='time')results.sort((a,b)=>a.minutes-b.minutes);
