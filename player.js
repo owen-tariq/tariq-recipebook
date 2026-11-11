@@ -780,61 +780,8 @@ function initPlayer() {
 
   loadMetadata(tracks[currentTrackIndex].src);
 
-  // SEAMLESS ROUTER
-  document.addEventListener('click', async (e) => {
-    let href = null;
-    const link = e.target.closest('a');
-    if (link && link.href && link.href.startsWith(window.location.origin)) {
-      href = link.href;
-    }
-    const clickableDiv = e.target.closest('.recipe-card');
-    if (clickableDiv) {
-      const onclickStr = clickableDiv.getAttribute('onclick');
-      if (onclickStr && onclickStr.includes('location.href')) {
-        const match = onclickStr.match(/'([^']+)'/);
-        if (match && match[1]) {
-          href = new URL(match[1], window.location.href).href;
-        }
-      }
-    }
-    if (href && !href.includes('#')) {
-      e.preventDefault();
-      e.stopPropagation();
-      await navigateTo(href);
-    }
-  }, true); // Use capture phase to intercept before inline onclick fires
-
-  window.addEventListener('popstate', async () => { await navigateTo(window.location.href, true); });
-
-  async function navigateTo(url, isPopState = false) {
-    try {
-      const response = await fetch(url);
-      const htmlText = await response.text();
-      const parser = new DOMParser();
-      const doc = parser.parseFromString(htmlText, 'text/html');
-      
-      const newContainer = doc.querySelector('.container');
-      const oldContainer = document.querySelector('.container');
-      
-      const newBody = doc.querySelector('body');
-      const recipeGlow = newBody.style.getPropertyValue('--recipe-glow');
-      const recipeGlowAlt = newBody.style.getPropertyValue('--recipe-glow-alt');
-      
-      if (recipeGlow) document.body.style.setProperty('--recipe-glow', recipeGlow);
-      if (recipeGlowAlt) document.body.style.setProperty('--recipe-glow-alt', recipeGlowAlt);
-      
-      document.title = doc.title;
-      oldContainer.style.opacity = '0';
-      oldContainer.style.transition = 'opacity 0.2s ease';
-      
-      setTimeout(() => {
-        oldContainer.innerHTML = newContainer.innerHTML;
-        window.scrollTo(0, 0);
-        oldContainer.style.opacity = '1';
-        if (!isPopState) window.history.pushState({}, '', url);
-      }, 200);
-    } catch (error) {
-      window.location.href = url;
-    }
-  }
+  // IMPORTANT: Keep this page's music controls, but do NOT intercept site links.
+  // The old seamless router replaced only '.container' and didn't re-run scripts,
+  // leaving pages with <main> layouts blank. Native navigation ensures every
+  // recipe page loads its own CSS, JS, and accessible content.
 }
