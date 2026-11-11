@@ -1,6 +1,6 @@
 'use strict';
 /* Uses the ingredient lists in data/hellofresh-recipes.json.
- * Matching is advisory: several cards are independent adaptations.
+ * Matching uses source-listed ingredients for photo-matched HelloFresh Canada recipes.
  * No promise of exact package sizes, savings, nutrition or food safety. */
 (function(){
 const DATA='data/hellofresh-recipes.json';
@@ -110,7 +110,7 @@ function shoppingTotals(plan){
   for(const ing of r.ingredients){
    const info=ingredientInfo(ing.name);
    const k=info.key;
-   if(counted.has(k))continue; // duplicate same-food lines in some adapted ingredient templates
+   if(counted.has(k))continue; // protect against duplicate ingredient lines on a source page
    counted.add(k);
    if(!groups.has(k))groups.set(k,{...info,quantities:[],recipes:new Set()});
    groups.get(k).quantities.push({quantity:ing.quantity,raw:ing.name,recipe:r.title});
@@ -138,7 +138,7 @@ function updatePage(plan){
  const card=(r,i)=>{
   const related=i===0?{shared:[],fresh:[]} : overlap(plan[i-1],r);
   const joined=related.shared.filter(x=>x.type!=='pantry').slice(0,6);
-  return '<article class="reuse-meal"><div class="reuse-meal-top"><img src="/api/recipe-photo?id='+r.id+'" alt="Matched HelloFresh dish photo, or labelled unavailable-image placeholder" loading="lazy" onerror="this.onerror=null;this.src=\'photo-unverified.svg\';this.alt=\'Verified photo unavailable\'"><span class="reuse-day">Recipe '+(i+1)+'</span></div><div class="reuse-meal-body"><p class="hf-eyebrow">'+E(r.category)+' · '+E(r.minutes)+' min</p><h3><a href="meal.html?id='+r.id+'">'+E(r.title)+'</a></h3><p>'+(i===0?'Start with the meal you really want.':(related.fresh.length?'Reuse these fresh ingredients from the previous recipe:':'Some pantry ingredients overlap:'))+'</p><div class="reuse-overlap">'+(i?joined.map(x=>'<span>'+E(x.label)+'</span>').join(''):'<span>Starting recipe</span>')+'</div><div class="reuse-card-foot"><span class="reuse-matched">'+(i?related.shared.length+' shared ingredients':'2 servings')+'</span><a href="meal.html?id='+r.id+'">See recipe →</a></div></div></article>';
+  return '<article class="reuse-meal"><div class="reuse-meal-top"><img src="'+E(r.photo)+'" alt="Official HelloFresh Canada photo of '+E(r.title)+'" loading="lazy" onerror="this.onerror=null;this.src=\'photo-unverified.svg\';this.alt=\'Verified photo unavailable\'"><span class="reuse-day">Recipe '+(i+1)+'</span></div><div class="reuse-meal-body"><p class="hf-eyebrow">'+E(r.category)+' · '+E(r.minutes)+' min</p><h3><a href="meal.html?id='+r.id+'">'+E(r.title)+'</a></h3><p>'+(i===0?'Start with the meal you really want.':(related.fresh.length?'Reuse these fresh ingredients from the previous recipe:':'Some pantry ingredients overlap:'))+'</p><div class="reuse-overlap">'+(i?joined.map(x=>'<span>'+E(x.label)+'</span>').join(''):'<span>Starting recipe</span>')+'</div><div class="reuse-card-foot"><span class="reuse-matched">'+(i?related.shared.length+' shared ingredients':'2 servings')+'</span><a href="meal.html?id='+r.id+'">See recipe →</a></div></div></article>';
  };
  const groups=shoppingTotals(plan), repeated=groups.filter(x=>x.recipes.size>1);
  const mealCount=plan.length;
@@ -166,13 +166,13 @@ function initIngredientLookup(){
  const first=sorted.find(v=>v.key==='rice');if(first)selector.value=first.key;
  const render=()=>{
  const found=choices.get(selector.value);if(!found)return;
- area.innerHTML='<div class="reuse-lookup-summary">'+found.recipes.length+' of '+recipes.length+' recipe cards list '+E(found.label.toLowerCase())+'</div>'+(found.caution?'<p class="reuse-limited">'+E(found.caution)+'</p>':'')+'<ul class="reuse-lookup-items">'+found.recipes.map(r=>'<li><a href="meal.html?id='+r.id+'">'+E(r.title)+'</a> <small> · <a href="plan.html?start='+r.id+'">Plan from here</a></small>'+(r.adapted?'<small> · home adaptation</small>':'')+'</li>').join('')+'</ul>';
+ area.innerHTML='<div class="reuse-lookup-summary">'+found.recipes.length+' of '+recipes.length+' recipe cards list '+E(found.label.toLowerCase())+'</div>'+(found.caution?'<p class="reuse-limited">'+E(found.caution)+'</p>':'')+'<ul class="reuse-lookup-items">'+found.recipes.map(r=>'<li><a href="meal.html?id='+r.id+'">'+E(r.title)+'</a> <small> · <a href="plan.html?start='+r.id+'">Plan from here</a></small>'+'</li>').join('')+'</ul>';
  };
  selector.addEventListener('change',render);render();
 }
 async function init(){
  if(!$('#planStart'))return;
- try{const response=await fetch(DATA);if(!response.ok)throw new Error('Unable to load recipes');recipes=await response.json();if(!Array.isArray(recipes)||recipes.length!==78)throw new Error('Recipe data is incomplete');
+ try{const response=await fetch(DATA);if(!response.ok)throw new Error('Unable to load recipes');recipes=await response.json();if(!Array.isArray(recipes)||!recipes.length||recipes.some(r=>!r.photo||!r.verifiedSource||r.adapted))throw new Error('Recipe data is incomplete');
  initIngredientLookup(); const start=$('#planStart');start.innerHTML=recipes.map(r=>'<option value="'+r.id+'">'+E(r.title)+' ('+E(r.category)+')</option>').join('');
  let query=Number(new URLSearchParams(location.search).get('start'));let saved=null;try{saved=JSON.parse(localStorage.getItem(SAVED)||'null')}catch{}
  const initial=byId(query)||byId(Array.isArray(saved)?saved[0]:null)||byId(40)||recipes[0];start.value=initial.id;
