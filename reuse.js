@@ -3,7 +3,7 @@
  * Matching uses source-listed ingredients for photo-matched HelloFresh Canada recipes.
  * No promise of exact package sizes, savings, nutrition or food safety. */
 (function(){
-const DATA='data/hellofresh-recipes.json';
+const DATA='data/hellofresh-recipes.json?v=2';
 const SHOP='tariq-shopping-meals-v1', SAVED='tariq-reuse-meal-plan-v1';
 const E=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const norm=s=>String(s??'').toLowerCase().replace(/\s+/g,' ').trim();
