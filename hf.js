@@ -1,5 +1,5 @@
 'use strict';
-const HF_DATA='data/hellofresh-recipes.json?v=3';
+const HF_DATA='data/hellofresh-recipes.json?v=4';
 const HF_FAV='tariq-favorite-meals-v1',HF_SHOP='tariq-shopping-meals-v1';
 const $=(sel,el=document)=>el.querySelector(sel);
 const esc=s=>String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -28,17 +28,18 @@ let allRecipes=[];
 function isSourceVerified(r){return !r.adapted}
 function hasNutrition(r){return !r.adapted&&Number.isFinite(r.protein)&&Number.isFinite(r.kcal)}
 function categoryFromName(r){return r.category||'Other'}
-function imageHTML(r){return '<div class="hf-card-image"><img data-hf-photo="'+r.id+'" alt="Official HelloFresh Canada photo of '+esc(r.title)+'" loading="lazy"><span class="hf-card-type" data-photo-status>Official photo</span></div>'}
+function hfRegion(r){return r.source?.includes('www.hellofresh.com/')?'HelloFresh US':'HelloFresh Canada'}
+function imageHTML(r){return '<div class="hf-card-image"><img data-hf-photo="'+r.id+'" alt="Official '+hfRegion(r)+' photo of '+esc(r.title)+'" loading="lazy"><span class="hf-card-type" data-photo-status>Official photo</span></div>'}
 function cardHTML(r){return '<article class="hf-card">'+
 imageHTML(r)+'<button class="hf-card-save '+(isFavorite(r.id)?'active':'')+'" type="button" data-fave="'+r.id+'" aria-label="'+(isFavorite(r.id)?'Remove from favourites':'Add to favourites')+'">♥</button>'+
-'<div class="hf-card-info"><div class="hf-card-category">'+esc(categoryFromName(r))+'</div><h3><a href="meal.html?id='+r.id+'">'+esc(r.title)+'</a></h3><div class="hf-card-bottom"><span>⏱ '+esc(r.minutes)+' min</span>'+(hasNutrition(r)?'<span>'+r.protein+'g protein</span><span>'+r.kcal+' kcal</span>':'')+'</div><p class="hf-card-adaptation">'+(r.adapted?'Unverified adaptation':'HelloFresh Canada recipe · summarized steps')+'</p></div></article>'}
+'<div class="hf-card-info"><div class="hf-card-category">'+esc(categoryFromName(r))+'</div><h3><a href="meal.html?id='+r.id+'">'+esc(r.title)+'</a></h3><div class="hf-card-bottom"><span>⏱ '+esc(r.minutes)+' min</span>'+(hasNutrition(r)?'<span>'+r.protein+'g protein</span><span>'+r.kcal+' kcal</span>':'')+'</div><p class="hf-card-adaptation">'+(r.adapted?'Unverified adaptation':hfRegion(r)+' recipe · summarized steps')+'</p></div></article>'}
 function initCatalogue(){const grid=$('#recipeGrid'),search=$('#search'),cat=$('#category'),sort=$('#sort'),more=$('#showMore'),count=$('#recipeCount');if(!grid)return;
 let active='all',visible=12;
 function render(){let term=search.value.trim().toLowerCase(),sel=cat.value;
 let results=allRecipes.filter(r=>{
 let catPass=sel==='all'||categoryFromName(r)===sel;
 let q=(r.title+' '+r.category+' '+r.ingredients.map(x=>x.name).join(' ')).toLowerCase();
-let filterPass=active==='all'||(active==='new'&&r.id>=79)||(active==='quick'&&r.minutes<=30)||(active==='protein'&&hasNutrition(r)&&r.protein>=40)||(active==='calories'&&hasNutrition(r)&&r.kcal<=650)||(active==='official'&&!r.adapted)||(active==='favorites'&&isFavorite(r.id));
+let filterPass=active==='all'||(active==='new'&&r.id>=96)||(active==='quick'&&r.minutes<=30)||(active==='protein'&&hasNutrition(r)&&r.protein>=40)||(active==='calories'&&hasNutrition(r)&&r.kcal<=650)||(active==='official'&&!r.adapted)||(active==='favorites'&&isFavorite(r.id));
 return catPass&&q.includes(term)&&filterPass});
 const sortby=sort.value;
 if(sortby==='time')results.sort((a,b)=>a.minutes-b.minutes);
@@ -73,7 +74,7 @@ area.innerHTML='<p class="hf-breadcrumb"><a href="hellofresh.html">← All meal-
 '<div class="hf-detail-summary"><p class="hf-eyebrow">'+esc(r.category)+' · 2-PORTION RECIPE</p><h1>'+esc(r.title)+'</h1><p>Easy-to-follow personal home cooking card. Ingredients can be scaled for your household.</p>'+
 '<div class="hf-info-pills"><span>⏱ '+r.minutes+' min</span><span>2 portions</span>'+(hasNutrition(r)?'<span>'+r.protein+'g protein/serving</span><span>'+r.kcal+' kcal/serving</span>':'')+'</div>'+
 '<div class="hf-detail-actions"><a class="hf-secondary" href="plan.html?start='+r.id+'">♻ Cook Next / Reuse Ingredients</a><button class="hf-primary" id="addShopping" type="button">＋ Add to shopping list</button><button class="hf-secondary" id="favoriteDetail" type="button">♥ Favourite</button><button class="hf-secondary" id="printRecipe" type="button">Print</button></div>'+
-'<div class="hf-disclosure"><strong>'+(r.adapted?'Unverified adaptation':'HelloFresh Canada ingredient list; cooking steps summarized for home use.')+'</strong> '+(r.adapted?'Unverified quantities':'Published nutrition may change with halal substitutions.')+'</div></div></section>'+
+'<div class="hf-disclosure"><strong>'+(r.adapted?'Unverified adaptation':hfRegion(r)+' ingredient list; cooking steps summarized for home use.')+'</strong> '+(r.adapted?'Unverified quantities':'Published nutrition may change with halal substitutions.')+(hfRegion(r)==='HelloFresh US'?' US ingredient weights may be in ounces (1 oz ≈ 28 g).':'')+'</div></div></section>'+
 '<section class="hf-detail-cols"><div class="hf-panel"><h2>Ingredients</h2><div class="hf-serving"><strong>How many portions?</strong><select id="portions"><option value="1">1 portion</option><option value="2" selected>2 portions</option><option value="4">4 portions</option></select></div><ul id="ingredientsList">'+ingredientHTML(r,2)+'</ul><div class="hf-warning"><strong>Halal check</strong><p>'+esc(r.halal)+'</p></div></div><div class="hf-panel"><h2>Cooking steps</h2><ol class="hf-steps">'+stepHTML(r)+'</ol><p class="hf-card-adaptation">Cooking methods are personal summaries, not copied HelloFresh instructions. All quantities originally represent two portions.</p>'+(r.source?'<p><a href="'+esc(r.source)+'" target="_blank" rel="noopener noreferrer">'+(r.adapted?'Browse HelloFresh category inspiration ↗':'View matched HelloFresh recipe ↗')+'</a></p>':'')+'</div></section>';
 attachPhotos(area);
 $('#portions').addEventListener('change',e=>{$('#ingredientsList').innerHTML=ingredientHTML(r,Number(e.target.value))});

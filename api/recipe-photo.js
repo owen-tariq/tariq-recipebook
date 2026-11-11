@@ -55,7 +55,7 @@ function hero(html,title){
  }
  if(!u)return null;
  let parsed;try{parsed=new URL(u,'https://www.hellofresh.ca')}catch{return null}
- if(parsed.protocol!=='https:'||!['media.hellofresh.com','img.hellofresh.com','cdn.hellofresh.com','www.hellofresh.ca'].includes(parsed.hostname))return null;
+ if(parsed.protocol!=='https:'||!['media.hellofresh.com','img.hellofresh.com','cdn.hellofresh.com','www.hellofresh.ca','www.hellofresh.com'].includes(parsed.hostname))return null;
  if(!/(\.png|\.jpe?g|\.webp|\/recipes\/image\/)/i.test(parsed.pathname))return null;
  return parsed.href;
 }
@@ -68,7 +68,7 @@ async function html(url,ms=6500){
  }catch{return null}finally{clearTimeout(timer)}
 }
 function allowed(url){
- try{const u=new URL(url);return u.protocol==='https:'&&u.hostname==='www.hellofresh.ca'&&/^\/recipes\/[a-z0-9-]+-[a-f0-9]{24}\/?$/.test(u.pathname)}catch{return false}
+ try{const u=new URL(url);return u.protocol==='https:'&&['www.hellofresh.ca','www.hellofresh.com'].includes(u.hostname)&&/^\/recipes\/[a-z0-9-]+-[a-f0-9]{24}\/?$/.test(u.pathname)}catch{return false}
 }
 async function search(title){
  const q=encodeURIComponent('site:hellofresh.ca/recipes/ "'+title+'"');
