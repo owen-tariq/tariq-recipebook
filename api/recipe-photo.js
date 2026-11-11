@@ -55,7 +55,7 @@ function hero(html,title){
  }
  if(!u)return null;
  let parsed;try{parsed=new URL(u,'https://www.hellofresh.ca')}catch{return null}
- if(parsed.protocol!=='https:'||!['media.hellofresh.com','cdn.hellofresh.com','www.hellofresh.ca'].includes(parsed.hostname))return null;
+ if(parsed.protocol!=='https:'||!['media.hellofresh.com','img.hellofresh.com','cdn.hellofresh.com','www.hellofresh.ca'].includes(parsed.hostname))return null;
  if(!/(\.png|\.jpe?g|\.webp|\/recipes\/image\/)/i.test(parsed.pathname))return null;
  return parsed.href;
 }
@@ -93,6 +93,7 @@ module.exports=async(req,res)=>{
  const id=Number(req.query.id),recipe=recipes.find(x=>x.id===id);
  if(!Number.isInteger(id)||!recipe)return res.status(404).send('Unknown recipe');
  res.setHeader('X-Content-Type-Options','nosniff');
+ if(recipe.photo && /^https:\/\/media\.hellofresh\.com\/q_[a-zA-Z0-9%_,]+\/recipes\/image\/[a-zA-Z0-9_.-]+$/.test(recipe.photo))return res.redirect(302,recipe.photo);
  res.setHeader('Cache-Control','public, s-maxage=86400, stale-while-revalidate=604800');
  try{
   let image=cache.get(id);
