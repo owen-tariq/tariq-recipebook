@@ -3698,5 +3698,425 @@
       "Slice chicken over creamy pasta. Original recipe uses cooking wine; this home substitution changes flavour and published nutrition."
     ],
     "halal": "Original HelloFresh recipe contains 4 tbsp WHITE COOKING WINE. Replace with halal vegetable broth and lemon juice. Use halal chicken and vegetarian/microbial-rennet Parmesan."
+  },
+  {
+    "id": 119,
+    "title": "Creamy Chicken Pasta with Broccoli",
+    "category": "Chicken",
+    "minutes": 35,
+    "kcal": 730,
+    "protein": 63,
+    "adapted": false,
+    "verifiedSource": true,
+    "sourceType": "official-hellofresh-us",
+    "source": "https://www.hellofresh.com/recipes/creamy-chicken-pasta-58e6602d3bddb565fb174642",
+    "photo": "https://media.hellofresh.com/q_78%2Cw_960%2Cf_auto%2Cc_limit%2Cfl_lossy/recipes/image/w21-r5-96a7efe8.jpg",
+    "ingredients": [
+      {
+        "quantity": "12 oz",
+        "name": "Chicken breasts (check archived serving units)"
+      },
+      {
+        "quantity": "4 oz",
+        "name": "Broccoli florets"
+      },
+      {
+        "quantity": "2 oz",
+        "name": "Green peas"
+      },
+      {
+        "quantity": "2 tbsp",
+        "name": "Cream cheese"
+      },
+      {
+        "quantity": "1",
+        "name": "Lemon"
+      },
+      {
+        "quantity": "6 oz",
+        "name": "Gemelli pasta"
+      },
+      {
+        "quantity": "1/2 oz",
+        "name": "Fresh basil"
+      },
+      {
+        "quantity": "1/4 cup",
+        "name": "Parmesan cheese"
+      },
+      {
+        "quantity": "1",
+        "name": "Chicken stock concentrate"
+      },
+      {
+        "quantity": "2 cloves",
+        "name": "Garlic"
+      }
+    ],
+    "steps": [
+      "Boil a pot of salted water for gemelli. Zest lemon and cut it into wedges.",
+      "Cut broccoli into small florets, mince garlic and chop basil; pat chicken dry.",
+      "Cook gemelli until almost tender; add broccoli and peas during the final couple of minutes.",
+      "Season chicken and sear in a little oil until browned and 74°C in the centre; cut into strips.",
+      "Stir cream cheese, halal chicken stock concentrate and garlic into pasta with a splash of cooking water until creamy.",
+      "Toss with basil, add lemon juice to taste, and top with chicken and Parmesan. Double-check amounts on the archived US recipe."
+    ],
+    "halal": "Use halal chicken and stock concentrate; choose Parmesan made with microbial/vegetarian rennet. Older US recipe-page unit formatting is ambiguous—review package quantities."
+  },
+  {
+    "id": 120,
+    "title": "Chicken Penne al Limone",
+    "category": "Chicken",
+    "minutes": 30,
+    "kcal": 860,
+    "protein": 50,
+    "adapted": false,
+    "verifiedSource": true,
+    "sourceType": "official-hellofresh-us",
+    "source": "https://www.hellofresh.com/recipes/chicken-penne-al-limone-64bfc8a18e7c223eb5b362e6",
+    "photo": "https://media.hellofresh.com/q_78%2Cw_960%2Cf_auto%2Cc_limit%2Cfl_lossy/recipes/image/63853599929fb724f40ed140-e3d4003e.jpg",
+    "ingredients": [
+      {
+        "quantity": "1 clove",
+        "name": "Garlic"
+      },
+      {
+        "quantity": "1",
+        "name": "Lemon"
+      },
+      {
+        "quantity": "6 oz",
+        "name": "Penne pasta"
+      },
+      {
+        "quantity": "4 oz",
+        "name": "Cream sauce base"
+      },
+      {
+        "quantity": "1",
+        "name": "Zucchini"
+      },
+      {
+        "quantity": "1/4 oz",
+        "name": "Parsley"
+      },
+      {
+        "quantity": "10 oz",
+        "name": "Chicken breast strips"
+      },
+      {
+        "quantity": "3 tbsp",
+        "name": "Parmesan cheese"
+      }
+    ],
+    "steps": [
+      "Boil salted water and cook penne until al dente; save some cooking liquid.",
+      "Slice zucchini into half-moons, mince garlic and chop parsley; zest and halve lemon.",
+      "Season chicken strips and sauté in a hot oiled skillet until cooked through to 74°C.",
+      "Cook zucchini until lightly browned, then add garlic and the cream sauce base.",
+      "Stir in lemon zest, a squeeze of juice and a little pasta water, then toss with penne.",
+      "Divide between bowls, add chicken and top with Parmesan and fresh parsley."
+    ],
+    "halal": "Buy halal chicken and verify cream sauce and Parmesan rennet. A squeeze of lemon replaces any alcohol-containing seasoning."
+  },
+  {
+    "id": 121,
+    "title": "Organic Chicken & Mushroom Penne",
+    "category": "Chicken",
+    "minutes": 20,
+    "kcal": 740,
+    "protein": null,
+    "adapted": false,
+    "verifiedSource": true,
+    "sourceType": "official-hellofresh-us",
+    "source": "https://www.hellofresh.com/recipes/organic-chicken-mushroom-penne-6411ff129c899a9cff0e06f5",
+    "photo": "https://media.hellofresh.com/q_78%2Cw_960%2Cf_auto%2Cc_limit%2Cfl_lossy/recipes/image/6411ff129c899a9cff0e06f5-e27278ce-4a76d70a.jpg",
+    "ingredients": [
+      {
+        "quantity": "2 g",
+        "name": "Truffle seasoning"
+      },
+      {
+        "quantity": "10 oz",
+        "name": "Organic chicken cutlets"
+      },
+      {
+        "quantity": "8 oz",
+        "name": "Button mushrooms"
+      },
+      {
+        "quantity": "4 tbsp",
+        "name": "Cream cheese"
+      },
+      {
+        "quantity": "6 oz",
+        "name": "Penne pasta"
+      },
+      {
+        "quantity": "3 tbsp",
+        "name": "Parmesan cheese"
+      },
+      {
+        "quantity": "1",
+        "name": "Mushroom stock concentrate"
+      },
+      {
+        "quantity": "1",
+        "name": "Tomato"
+      },
+      {
+        "quantity": "1/4 cup",
+        "name": "Panko breadcrumbs"
+      },
+      {
+        "quantity": "2",
+        "name": "Scallions"
+      },
+      {
+        "quantity": "1 tsp",
+        "name": "Garlic powder"
+      }
+    ],
+    "steps": [
+      "Boil penne in salted water until tender, then reserve some pasta water.",
+      "Slice mushrooms, tomato and scallions; pat chicken cutlets dry and season.",
+      "Cook chicken in a hot skillet until its centre reaches 74°C, then slice into pieces.",
+      "Brown mushrooms with garlic powder and mushroom stock, adding a splash of pasta water.",
+      "Stir in cream cheese, truffle seasoning, cooked penne and grated Parmesan until glossy.",
+      "Top with sliced chicken, chopped scallions, tomato and a sprinkle of lightly toasted panko."
+    ],
+    "halal": "Use halal-certified chicken and check mushroom stock concentrate, truffle blend, cheese rennet and panko. US listing's protein figure appears unreliable, so left unspecified."
+  },
+  {
+    "id": 122,
+    "title": "German-Style Smoky Chicken Penne",
+    "category": "Chicken",
+    "minutes": 20,
+    "kcal": 640,
+    "protein": 39,
+    "adapted": false,
+    "verifiedSource": true,
+    "sourceType": "official-hellofresh-us",
+    "source": "https://www.hellofresh.com/recipes/german-style-smoky-chicken-penne-66fda4de99e8e2a18bd73436",
+    "photo": "https://media.hellofresh.com/q_78%2Cw_960%2Cf_auto%2Cc_limit%2Cfl_lossy/recipes/image/66fc209d44b7013be522e822-5aae007f-552ded3c.jpeg",
+    "ingredients": [
+      {
+        "quantity": "1",
+        "name": "Vegetable stock concentrate"
+      },
+      {
+        "quantity": "1",
+        "name": "Zucchini"
+      },
+      {
+        "quantity": "10 oz",
+        "name": "Dark-meat chicken"
+      },
+      {
+        "quantity": "4 tbsp",
+        "name": "Cream cheese"
+      },
+      {
+        "quantity": "1 oz",
+        "name": "Smoky mustard"
+      },
+      {
+        "quantity": "1/2",
+        "name": "Lemon"
+      },
+      {
+        "quantity": "6 oz",
+        "name": "Penne pasta"
+      },
+      {
+        "quantity": "1/4 oz",
+        "name": "Chives"
+      }
+    ],
+    "steps": [
+      "Boil penne in salted water until al dente, reserving some pasta water.",
+      "Cut zucchini into half-moons, chop chives and zest the lemon.",
+      "Season halal dark-meat chicken and sear until golden and 74°C inside.",
+      "Sauté zucchini in the same pan. Add the vegetable stock concentrate and a splash of water.",
+      "Stir in cream cheese and smoky mustard to make a smooth sauce, then add pasta and chicken.",
+      "Finish with chopped chives and lemon juice. Divide into two bowls."
+    ],
+    "halal": "Use halal chicken and alcohol-free smoky mustard (some mustards contain wine); check stock concentrate and cream cheese."
+  },
+  {
+    "id": 123,
+    "title": "Garlic Chicken & Creamy Lemon Linguine",
+    "category": "Chicken",
+    "minutes": 20,
+    "kcal": 710,
+    "protein": 50,
+    "adapted": false,
+    "verifiedSource": true,
+    "sourceType": "official-hellofresh-us",
+    "source": "https://www.hellofresh.com/recipes/garlic-chicken-and-creamy-lemon-linguine-69a94b3b540e60f740c7865b",
+    "photo": "https://media.hellofresh.com/q_78%2Cw_960%2Cf_auto%2Cc_limit%2Cfl_lossy/recipes/image/660c63759149ba03ec9b06ad-21460236-a512dcd5.jpeg",
+    "ingredients": [
+      {
+        "quantity": "1/2 oz",
+        "name": "Vidalia onion paste"
+      },
+      {
+        "quantity": "4 oz",
+        "name": "Green peas"
+      },
+      {
+        "quantity": "4 oz",
+        "name": "Cream sauce base"
+      },
+      {
+        "quantity": "1",
+        "name": "Lemon"
+      },
+      {
+        "quantity": "7 oz",
+        "name": "Gluten-free fresh linguine"
+      },
+      {
+        "quantity": "12 oz",
+        "name": "Chicken cutlets"
+      },
+      {
+        "quantity": "2",
+        "name": "Scallions"
+      },
+      {
+        "quantity": "1 tsp",
+        "name": "Garlic powder"
+      }
+    ],
+    "steps": [
+      "Cook linguine in salted boiling water until tender, saving a little starchy water.",
+      "Slice scallions and zest the lemon, then pat chicken cutlets dry.",
+      "Season chicken with garlic powder, salt and pepper; pan-cook until the centre reaches 74°C.",
+      "Sauté scallions with onion paste, then add peas and a little pasta water.",
+      "Stir in cream sauce base, lemon zest and some juice, then toss the linguine through it.",
+      "Slice chicken, lay it over the creamy linguine and finish with scallions and lemon wedges."
+    ],
+    "halal": "Use halal chicken and check cream sauce base and Vidalia onion paste for alcohol or meat flavours."
+  },
+  {
+    "id": 124,
+    "title": "Shrimp Spaghetti with a Kick",
+    "category": "Shrimp",
+    "minutes": 20,
+    "kcal": 730,
+    "protein": 34,
+    "adapted": false,
+    "verifiedSource": true,
+    "sourceType": "official-hellofresh-us",
+    "source": "https://www.hellofresh.com/recipes/shrimp-spaghetti-with-a-kick-6203c51288dbd95f422707d7",
+    "photo": "https://media.hellofresh.com/q_78%2Cw_960%2Cf_auto%2Cc_limit%2Cfl_lossy/recipes/image/6203c51288dbd95f422707d7-a539cdce.jpg",
+    "ingredients": [
+      {
+        "quantity": "6 oz",
+        "name": "Spaghetti"
+      },
+      {
+        "quantity": "1",
+        "name": "Zucchini"
+      },
+      {
+        "quantity": "1",
+        "name": "Chili pepper"
+      },
+      {
+        "quantity": "10 oz",
+        "name": "Shrimp"
+      },
+      {
+        "quantity": "2 tbsp",
+        "name": "Garlic-herb butter"
+      },
+      {
+        "quantity": "1/4 cup",
+        "name": "Parmesan cheese"
+      }
+    ],
+    "steps": [
+      "Boil spaghetti in salted water until al dente and save a little pasta water.",
+      "Slice zucchini into half-moons and finely chop chili pepper; pat shrimp dry.",
+      "Sauté zucchini in some of the garlic-herb butter until golden; remove to a plate.",
+      "Add shrimp and the remaining garlic-herb butter to the pan; cook until pink and 74°C.",
+      "Toss spaghetti, cooked zucchini and chili into the pan with pasta water to make a silky coating.",
+      "Top each plate with Parmesan and season to taste. Start with less chili if sensitive to heat."
+    ],
+    "halal": "Shrimp itself contains no pork; check garlic-herb butter seasoning and Parmesan for vegetarian/microbial rennet."
+  },
+  {
+    "id": 125,
+    "title": "Roasted Italian Panko-Crusted Salmon",
+    "category": "Salmon",
+    "minutes": 20,
+    "kcal": 1280,
+    "protein": 74,
+    "adapted": false,
+    "verifiedSource": true,
+    "sourceType": "official-hellofresh-us",
+    "source": "https://www.hellofresh.com/recipes/roasted-italian-panko-crusted-salmon-69f236983ace2ca2f08f1381",
+    "photo": "https://media.hellofresh.com/q_78%2Cw_960%2Cf_auto%2Cc_limit%2Cfl_lossy/recipes/image/HFUSRC_R18656A_Hero_ItalianPankoCrustedSalmon_W28_70_2026_Web-c1f0c262.jpg",
+    "ingredients": [
+      {
+        "quantity": "1",
+        "name": "Vegetable stock concentrate"
+      },
+      {
+        "quantity": "1/2 cup",
+        "name": "Panko breadcrumbs"
+      },
+      {
+        "quantity": "4 oz",
+        "name": "Orzo"
+      },
+      {
+        "quantity": "4 oz",
+        "name": "Green peas"
+      },
+      {
+        "quantity": "2 tbsp",
+        "name": "Cream cheese"
+      },
+      {
+        "quantity": "1",
+        "name": "Lemon"
+      },
+      {
+        "quantity": "1 tbsp",
+        "name": "Italian seasoning"
+      },
+      {
+        "quantity": "2 oz",
+        "name": "Green goddess dressing"
+      },
+      {
+        "quantity": "1.5 oz",
+        "name": "Sun-dried tomatoes"
+      },
+      {
+        "quantity": "2 tsp",
+        "name": "Dijon mustard"
+      },
+      {
+        "quantity": "1 tsp",
+        "name": "Garlic powder"
+      },
+      {
+        "quantity": "20 oz",
+        "name": "Salmon fillets"
+      }
+    ],
+    "steps": [
+      "Heat oven to 220°C. Bring salted water to a boil for orzo and pat salmon dry.",
+      "Combine panko, Italian seasoning, garlic powder, a little oil and lemon zest into a crust mixture.",
+      "Place salmon on a lined sheet and press the panko mixture over the fillets; roast until cooked to 70°C.",
+      "Boil orzo until tender and add peas near the end; drain, reserving a little cooking liquid.",
+      "Warm stock concentrate, cream cheese, chopped sun-dried tomatoes and lemon juice with orzo to make a creamy base.",
+      "Serve salmon over pea-orzo with green goddess dressing and Dijon on the side. Original listing is 1,280 kcal per serving."
+    ],
+    "halal": "Use halal-suitable veggie stock and green-goddess dressing; verify Dijon for wine, cheese ingredients and panko. This high-calorie recipe may not match a low-calorie goal."
   }
 ]
