@@ -1,6 +1,10 @@
 'use strict';
 const recipes=require('../data/hellofresh-recipes.json');
 const overrides={
+16:'https://www.hellofresh.ca/recipes/bulgogi-inspired-steak-and-shrimp-bowls-66b126d16e2625457a71c02c',
+25:'https://www.hellofresh.ca/recipes/sweet-heat-beyond-meat-r-670a1859d1dd98c148b07c05',
+28:'https://www.hellofresh.ca/recipes/carb-smart-beef-kofta-curry-670ea1cfed0d969de7c04803',
+33:'https://www.hellofresh.ca/recipes/cal-smart-smoky-beef-meatballs-66c0ec2d1de4c4d62e8006d3',
 13:'https://www.hellofresh.ca/recipes/smart-apricot-mustard-chicken-thighs-66cb76a202090b0cfbd29ed5',
 14:'https://www.hellofresh.ca/recipes/smart-smoky-mustard-chicken-thighs-669de472180815c793275660',
 17:'https://www.hellofresh.ca/recipes/spicy-korean-chicken-tacos-65ef9b72d4f9506890147379',
