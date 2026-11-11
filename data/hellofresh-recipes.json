@@ -1342,5 +1342,1013 @@
     "adapted": false,
     "verifiedSource": true,
     "sourceType": "official-hellofresh-canada"
+  },
+  {
+    "id": 79,
+    "title": "Korean-Style Beef Stir Fry",
+    "category": "Beef",
+    "minutes": 30,
+    "kcal": 675,
+    "protein": 45,
+    "adapted": false,
+    "verifiedSource": true,
+    "sourceType": "official-hellofresh-canada",
+    "photo": "https://media.hellofresh.com/q_78%2Cw_960%2Cf_auto%2Cc_limit%2Cfl_lossy/recipes/image/korean-style-beef-stir-fry-1f9690c1.jpg",
+    "source": "https://www.hellofresh.ca/recipes/korean-style-beef-stir-fry-57801843d545258c738b4568",
+    "ingredients": [
+      {
+        "quantity": "2",
+        "name": "Green onions"
+      },
+      {
+        "quantity": "2 cloves",
+        "name": "Garlic"
+      },
+      {
+        "quantity": "30 g",
+        "name": "Ginger"
+      },
+      {
+        "quantity": "170 g",
+        "name": "Broccolini"
+      },
+      {
+        "quantity": "250 g",
+        "name": "Ground beef"
+      },
+      {
+        "quantity": "1 tbsp",
+        "name": "Hoisin sauce"
+      },
+      {
+        "quantity": "2 tbsp",
+        "name": "Soy sauce"
+      },
+      {
+        "quantity": "1 tbsp",
+        "name": "Sesame seeds"
+      },
+      {
+        "quantity": "3/4 cup",
+        "name": "Long-grain brown rice"
+      }
+    ],
+    "steps": [
+      "Rinse the brown rice. Simmer it in approximately 1¾ cups water until the grains are tender, around 25–30 minutes.",
+      "While the rice cooks, mince garlic and ginger. Slice the green onions, separating white and green pieces; trim the broccolini.",
+      "Sauté broccolini with half the garlic and ginger in a little oil until tender-crisp; transfer to a plate.",
+      "Combine ground beef with hoisin, soy sauce, green-onion whites and remaining garlic and ginger.",
+      "Brown beef in the same pan, breaking it apart; cook to 71°C and return broccolini to warm through.",
+      "Serve beef and broccolini over rice, then scatter green-onion greens and sesame seeds."
+    ],
+    "halal": "Use halal-certified ground beef. Check hoisin sauce and use soy sauce with no alcohol; inspect seasoning labels."
+  },
+  {
+    "id": 80,
+    "title": "Quick Honey-Garlic Soy Organic Chicken",
+    "category": "Chicken",
+    "minutes": 25,
+    "kcal": 800,
+    "protein": 46,
+    "adapted": false,
+    "verifiedSource": true,
+    "sourceType": "official-hellofresh-canada",
+    "photo": "https://media.hellofresh.com/q_78%2Cw_960%2Cf_auto%2Cc_limit%2Cfl_lossy/recipes/image/a3e48f95-90ce-5a63-83f5-93238b6e617a-5acfd934.jpg",
+    "source": "https://www.hellofresh.ca/recipes/quick-honey-garlic-soy-chicken-680f8c0780e0f84c774cd43e",
+    "ingredients": [
+      {
+        "quantity": "2",
+        "name": "Organic chicken breasts"
+      },
+      {
+        "quantity": "2",
+        "name": "Green onions"
+      },
+      {
+        "quantity": "3/4 cup",
+        "name": "Sticky rice"
+      },
+      {
+        "quantity": "113 g",
+        "name": "Corn kernels"
+      },
+      {
+        "quantity": "1 tbsp",
+        "name": "Sesame oil"
+      },
+      {
+        "quantity": "4 tbsp",
+        "name": "Honey-garlic sauce"
+      },
+      {
+        "quantity": "1 tbsp",
+        "name": "Soy sauce"
+      },
+      {
+        "quantity": "2 cloves",
+        "name": "Garlic"
+      }
+    ],
+    "steps": [
+      "Wash rice and simmer with about 1¼ cups water, covered, 13–15 minutes; rest off heat.",
+      "Mince garlic and slice green onions. Mix soy sauce, honey-garlic sauce and half the garlic.",
+      "Cut chicken into 2–3 cm chunks; season with salt and pepper.",
+      "Heat part of the sesame oil with butter; cook corn until hot. Add some green onion and remaining garlic, then set aside.",
+      "Cook chicken in the remaining oil until golden and 74°C, then simmer briefly with the honey-garlic mixture until glossy.",
+      "Fluff rice with green onions, then portion corn and saucy chicken over two rice bowls."
+    ],
+    "halal": "Use halal chicken. Original HelloFresh soy sauce ingredient declaration includes alcohol: use verified alcohol-free soy sauce. Check honey-garlic sauce."
+  },
+  {
+    "id": 81,
+    "title": "Smart Golden Shrimp and Coconut Sauce",
+    "category": "Shrimp",
+    "minutes": 25,
+    "kcal": 650,
+    "protein": 30,
+    "adapted": false,
+    "verifiedSource": true,
+    "sourceType": "official-hellofresh-canada",
+    "photo": "https://media.hellofresh.com/q_78%2Cw_960%2Cf_auto%2Cc_limit%2Cfl_lossy/recipes/image/5df73991-fcb0-5c5e-851f-0ba4fc7601ff-93477cc5.jpg",
+    "source": "https://www.hellofresh.ca/recipes/smart-golden-coconut-shrimp-66955b8e634fba9ab8079301",
+    "ingredients": [
+      {
+        "quantity": "285 g",
+        "name": "Shrimp"
+      },
+      {
+        "quantity": "1/2 cup",
+        "name": "Couscous"
+      },
+      {
+        "quantity": "1",
+        "name": "Zucchini"
+      },
+      {
+        "quantity": "113 g",
+        "name": "Baby tomatoes"
+      },
+      {
+        "quantity": "28 g",
+        "name": "Baby spinach"
+      },
+      {
+        "quantity": "1",
+        "name": "Coconut milk portion"
+      },
+      {
+        "quantity": "14 g",
+        "name": "Crispy shallots"
+      },
+      {
+        "quantity": "1 tbsp",
+        "name": "Curry paste"
+      },
+      {
+        "quantity": "7.5 g",
+        "name": "Vegetable stock powder"
+      },
+      {
+        "quantity": "4 g",
+        "name": "Cumin-turmeric spice blend"
+      }
+    ],
+    "steps": [
+      "Bring ⅔ cup water with a little butter to a boil; stir in couscous, cover and rest for five minutes.",
+      "Quarter the zucchini, pierce tomatoes and roughly chop spinach.",
+      "Toss zucchini and tomatoes with oil, then broil or roast until lightly charred and tender.",
+      "Pat shrimp dry and sauté with cumin-turmeric blend until pink, opaque and cooked through; set aside.",
+      "Simmer coconut milk, verified stock powder and curry paste until slightly thick, then add cooked shrimp.",
+      "Fluff couscous with spinach; top with roasted vegetables, coconut shrimp and crispy shallots."
+    ],
+    "halal": "Check curry paste and stock powder for halal suitability, including alcohol or meat-derived ingredients. Shrimp itself contains no pork."
+  },
+  {
+    "id": 82,
+    "title": "Chili-Garlic Salmon Rice Bowls",
+    "category": "Salmon",
+    "minutes": 20,
+    "kcal": 740,
+    "protein": 33,
+    "adapted": false,
+    "verifiedSource": true,
+    "sourceType": "official-hellofresh-canada",
+    "photo": "https://media.hellofresh.com/q_78%2Cw_960%2Cf_auto%2Cc_limit%2Cfl_lossy/recipes/image/f18ba43e-099a-4b3c-bf82-a09f4da31b75-28ccd8fe.jpg",
+    "source": "https://www.hellofresh.ca/recipes/chili-garlic-salmon-rice-bowls-65fe1d5078b19ca7c0a982b0",
+    "ingredients": [
+      {
+        "quantity": "250 g",
+        "name": "Skin-on salmon fillets"
+      },
+      {
+        "quantity": "3/4 cup",
+        "name": "Jasmine rice"
+      },
+      {
+        "quantity": "1",
+        "name": "Shanghai bok choy"
+      },
+      {
+        "quantity": "1",
+        "name": "Carrot"
+      },
+      {
+        "quantity": "1",
+        "name": "Yellow onion"
+      },
+      {
+        "quantity": "28 g",
+        "name": "Crispy shallots"
+      },
+      {
+        "quantity": "1 tbsp",
+        "name": "Chili-garlic sauce"
+      },
+      {
+        "quantity": "4 tbsp",
+        "name": "Ginger sauce"
+      },
+      {
+        "quantity": "1 tbsp",
+        "name": "Sesame oil"
+      }
+    ],
+    "steps": [
+      "Rinse jasmine rice, cover with about 1¼ cups water and simmer 13–15 minutes until tender.",
+      "Season salmon, brush with chili-garlic sauce and broil until cooked through to 70°C.",
+      "Slice carrot, onion and bok choy while the fish cooks.",
+      "Sauté carrots first, then onion and bok choy with sesame oil and a splash of water until crisp-tender.",
+      "Stir half the ginger sauce into the vegetables and warm briefly.",
+      "Add crispy shallots and remaining sesame oil to rice, then serve with salmon, vegetables and leftover ginger sauce."
+    ],
+    "halal": "Check ginger and chili-garlic sauces for alcohol or other non-halal additions; use halal-suitable alternatives if needed."
+  },
+  {
+    "id": 83,
+    "title": "Honey-Garlic Shrimp",
+    "category": "Shrimp",
+    "minutes": 25,
+    "kcal": 670,
+    "protein": 31,
+    "adapted": false,
+    "verifiedSource": true,
+    "sourceType": "official-hellofresh-canada",
+    "photo": "https://media.hellofresh.com/q_78%2Cw_960%2Cf_auto%2Cc_limit%2Cfl_lossy/recipes/image/HF_Y24_R1011_W38_CA_RF154383-3_Main_2_low-3f55a612.jpg",
+    "source": "https://www.hellofresh.ca/recipes/honey-garlic-shrimp-669e16d1f062ed659bdaecdf",
+    "ingredients": [
+      {
+        "quantity": "285 g",
+        "name": "Shrimp"
+      },
+      {
+        "quantity": "4 tbsp",
+        "name": "Honey-garlic sauce"
+      },
+      {
+        "quantity": "1 tbsp",
+        "name": "Soy sauce"
+      },
+      {
+        "quantity": "1 tsp",
+        "name": "Garlic salt"
+      },
+      {
+        "quantity": "3/4 cup",
+        "name": "Basmati rice"
+      },
+      {
+        "quantity": "1",
+        "name": "Shanghai bok choy"
+      },
+      {
+        "quantity": "2 tbsp",
+        "name": "Ginger-garlic puree"
+      },
+      {
+        "quantity": "7 g",
+        "name": "Black sesame seeds"
+      },
+      {
+        "quantity": "1",
+        "name": "Sweet bell pepper"
+      }
+    ],
+    "steps": [
+      "Cook basmati rice in about 1¼ cups water with half the garlic salt for 12–14 minutes.",
+      "Pat shrimp dry, season with pepper and garlic salt and pan-cook until pink and cooked through; set aside.",
+      "Cut bell pepper and bok choy into bite-size pieces.",
+      "Stir-fry vegetables, then add ginger-garlic puree and some soy sauce.",
+      "Warm the honey-garlic sauce with remaining soy sauce until it coats a spoon lightly.",
+      "Fluff rice with butter and sesame seeds. Add vegetables, shrimp, warm sauce and remaining sesame."
+    ],
+    "halal": "HelloFresh's listed soy sauce can contain alcohol. Buy verified alcohol-free soy sauce; inspect honey-garlic and ginger-garlic sauces."
+  },
+  {
+    "id": 84,
+    "title": "Greek-Style Shrimp and Feta Bake",
+    "category": "Shrimp",
+    "minutes": 25,
+    "kcal": 650,
+    "protein": 29,
+    "adapted": false,
+    "verifiedSource": true,
+    "sourceType": "official-hellofresh-canada",
+    "photo": "https://media.hellofresh.com/q_78%2Cw_960%2Cf_auto%2Cc_limit%2Cfl_lossy/recipes/image/029cdc7e-530c-5758-8327-80c09c10c561-e8c12bab.jpg",
+    "source": "https://www.hellofresh.ca/recipes/greek-shrimp-and-feta-bake-65f0a47897477827aca4c4e6",
+    "ingredients": [
+      {
+        "quantity": "285 g",
+        "name": "Shrimp"
+      },
+      {
+        "quantity": "1/4 cup",
+        "name": "Roasted pepper pesto"
+      },
+      {
+        "quantity": "113 g",
+        "name": "Baby tomatoes"
+      },
+      {
+        "quantity": "1/4 cup",
+        "name": "Crumbled feta cheese"
+      },
+      {
+        "quantity": "2 cloves",
+        "name": "Garlic"
+      },
+      {
+        "quantity": "1",
+        "name": "Shallot"
+      },
+      {
+        "quantity": "7 g",
+        "name": "Basil"
+      },
+      {
+        "quantity": "3/4 cup",
+        "name": "Jasmine rice"
+      }
+    ],
+    "steps": [
+      "Heat oven to 230°C. Cook jasmine rice with about 1¼ cups water in a covered pot.",
+      "Mince shallot and garlic; halve tomatoes and finely slice fresh basil.",
+      "In a small baking dish, toss tomatoes and shallot with garlic and roasted red-pepper pesto.",
+      "Add shrimp and feta to the dish and bake until shrimp are opaque and reach 74°C.",
+      "Stir butter through the cooked rice and fluff with a fork.",
+      "Serve the warm shrimp-and-feta bake over rice, topped with fresh basil."
+    ],
+    "halal": "Check pesto cheese and feta for microbial or vegetarian rennet, and confirm sauces have no added alcohol."
+  },
+  {
+    "id": 85,
+    "title": "Spicy Korean-Style Chicken",
+    "category": "Chicken",
+    "minutes": 30,
+    "kcal": 740,
+    "protein": 47,
+    "adapted": false,
+    "verifiedSource": true,
+    "sourceType": "official-hellofresh-canada",
+    "photo": "https://media.hellofresh.com/q_78%2Cw_960%2Cf_auto%2Cc_limit%2Cfl_lossy/recipes/image/2488fb66-a29c-4ef8-8ad1-841b694b6f41-7f65663c.jpg",
+    "source": "https://www.hellofresh.ca/recipes/spicy-korean-style-chicken-65fe1da73a5b3388b38642d9",
+    "ingredients": [
+      {
+        "quantity": "320 g",
+        "name": "Chicken breast tenders"
+      },
+      {
+        "quantity": "2 tbsp",
+        "name": "Gochujang"
+      },
+      {
+        "quantity": "4 tbsp",
+        "name": "Soy sauce-mirin blend"
+      },
+      {
+        "quantity": "2 tbsp",
+        "name": "Ginger-garlic puree"
+      },
+      {
+        "quantity": "1",
+        "name": "Zucchini"
+      },
+      {
+        "quantity": "1",
+        "name": "Carrot"
+      },
+      {
+        "quantity": "3/4 cup",
+        "name": "Jasmine rice"
+      },
+      {
+        "quantity": "9 g",
+        "name": "Cornstarch"
+      },
+      {
+        "quantity": "2",
+        "name": "Green onions"
+      }
+    ],
+    "steps": [
+      "Rinse rice and cook until tender in a covered pot for about 13–15 minutes.",
+      "Cut zucchini, carrot and green onions into small pieces. Mix gochujang, soy-mirin blend, sugar and a splash of water.",
+      "Season and pan-fry chicken tenders until the centres reach 74°C.",
+      "In another pan or after removing the chicken, stir-fry carrot and zucchini with ginger-garlic puree until tender-crisp.",
+      "Add the sauce and a cornstarch slurry; simmer until thickened, returning chicken to coat.",
+      "Divide rice between bowls, top with vegetables and chicken and finish with green onions."
+    ],
+    "halal": "The original gochujang and soy-mirin blend may contain alcohol. Use halal-certified gochujang, alcohol-free soy sauce and rice vinegar instead; buy halal chicken."
+  },
+  {
+    "id": 86,
+    "title": "Smart Smoky Mustard Chicken Thighs",
+    "category": "Chicken",
+    "minutes": 35,
+    "kcal": 560,
+    "protein": 33,
+    "adapted": false,
+    "verifiedSource": true,
+    "sourceType": "official-hellofresh-canada",
+    "photo": "https://media.hellofresh.com/q_78%2Cw_960%2Cf_auto%2Cc_limit%2Cfl_lossy/recipes/image/HF_Y24_R1026_W38_CA_RC23986-1_Main_2_low-cf7e5439.jpg",
+    "source": "https://www.hellofresh.ca/recipes/smart-smoky-mustard-chicken-thighs-669de472180815c793275660",
+    "ingredients": [
+      {
+        "quantity": "280 g",
+        "name": "Chicken thighs"
+      },
+      {
+        "quantity": "170 g",
+        "name": "Brussels sprouts"
+      },
+      {
+        "quantity": "2",
+        "name": "Carrots"
+      },
+      {
+        "quantity": "1",
+        "name": "Shallot"
+      },
+      {
+        "quantity": "1 clove",
+        "name": "Garlic"
+      },
+      {
+        "quantity": "2 tbsp",
+        "name": "Chipotle sauce"
+      },
+      {
+        "quantity": "2",
+        "name": "Chicken broth concentrate portions"
+      },
+      {
+        "quantity": "1/2 tbsp",
+        "name": "Whole-grain mustard"
+      },
+      {
+        "quantity": "1 tsp",
+        "name": "Garlic salt"
+      }
+    ],
+    "steps": [
+      "Heat oven to 220°C. Trim and halve Brussels sprouts; roast with oil until browned and tender.",
+      "Dice carrots and boil them with a little verified halal broth until soft; mash with butter and garlic salt.",
+      "Thinly slice shallot and mince the garlic.",
+      "Season chicken thighs and sear until coloured, then cook fully to 74°C.",
+      "Sauté shallot and garlic, then mix in chipotle sauce, whole-grain mustard and a little broth to make a glossy pan sauce.",
+      "Serve chicken with carrot mash, roasted sprouts and the smoky mustard sauce."
+    ],
+    "halal": "Buy halal chicken and verified halal broth. Whole-grain mustard can contain white wine vinegar; check label or substitute non-wine vinegar mustard."
+  },
+  {
+    "id": 87,
+    "title": "Smart Vietnamese-Style Marinated Chicken Thighs",
+    "category": "Chicken",
+    "minutes": 25,
+    "kcal": 330,
+    "protein": 30,
+    "adapted": false,
+    "verifiedSource": true,
+    "sourceType": "official-hellofresh-canada",
+    "photo": "https://media.hellofresh.com/q_78%2Cw_960%2Cf_auto%2Cc_limit%2Cfl_lossy/recipes/image/HF_Y24_R1037_W29_CA_RP158434-5_Main__2low-f9a2179b.jpg",
+    "source": "https://www.hellofresh.ca/recipes/smart-vietnamese-style-marinated-chicken-thighs-66b8cf9fa3e58e452b7cec3e",
+    "ingredients": [
+      {
+        "quantity": "280 g",
+        "name": "Chicken thighs"
+      },
+      {
+        "quantity": "1",
+        "name": "Lemongrass stalk"
+      },
+      {
+        "quantity": "1 tbsp",
+        "name": "Soy sauce"
+      },
+      {
+        "quantity": "1/2 tbsp",
+        "name": "Garlic puree"
+      },
+      {
+        "quantity": "113 g",
+        "name": "Spring mix"
+      },
+      {
+        "quantity": "1",
+        "name": "Mini cucumber"
+      },
+      {
+        "quantity": "113 g",
+        "name": "Baby tomatoes"
+      },
+      {
+        "quantity": "2 tbsp",
+        "name": "Sweet chili sauce"
+      },
+      {
+        "quantity": "1 tbsp",
+        "name": "Seasoned rice vinegar"
+      },
+      {
+        "quantity": "14 g",
+        "name": "Crispy shallots"
+      },
+      {
+        "quantity": "7 g",
+        "name": "Mint"
+      }
+    ],
+    "steps": [
+      "Bruise and finely mince lemongrass, then mix it with garlic puree and soy sauce.",
+      "Pat chicken thighs dry and pound evenly to roughly 1 cm thickness; coat with marinade.",
+      "Slice cucumber, halve tomatoes and chop mint.",
+      "Whisk sweet chili sauce, rice vinegar and a little oil to make a salad dressing.",
+      "Pan-cook chicken until golden and fully cooked to 74°C, then slice.",
+      "Toss greens, tomatoes and cucumber with dressing; add chicken, mint and crispy shallots."
+    ],
+    "halal": "Use halal chicken and alcohol-free soy sauce; check sweet-chili sauce and crispy shallots. The page's optional protein notes reference pork, but the selected ingredient listing here uses chicken."
+  },
+  {
+    "id": 88,
+    "title": "Greek-Style Lemon Chicken Thighs",
+    "category": "Chicken",
+    "minutes": 30,
+    "kcal": 590,
+    "protein": 39,
+    "adapted": false,
+    "verifiedSource": true,
+    "sourceType": "official-hellofresh-canada",
+    "photo": "https://media.hellofresh.com/q_78%2Cw_960%2Cf_auto%2Cc_limit%2Cfl_lossy/recipes/image/HF_Y23_R1007_W32_CA_RC0066-16_Main_low-2740290f.jpg",
+    "source": "https://www.hellofresh.ca/recipes/greek-style-lemon-chicken-67cd2854ec0bcc743e8218a7",
+    "ingredients": [
+      {
+        "quantity": "280 g",
+        "name": "Chicken thighs"
+      },
+      {
+        "quantity": "1/2 cup",
+        "name": "Couscous"
+      },
+      {
+        "quantity": "1",
+        "name": "Zucchini"
+      },
+      {
+        "quantity": "1",
+        "name": "Sweet bell pepper"
+      },
+      {
+        "quantity": "1",
+        "name": "Lemon"
+      },
+      {
+        "quantity": "1/4 cup",
+        "name": "Crumbled feta cheese"
+      },
+      {
+        "quantity": "1",
+        "name": "Chicken broth concentrate portion"
+      },
+      {
+        "quantity": "4 g",
+        "name": "Dill-garlic spice blend"
+      },
+      {
+        "quantity": "7 g",
+        "name": "Zesty garlic blend"
+      }
+    ],
+    "steps": [
+      "Heat oven to 220°C. Chop zucchini and bell pepper, zest the lemon and cut it into wedges.",
+      "Season the vegetables with the zesty garlic blend and oil, then roast for 15–17 minutes.",
+      "Season chicken with dill-garlic blend, sear briefly in a pan and transfer beside vegetables to finish in the oven to 74°C.",
+      "Bring halal-certified broth and ⅔ cup water to a boil; remove from heat, stir in couscous and cover for five minutes.",
+      "Fluff couscous and stir through roasted vegetables, lemon zest and juice.",
+      "Slice chicken over couscous and top with feta and lemon."
+    ],
+    "halal": "Use halal chicken and broth concentrate; check spice blends and feta's enzyme/rennet."
+  },
+  {
+    "id": 89,
+    "title": "SuperQuick Greek-Style Salmon",
+    "category": "Salmon",
+    "minutes": 15,
+    "kcal": 810,
+    "protein": 37,
+    "adapted": false,
+    "verifiedSource": true,
+    "sourceType": "official-hellofresh-canada",
+    "photo": "https://media.hellofresh.com/q_78%2Cw_960%2Cf_auto%2Cc_limit%2Cfl_lossy/recipes/image/HF_Y24_R1051_W44_CA_RS31445-1_MAIN__6low-10addd2c.jpg",
+    "source": "https://www.hellofresh.ca/recipes/superquick-greek-style-salmon-66d55f014af7e0a57fdff238",
+    "ingredients": [
+      {
+        "quantity": "250 g",
+        "name": "Skin-on salmon fillets"
+      },
+      {
+        "quantity": "3/4 cup",
+        "name": "Basmati rice"
+      },
+      {
+        "quantity": "1 tbsp",
+        "name": "Vegetable stock powder"
+      },
+      {
+        "quantity": "3 tbsp",
+        "name": "Yogurt sauce"
+      },
+      {
+        "quantity": "1/2 tbsp",
+        "name": "Red wine vinegar"
+      },
+      {
+        "quantity": "1 tbsp",
+        "name": "Garlic puree"
+      },
+      {
+        "quantity": "1",
+        "name": "Tomato"
+      },
+      {
+        "quantity": "1/4 cup",
+        "name": "Crumbled feta cheese"
+      },
+      {
+        "quantity": "56 g",
+        "name": "Spring mix"
+      },
+      {
+        "quantity": "1/2 tbsp",
+        "name": "Lemon-pepper seasoning"
+      }
+    ],
+    "steps": [
+      "Boil basmati rice with verified stock powder until tender; set aside covered.",
+      "Pat salmon dry and season with lemon-pepper seasoning and a little salt.",
+      "Sear salmon in hot oil until cooked to 70°C; add garlic puree near the end.",
+      "Dice tomato and combine with spring mix and feta.",
+      "Whisk vinegar, a little oil and sugar for a dressing; substitute lemon juice if avoiding wine vinegar.",
+      "Serve salmon with rice, dressed salad and yogurt sauce."
+    ],
+    "halal": "The original dressing uses red wine vinegar: substitute lemon juice or non-wine vinegar. Check yogurt sauce, stock and feta rennet."
+  },
+  {
+    "id": 90,
+    "title": "Carb Smart Beef Taco Soup",
+    "category": "Beef",
+    "minutes": 25,
+    "kcal": 680,
+    "protein": 36,
+    "adapted": false,
+    "verifiedSource": true,
+    "sourceType": "official-hellofresh-canada",
+    "photo": "https://media.hellofresh.com/q_78%2Cw_960%2Cf_auto%2Cc_limit%2Cfl_lossy/recipes/image/HF_Y24_R1021_W45_CA_RB31446-1_Main__2low-096d9ef4.jpg",
+    "source": "https://www.hellofresh.ca/recipes/carb-smart-beef-taco-soup-66beaba20176da61893e0d16",
+    "ingredients": [
+      {
+        "quantity": "250 g",
+        "name": "Ground beef"
+      },
+      {
+        "quantity": "42.5 g",
+        "name": "Tortilla chips"
+      },
+      {
+        "quantity": "1",
+        "name": "Sweet bell pepper"
+      },
+      {
+        "quantity": "1",
+        "name": "Tomato"
+      },
+      {
+        "quantity": "1",
+        "name": "Yellow onion"
+      },
+      {
+        "quantity": "7 g",
+        "name": "Cilantro"
+      },
+      {
+        "quantity": "2",
+        "name": "Cream cheese portions"
+      },
+      {
+        "quantity": "1/4 cup",
+        "name": "Shredded cheddar cheese"
+      },
+      {
+        "quantity": "369 mL",
+        "name": "Crushed tomatoes"
+      },
+      {
+        "quantity": "1 tbsp",
+        "name": "Beef stock powder"
+      },
+      {
+        "quantity": "1 tbsp",
+        "name": "Enchilada spice blend"
+      },
+      {
+        "quantity": "1 tbsp",
+        "name": "Mexican seasoning"
+      }
+    ],
+    "steps": [
+      "Heat oven to 175°C. Chop bell pepper, tomato and onion; roughly cut cilantro.",
+      "Brown ground beef with onion and pepper in a soup pot, cooking the meat to 71°C.",
+      "Stir in crushed tomatoes, verified halal beef stock powder, enchilada seasoning, half the Mexican seasoning, cream cheese and water.",
+      "Simmer five to seven minutes until the soup thickens slightly and cheese has melted.",
+      "Toss tortilla chips with remaining Mexican seasoning and toast briefly in the oven.",
+      "Ladle soup into two bowls; garnish with chips, cheddar, fresh tomato and cilantro."
+    ],
+    "halal": "Use halal ground beef. Check beef stock powder and all packaged spice blends; cheddar should contain microbial/vegetarian rennet."
+  },
+  {
+    "id": 91,
+    "title": "Smart Vietnamese-Style Beef Patties",
+    "category": "Beef",
+    "minutes": 25,
+    "kcal": 580,
+    "protein": 30,
+    "adapted": false,
+    "verifiedSource": true,
+    "sourceType": "official-hellofresh-canada",
+    "photo": "https://media.hellofresh.com/q_78%2Cw_960%2Cf_auto%2Cc_limit%2Cfl_lossy/recipes/image/HF_Y23_R1036_W10_CA_RT155173-6_Main_Low-581be9db.jpg",
+    "source": "https://www.hellofresh.ca/recipes/smart-vietnamese-style-beef-patties-669dfec865ce5ed4b1f95f84",
+    "ingredients": [
+      {
+        "quantity": "250 g",
+        "name": "Ground beef"
+      },
+      {
+        "quantity": "1/2 tbsp",
+        "name": "Soy sauce"
+      },
+      {
+        "quantity": "1",
+        "name": "Mini cucumber"
+      },
+      {
+        "quantity": "1",
+        "name": "Carrot"
+      },
+      {
+        "quantity": "4 tbsp",
+        "name": "Sweet chili sauce"
+      },
+      {
+        "quantity": "2 tbsp",
+        "name": "Seasoned rice vinegar"
+      },
+      {
+        "quantity": "2 cloves",
+        "name": "Garlic"
+      },
+      {
+        "quantity": "28 g",
+        "name": "Chopped peanuts"
+      },
+      {
+        "quantity": "113 g",
+        "name": "Spring mix"
+      },
+      {
+        "quantity": "2",
+        "name": "Green onions"
+      },
+      {
+        "quantity": "1 tbsp",
+        "name": "Thai seasoning"
+      }
+    ],
+    "steps": [
+      "Slice cucumber and carrot, mince garlic and chop green onions.",
+      "Toast peanuts in a dry pan until fragrant, then set aside.",
+      "Mix ground beef, garlic, soy sauce and Thai seasoning; shape into eight small patties.",
+      "Pan-fry patties until browned and cooked through to 71°C.",
+      "Whisk half the sweet chili sauce with rice vinegar and oil, then toss greens, cucumber, carrot and green onion with dressing.",
+      "Coat patties with remaining sweet chili sauce and serve on salad, topped with roasted peanuts."
+    ],
+    "halal": "Use halal beef and alcohol-free soy sauce. Check Thai seasoning and sweet-chili sauce for alcohol or animal-derived flavourings."
+  },
+  {
+    "id": 92,
+    "title": "SuperQuick Thai Coconut-Curry Salmon Bowls",
+    "category": "Salmon",
+    "minutes": 15,
+    "kcal": 1140,
+    "protein": 40,
+    "adapted": false,
+    "verifiedSource": true,
+    "sourceType": "official-hellofresh-canada",
+    "photo": "https://media.hellofresh.com/q_78%2Cw_960%2Cf_auto%2Cc_limit%2Cfl_lossy/recipes/image/HF_Y25_R1051_W07_CA_RF31644-2_MAIN_low-9593c742.jpg",
+    "source": "https://www.hellofresh.ca/recipes/superquick-thai-coconut-curry-tilapia-bowls-675fa88942b1d78ec6587535",
+    "ingredients": [
+      {
+        "quantity": "250 g",
+        "name": "Skin-on salmon fillets"
+      },
+      {
+        "quantity": "3/4 cup",
+        "name": "Jasmine rice"
+      },
+      {
+        "quantity": "1",
+        "name": "Sweet bell pepper"
+      },
+      {
+        "quantity": "113 g",
+        "name": "Sugar snap peas"
+      },
+      {
+        "quantity": "1",
+        "name": "Coconut milk portion"
+      },
+      {
+        "quantity": "56 g",
+        "name": "Chopped cashews"
+      },
+      {
+        "quantity": "2 tbsp",
+        "name": "Ginger-garlic puree"
+      },
+      {
+        "quantity": "2 tbsp",
+        "name": "Red curry paste"
+      },
+      {
+        "quantity": "2 tbsp",
+        "name": "Garlic spread"
+      },
+      {
+        "quantity": "7 g",
+        "name": "Thai spice blend"
+      },
+      {
+        "quantity": "1 tbsp",
+        "name": "Soy sauce"
+      }
+    ],
+    "steps": [
+      "Start jasmine rice in a covered pot; cook until tender.",
+      "Slice bell pepper and trim snap peas. Pat salmon dry and season.",
+      "Sear salmon to 70°C, then set aside while preparing the curry.",
+      "Stir-fry bell pepper and snap peas with ginger-garlic puree, red curry paste and Thai spice blend.",
+      "Add coconut milk and a little soy sauce; simmer briefly and stir in salmon and garlic spread.",
+      "Serve coconut salmon and vegetables over rice, scattering chopped cashews on top."
+    ],
+    "halal": "Original soy sauce may contain alcohol; choose alcohol-free soy sauce. Check curry paste, Thai spice blend and garlic spread. This meal is high calorie (1140 kcal per HelloFresh serving)."
+  },
+  {
+    "id": 93,
+    "title": "Smoky Adobo Chicken Tacos",
+    "category": "Chicken",
+    "minutes": 30,
+    "kcal": null,
+    "protein": null,
+    "adapted": false,
+    "verifiedSource": true,
+    "sourceType": "official-hellofresh-canada",
+    "photo": "https://media.hellofresh.com/q_78%2Cw_960%2Cf_auto%2Cc_limit%2Cfl_lossy/recipes/image/smoky-adobo-chicken-tacos-8b4567.jpg",
+    "source": "https://www.hellofresh.ca/recipes/smoky-adobo-chicken-tacos-573c76defd2cb9ca2d8b4567",
+    "ingredients": [
+      {
+        "quantity": "1/2",
+        "name": "Red onion"
+      },
+      {
+        "quantity": "1",
+        "name": "Lime"
+      },
+      {
+        "quantity": "1",
+        "name": "Mango"
+      },
+      {
+        "quantity": "7 g",
+        "name": "Cilantro"
+      },
+      {
+        "quantity": "1",
+        "name": "Sour cream portion"
+      },
+      {
+        "quantity": "340 g",
+        "name": "Chicken breasts"
+      },
+      {
+        "quantity": "1 tbsp",
+        "name": "Chipotles in adobo"
+      },
+      {
+        "quantity": "1",
+        "name": "Avocado"
+      },
+      {
+        "quantity": "6",
+        "name": "Corn tortillas"
+      }
+    ],
+    "steps": [
+      "Cut mango into strips and finely slice red onion and cilantro. Zest and juice lime.",
+      "Mix sour cream with lime zest, lime juice, salt and pepper for a tangy crema.",
+      "Combine mango strips, onion, cilantro and remaining lime juice for slaw.",
+      "Butterfly chicken breasts and lightly coat with chipotle adobo sauce, adjusting spiciness.",
+      "Pan-cook chicken over medium-high heat until browned and cooked to 74°C, then slice thinly.",
+      "Warm tortillas; spread mashed avocado, add chicken and mango slaw, and drizzle lime crema."
+    ],
+    "halal": "Use halal chicken and verify chipotles in adobo and sour cream ingredients. HelloFresh did not publish reliable nutrition values for this older recipe."
+  },
+  {
+    "id": 94,
+    "title": "SuperQuick Asian-Inspired Beef Tacos",
+    "category": "Beef",
+    "minutes": 15,
+    "kcal": 860,
+    "protein": 38,
+    "adapted": false,
+    "verifiedSource": true,
+    "sourceType": "official-hellofresh-canada",
+    "photo": "https://media.hellofresh.com/q_78%2Cw_960%2Cf_auto%2Cc_limit%2Cfl_lossy/recipes/image/HF_Y24_R1049_W43_CA_RB31098-1_Main_low-ed5b1e25.jpg",
+    "source": "https://www.hellofresh.ca/recipes/superquick-asian-inspired-beef-tacos-6791658cbe277a0e68062382",
+    "ingredients": [
+      {
+        "quantity": "250 g",
+        "name": "Ground beef"
+      },
+      {
+        "quantity": "6",
+        "name": "Flour tortillas"
+      },
+      {
+        "quantity": "113 g",
+        "name": "Shredded red cabbage"
+      },
+      {
+        "quantity": "113 g",
+        "name": "Julienned carrot"
+      },
+      {
+        "quantity": "2",
+        "name": "Green onions"
+      },
+      {
+        "quantity": "1 tbsp",
+        "name": "Chili-garlic sauce"
+      },
+      {
+        "quantity": "4 tbsp",
+        "name": "Soy sauce-mirin blend"
+      },
+      {
+        "quantity": "2 tbsp",
+        "name": "Mayonnaise"
+      },
+      {
+        "quantity": "1 tbsp",
+        "name": "Seasoned rice vinegar"
+      },
+      {
+        "quantity": "28 g",
+        "name": "Chopped peanuts"
+      },
+      {
+        "quantity": "2 tbsp",
+        "name": "Ginger-garlic puree"
+      },
+      {
+        "quantity": "1",
+        "name": "Honey portion"
+      }
+    ],
+    "steps": [
+      "Brown halal ground beef with ginger-garlic puree, soy-mirin blend and a little oil, cooking to 71°C.",
+      "Thinly slice green onions and toss shredded cabbage and carrot with mayonnaise, vinegar and some green onions.",
+      "Mix honey with chili-garlic sauce for a spicy drizzle.",
+      "Warm flour tortillas just before serving so they stay flexible.",
+      "Fill tortillas with cabbage slaw and seasoned beef.",
+      "Drizzle hot honey on top and finish with peanuts and remaining green onion."
+    ],
+    "halal": "Soy-mirin blend can contain mirin; replace with alcohol-free soy sauce, rice vinegar and a little sugar. Check mayonnaise, vinegar and tortillas."
   }
 ]
