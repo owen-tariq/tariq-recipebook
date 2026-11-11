@@ -2998,5 +2998,705 @@
       "Finish with Parmesan and a little balsamic glaze; divide between two bowls."
     ],
     "halal": "Check balsamic glaze for wine-derived alcohol if avoiding it; use vegetarian-rennet Parmesan. Salmon and shrimp are the proteins here."
+  },
+  {
+    "id": 108,
+    "title": "Salmon, Shrimp and Zucchini Linguine",
+    "category": "Salmon",
+    "minutes": 25,
+    "kcal": 1290,
+    "protein": 62,
+    "adapted": false,
+    "verifiedSource": true,
+    "sourceType": "official-hellofresh-canada",
+    "source": "https://www.hellofresh.ca/recipes/salmon-shrimp-and-zucchini-linguine-6536abafdd620068450212a2",
+    "photo": "https://media.hellofresh.com/q_78%2Cw_960%2Cf_auto%2Cc_limit%2Cfl_lossy/recipes/image/salmon-shrimp-and-zucchini-linguine-2b9fbbc4.jpg",
+    "ingredients": [
+      {
+        "quantity": "285 g",
+        "name": "Shrimp"
+      },
+      {
+        "quantity": "250 g",
+        "name": "Salmon fillets"
+      },
+      {
+        "quantity": "1",
+        "name": "Zucchini"
+      },
+      {
+        "quantity": "56 g",
+        "name": "Green peas"
+      },
+      {
+        "quantity": "56 g",
+        "name": "Chopped onion"
+      },
+      {
+        "quantity": "227 g",
+        "name": "Fresh linguine"
+      },
+      {
+        "quantity": "7 g",
+        "name": "Fresh dill"
+      },
+      {
+        "quantity": "1",
+        "name": "Vegetable broth concentrate"
+      },
+      {
+        "quantity": "1.5 tsp",
+        "name": "Dijon mustard"
+      },
+      {
+        "quantity": "237 mL",
+        "name": "Cream"
+      },
+      {
+        "quantity": "2 tbsp",
+        "name": "Garlic puree"
+      }
+    ],
+    "steps": [
+      "Bring a large pot of salted water to a boil and cook fresh linguine until just tender; reserve pasta water.",
+      "Cut zucchini into half-moons and chop dill; pat shrimp and salmon dry.",
+      "Sear salmon in a hot pan until the centre reaches 70°C; remove to a plate and flake into large pieces.",
+      "Cook shrimp in the pan until opaque and 74°C; remove. Sauté onion, zucchini and peas with garlic puree.",
+      "Add cream, Dijon mustard and halal-suitable vegetable broth concentrate; simmer briefly and thin with pasta water.",
+      "Toss linguine with creamy vegetables, shrimp, salmon and dill. This is a very rich 1,290-kcal serving."
+    ],
+    "halal": "Verify Dijon mustard (some contain wine), broth and cream are suitable. Use alcohol-free alternatives; higher calorie than your stated preference."
+  },
+  {
+    "id": 109,
+    "title": "Warm Salmon and Shrimp with Cajun Rice",
+    "category": "Salmon",
+    "minutes": 35,
+    "kcal": 890,
+    "protein": 55,
+    "adapted": false,
+    "verifiedSource": true,
+    "sourceType": "official-hellofresh-canada",
+    "source": "https://www.hellofresh.ca/recipes/warm-salmon-and-shrimp-6407105eee95fb09b0045099",
+    "photo": "https://media.hellofresh.com/q_78%2Cw_960%2Cf_auto%2Cc_limit%2Cfl_lossy/recipes/image/crevettes-et-saumon-a-la-cajun-103989fc.jpg",
+    "ingredients": [
+      {
+        "quantity": "250 g",
+        "name": "Salmon fillets"
+      },
+      {
+        "quantity": "285 g",
+        "name": "Shrimp"
+      },
+      {
+        "quantity": "3/4 cup",
+        "name": "Basmati rice"
+      },
+      {
+        "quantity": "160 g",
+        "name": "Sweet bell pepper"
+      },
+      {
+        "quantity": "80 g",
+        "name": "Tomato"
+      },
+      {
+        "quantity": "2",
+        "name": "Green onions"
+      },
+      {
+        "quantity": "1",
+        "name": "Lemon"
+      },
+      {
+        "quantity": "113 g",
+        "name": "Aromatics blend"
+      },
+      {
+        "quantity": "1 tbsp",
+        "name": "Cajun spice blend"
+      },
+      {
+        "quantity": "1",
+        "name": "Vegetable broth concentrate"
+      }
+    ],
+    "steps": [
+      "Rinse basmati rice and cook covered in water with a little Cajun spice until tender.",
+      "Dice bell pepper and tomato, slice green onions and zest half the lemon.",
+      "Season salmon with Cajun spice and roast or sear to 70°C; set aside.",
+      "Sauté aromatics blend and bell pepper until softened, then add shrimp and cook to 74°C.",
+      "Stir tomatoes, broth concentrate and a splash of water through the shrimp; simmer until flavours combine.",
+      "Spoon over rice and top with salmon, lemon wedges and green onions."
+    ],
+    "halal": "Choose alcohol-free, halal-suitable vegetable broth and check Cajun seasoning for hidden meat flavours."
+  },
+  {
+    "id": 110,
+    "title": "Cajun Salmon and Shrimp",
+    "category": "Salmon",
+    "minutes": 35,
+    "kcal": 890,
+    "protein": 55,
+    "adapted": false,
+    "verifiedSource": true,
+    "sourceType": "official-hellofresh-canada",
+    "source": "https://www.hellofresh.ca/recipes/cajun-salmon-and-shrimp-6332acd84a7e3eea2e0016a8",
+    "photo": "https://media.hellofresh.com/q_78%2Cw_960%2Cf_auto%2Cc_limit%2Cfl_lossy/recipes/image/crevettes-et-saumon-a-la-cajun-0ff0bd53.jpg",
+    "ingredients": [
+      {
+        "quantity": "250 g",
+        "name": "Salmon fillets"
+      },
+      {
+        "quantity": "285 g",
+        "name": "Shrimp"
+      },
+      {
+        "quantity": "3/4 cup",
+        "name": "Basmati rice"
+      },
+      {
+        "quantity": "3 stalks",
+        "name": "Celery"
+      },
+      {
+        "quantity": "160 g",
+        "name": "Sweet bell pepper"
+      },
+      {
+        "quantity": "80 g",
+        "name": "Tomato"
+      },
+      {
+        "quantity": "2",
+        "name": "Green onions"
+      },
+      {
+        "quantity": "1",
+        "name": "Lemon"
+      },
+      {
+        "quantity": "56 g",
+        "name": "Chopped onion"
+      },
+      {
+        "quantity": "1 tbsp",
+        "name": "Cajun spice blend"
+      },
+      {
+        "quantity": "1",
+        "name": "Vegetable broth concentrate"
+      }
+    ],
+    "steps": [
+      "Simmer basmati rice until tender, then fluff and keep warm.",
+      "Dice celery, bell pepper, tomato and onion; slice green onions and cut lemon into wedges.",
+      "Sprinkle salmon with Cajun seasoning; sear or roast until it reaches 70°C.",
+      "Sauté chopped onion, celery and bell pepper in a large pan until softened.",
+      "Add shrimp, remaining Cajun spices, broth concentrate and a splash of water, then simmer until shrimp reach 74°C.",
+      "Serve the spicy shrimp and vegetables over rice with salmon, fresh tomato, lemon and green onions."
+    ],
+    "halal": "Check Cajun spice and vegetable broth ingredients for halal suitability; no pork is listed."
+  },
+  {
+    "id": 111,
+    "title": "Miso-Honey Glazed Salmon",
+    "category": "Salmon",
+    "minutes": 30,
+    "kcal": 720,
+    "protein": 36,
+    "adapted": false,
+    "verifiedSource": true,
+    "sourceType": "official-hellofresh-canada",
+    "source": "https://www.hellofresh.ca/recipes/miso-honey-glazed-salmon-6407108acde6619c420ec394",
+    "photo": "https://media.hellofresh.com/q_78%2Cw_960%2Cf_auto%2Cc_limit%2Cfl_lossy/recipes/image/saumon-glace-au-miso-et-au-miel-29f3657d.jpg",
+    "ingredients": [
+      {
+        "quantity": "250 g",
+        "name": "Salmon fillets"
+      },
+      {
+        "quantity": "1 tsp",
+        "name": "Garlic salt"
+      },
+      {
+        "quantity": "1 tbsp",
+        "name": "Honey"
+      },
+      {
+        "quantity": "1 tbsp",
+        "name": "Soy sauce"
+      },
+      {
+        "quantity": "1 tbsp",
+        "name": "Sesame seeds"
+      },
+      {
+        "quantity": "3/4 cup",
+        "name": "Basmati rice"
+      },
+      {
+        "quantity": "113 g",
+        "name": "Bok choy"
+      },
+      {
+        "quantity": "2",
+        "name": "Green onions"
+      },
+      {
+        "quantity": "160 g",
+        "name": "Sweet bell pepper"
+      },
+      {
+        "quantity": "1",
+        "name": "Miso broth concentrate"
+      }
+    ],
+    "steps": [
+      "Cook basmati rice covered until tender.",
+      "Trim bok choy, slice bell pepper and green onions, and pat salmon dry.",
+      "Combine honey, soy sauce and miso broth concentrate in a small bowl; use alcohol-free soy sauce.",
+      "Toast sesame seeds in a clean dry pan, then sauté bell pepper and bok choy until tender-crisp.",
+      "Sear salmon with garlic salt and brush in the glaze during the final minutes; cook to 70°C.",
+      "Serve salmon on rice with sautéed vegetables, sesame and green onions."
+    ],
+    "halal": "Some soy sauce and miso stock products contain alcohol; select alcohol-free soy sauce and verified halal broth."
+  },
+  {
+    "id": 112,
+    "title": "Baked Salmon and Chips",
+    "category": "Salmon",
+    "minutes": 35,
+    "kcal": 830,
+    "protein": 37,
+    "adapted": false,
+    "verifiedSource": true,
+    "sourceType": "official-hellofresh-canada",
+    "source": "https://www.hellofresh.ca/recipes/baked-salmon-and-chips-5fb3c5cc3f38474f0b7e42c7",
+    "photo": "https://media.hellofresh.com/q_78%2Cw_960%2Cf_auto%2Cc_limit%2Cfl_lossy/recipes/image/saumon-et-frites-10bc4887.jpg",
+    "ingredients": [
+      {
+        "quantity": "285 g",
+        "name": "Skinless salmon fillets"
+      },
+      {
+        "quantity": "460 g",
+        "name": "Russet potatoes"
+      },
+      {
+        "quantity": "2/5 tbsp",
+        "name": "Mayonnaise"
+      },
+      {
+        "quantity": "7 g",
+        "name": "Fresh dill"
+      },
+      {
+        "quantity": "90 mL",
+        "name": "Sliced dill pickles"
+      },
+      {
+        "quantity": "1",
+        "name": "Lemon"
+      },
+      {
+        "quantity": "113 g",
+        "name": "Sugar snap peas"
+      },
+      {
+        "quantity": "6 g",
+        "name": "Garlic"
+      },
+      {
+        "quantity": "1 tsp",
+        "name": "Worcestershire sauce"
+      }
+    ],
+    "steps": [
+      "Heat oven to 230°C. Slice potatoes into thin fries and roast with oil and salt for 25–28 minutes.",
+      "Finely chop dill pickles and dill; mince garlic and zest lemon.",
+      "Mix mayonnaise with pickles, lemon zest, dill and part of the Worcestershire sauce for tartar dip.",
+      "Pat salmon dry and roast on a lined tray until its centre reaches 70°C.",
+      "Quickly sauté snap peas with garlic until bright green; squeeze on a little lemon.",
+      "Serve roasted salmon with potato fries, snap peas and the pickle-dill tartar sauce."
+    ],
+    "halal": "Worcestershire can contain anchovy (fish) or other ingredients; check brand and make sure mayonnaise is halal-suitable."
+  },
+  {
+    "id": 113,
+    "title": "Zesty Garlic Salmon with Tomato Linguine",
+    "category": "Salmon",
+    "minutes": 20,
+    "kcal": 700,
+    "protein": 42,
+    "adapted": false,
+    "verifiedSource": true,
+    "sourceType": "official-hellofresh-canada",
+    "source": "https://www.hellofresh.ca/recipes/zesty-garlic-salmon-65a6429e9111ee6d540db1b8",
+    "photo": "https://media.hellofresh.com/q_78%2Cw_960%2Cf_auto%2Cc_limit%2Cfl_lossy/recipes/image/zesty-garlic-salmon-b7ae25cc.jpg",
+    "ingredients": [
+      {
+        "quantity": "250 g",
+        "name": "Salmon fillets"
+      },
+      {
+        "quantity": "170 g",
+        "name": "Linguine"
+      },
+      {
+        "quantity": "28 g",
+        "name": "Baby spinach"
+      },
+      {
+        "quantity": "1/4 cup",
+        "name": "Crumbled feta"
+      },
+      {
+        "quantity": "370 mL",
+        "name": "Crushed tomatoes with garlic and onion"
+      },
+      {
+        "quantity": "1 tbsp",
+        "name": "Zesty garlic seasoning blend"
+      }
+    ],
+    "steps": [
+      "Boil salted water and cook linguine until tender; drain and save some cooking water.",
+      "Pat salmon dry and rub with zesty garlic spice, salt and pepper.",
+      "Sear salmon in oil until nicely browned and the centre reaches 70°C.",
+      "Warm crushed tomatoes in the skillet with a little pasta water until simmering.",
+      "Stir spinach into tomato sauce until wilted, then toss with the cooked linguine.",
+      "Portion tomato linguine into two bowls, place salmon on top and crumble feta over each."
+    ],
+    "halal": "Check feta for microbial/vegetarian rennet and canned tomato sauce for wine or meat ingredients."
+  },
+  {
+    "id": 114,
+    "title": "Panko-Crusted Baked Salmon",
+    "category": "Salmon",
+    "minutes": 25,
+    "kcal": 950,
+    "protein": 42,
+    "adapted": false,
+    "verifiedSource": true,
+    "sourceType": "official-hellofresh-canada",
+    "source": "https://www.hellofresh.ca/recipes/panko-crusted-baked-salmon-660c9db13f0f2e6d306d9718",
+    "photo": "https://media.hellofresh.com/q_78%2Cw_960%2Cf_auto%2Cc_limit%2Cfl_lossy/recipes/image/14d4a341-3368-417c-8f5f-f7e1bfb84750-3933bdaf.jpg",
+    "ingredients": [
+      {
+        "quantity": "250 g",
+        "name": "Salmon fillets"
+      },
+      {
+        "quantity": "1/4 cup",
+        "name": "Sun-dried tomato pesto"
+      },
+      {
+        "quantity": "1/3 cup",
+        "name": "Panko breadcrumbs"
+      },
+      {
+        "quantity": "170 g",
+        "name": "Orzo"
+      },
+      {
+        "quantity": "1/4 cup",
+        "name": "Crumbled feta"
+      },
+      {
+        "quantity": "56 g",
+        "name": "Baby spinach"
+      },
+      {
+        "quantity": "7 g",
+        "name": "Zesty garlic blend"
+      },
+      {
+        "quantity": "2 tbsp",
+        "name": "Mayonnaise"
+      },
+      {
+        "quantity": "3.5 g",
+        "name": "Chives"
+      }
+    ],
+    "steps": [
+      "Heat oven to 230°C; boil salted water for orzo and chop chives.",
+      "Stir panko with mayonnaise, sun-dried tomato pesto and a little zesty garlic seasoning.",
+      "Place salmon on a lined baking sheet and press pesto-panko topping onto the surface.",
+      "Bake salmon until crust is golden and fish reaches 70°C.",
+      "Cook orzo, drain, and fold in baby spinach until softened; season with the remaining garlic blend.",
+      "Serve salmon over orzo, crumbling feta and scattering chives over each plate."
+    ],
+    "halal": "Check pesto and feta cheese for vegetarian/microbial rennet; verify mayonnaise and panko."
+  },
+  {
+    "id": 115,
+    "title": "Sushi-Inspired Gingery Salmon Bowls",
+    "category": "Salmon",
+    "minutes": 30,
+    "kcal": 980,
+    "protein": 38,
+    "adapted": false,
+    "verifiedSource": true,
+    "sourceType": "official-hellofresh-canada",
+    "source": "https://www.hellofresh.ca/recipes/something-sushi-rice-bowl-6703e0da02cdf0b40ec36b7b",
+    "photo": "https://media.hellofresh.com/q_78%2Cw_960%2Cf_auto%2Cc_limit%2Cfl_lossy/recipes/image/HF_Y25_R1044_W03_CA_RF33942-1_Main__7low-0e1288ef.jpg",
+    "ingredients": [
+      {
+        "quantity": "250 g",
+        "name": "Skin-on salmon fillets"
+      },
+      {
+        "quantity": "3/4 cup",
+        "name": "Sticky rice"
+      },
+      {
+        "quantity": "56 g",
+        "name": "Edamame"
+      },
+      {
+        "quantity": "227 g",
+        "name": "Broccoli"
+      },
+      {
+        "quantity": "1",
+        "name": "Avocado"
+      },
+      {
+        "quantity": "56 g",
+        "name": "Shredded red cabbage"
+      },
+      {
+        "quantity": "1",
+        "name": "Green onion"
+      },
+      {
+        "quantity": "7 g",
+        "name": "Black sesame seeds"
+      },
+      {
+        "quantity": "2 tbsp",
+        "name": "Ginger sauce"
+      },
+      {
+        "quantity": "2 tbsp",
+        "name": "Seasoned rice vinegar"
+      },
+      {
+        "quantity": "1 tbsp",
+        "name": "Sesame oil"
+      },
+      {
+        "quantity": "2 tbsp",
+        "name": "Spicy mayonnaise"
+      }
+    ],
+    "steps": [
+      "Rinse sticky rice and cook covered following package directions, keeping it moist for a bowl.",
+      "Cut broccoli into florets, shred cabbage, slice green onion and cube avocado.",
+      "Toss cabbage with seasoned rice vinegar and a pinch of sugar; let it stand.",
+      "Cook broccoli and edamame in a hot pan with sesame oil until crisp-tender.",
+      "Sear salmon until the centre reaches 70°C; brush or toss with the ginger sauce.",
+      "Build bowls with rice, cabbage, vegetables, avocado and salmon; drizzle spicy mayo and sprinkle sesame and green onion."
+    ],
+    "halal": "Check ginger sauce, seasoned vinegar and spicy mayo for alcohol and other unsuitable ingredients. This meal is 980 kcal per serving."
+  },
+  {
+    "id": 116,
+    "title": "Velvety Tuscan Salmon Linguine",
+    "category": "Salmon",
+    "minutes": 30,
+    "kcal": 1290,
+    "protein": 44,
+    "adapted": false,
+    "verifiedSource": true,
+    "sourceType": "official-hellofresh-canada",
+    "source": "https://www.hellofresh.ca/recipes/velvety-tuscan-salmon-65f8d67d4690e3c0904721ee",
+    "photo": "https://media.hellofresh.com/q_78%2Cw_960%2Cf_auto%2Cc_limit%2Cfl_lossy/recipes/image/HF_Y24_R1045_W29_CA_RF154374-1_Main_low-d6aff2bb.jpg",
+    "ingredients": [
+      {
+        "quantity": "250 g",
+        "name": "Skin-on salmon fillets"
+      },
+      {
+        "quantity": "113 g",
+        "name": "Baby tomatoes"
+      },
+      {
+        "quantity": "237 mL",
+        "name": "Cream"
+      },
+      {
+        "quantity": "56 g",
+        "name": "Baby spinach"
+      },
+      {
+        "quantity": "1",
+        "name": "Shallot"
+      },
+      {
+        "quantity": "1/4 cup",
+        "name": "Shredded Parmesan"
+      },
+      {
+        "quantity": "1 tbsp",
+        "name": "Zesty garlic blend"
+      },
+      {
+        "quantity": "227 g",
+        "name": "Fresh linguine"
+      },
+      {
+        "quantity": "2 cloves",
+        "name": "Garlic"
+      }
+    ],
+    "steps": [
+      "Boil water for fresh linguine; chop shallot, mince garlic, halve tomatoes and rinse spinach.",
+      "Season salmon with zesty garlic blend and roast or sear until it reaches 70°C.",
+      "Cook linguine in salted boiling water; drain, reserving starchy cooking water.",
+      "Sauté shallot, garlic and tomatoes in a little butter until fragrant.",
+      "Add cream, spinach and some pasta water; simmer until lightly reduced, then add Parmesan.",
+      "Coat linguine in creamy sauce and serve salmon over it. This is a rich, high-calorie choice."
+    ],
+    "halal": "Use Parmesan with microbial/vegetarian rennet and check seasonings; 1,290 kcal/serving is not a low-calorie dish."
+  },
+  {
+    "id": 117,
+    "title": "Sticky Ginger Beef and Rice Bowls",
+    "category": "Beef",
+    "minutes": 30,
+    "kcal": 930,
+    "protein": 33,
+    "adapted": false,
+    "verifiedSource": true,
+    "sourceType": "official-hellofresh-canada",
+    "source": "https://www.hellofresh.ca/recipes/sticky-ginger-beef-and-rice-bowls-63e20a3909b3dca33c072fba",
+    "photo": "https://media.hellofresh.com/q_78%2Cw_960%2Cf_auto%2Cc_limit%2Cfl_lossy/recipes/image/bols-de-boeuf-et-de-riz-collant-au-gingembre-f30ad253.jpg",
+    "ingredients": [
+      {
+        "quantity": "250 g",
+        "name": "Ground beef"
+      },
+      {
+        "quantity": "3/4 cup",
+        "name": "Jasmine rice"
+      },
+      {
+        "quantity": "56 g",
+        "name": "Julienned carrots"
+      },
+      {
+        "quantity": "28 g",
+        "name": "Crispy shallots"
+      },
+      {
+        "quantity": "2 tbsp",
+        "name": "Soy sauce"
+      },
+      {
+        "quantity": "1 tbsp",
+        "name": "Ginger-garlic puree"
+      },
+      {
+        "quantity": "113 g",
+        "name": "Sugar snap peas"
+      },
+      {
+        "quantity": "1 tbsp",
+        "name": "Rice vinegar"
+      },
+      {
+        "quantity": "4 tbsp",
+        "name": "Mayonnaise"
+      },
+      {
+        "quantity": "1 tbsp",
+        "name": "Honey"
+      },
+      {
+        "quantity": "3",
+        "name": "Radishes"
+      }
+    ],
+    "steps": [
+      "Rinse jasmine rice and toast briefly with half the ginger-garlic puree in oil; add water and simmer covered.",
+      "Slice radishes and snap peas and set carrots in a small bowl.",
+      "Toss carrot and radish with rice vinegar, honey and a little salt to quick-pickle.",
+      "Brown halal ground beef with remaining ginger-garlic puree and soy sauce until fully cooked to 71°C.",
+      "Mix a little soy sauce into mayonnaise; quickly sauté sugar snap peas.",
+      "Serve beef, snap peas and pickled vegetables over rice, topping with soy-mayo and crispy shallots."
+    ],
+    "halal": "Use halal beef and alcohol-free soy sauce; check mayonnaise, crispy shallots and rice vinegar."
+  },
+  {
+    "id": 118,
+    "title": "Creamy Sun-Dried Tomato Pesto Chicken Pasta",
+    "category": "Chicken",
+    "minutes": 20,
+    "kcal": 1050,
+    "protein": 57,
+    "adapted": false,
+    "verifiedSource": true,
+    "sourceType": "official-hellofresh-canada",
+    "source": "https://www.hellofresh.ca/recipes/creamy-lemon-chicken-linguine-66721c9f61ecc3cc7c9acec3",
+    "photo": "https://media.hellofresh.com/q_78%2Cw_960%2Cf_auto%2Cc_limit%2Cfl_lossy/recipes/image/HF_Y24_R1029_W51_CA_RC28632-1_Main_low-b7f8f9e3.jpg",
+    "ingredients": [
+      {
+        "quantity": "2",
+        "name": "Chicken breasts"
+      },
+      {
+        "quantity": "227 g",
+        "name": "Fresh linguine"
+      },
+      {
+        "quantity": "113 g",
+        "name": "Baby tomatoes"
+      },
+      {
+        "quantity": "56 g",
+        "name": "Baby spinach"
+      },
+      {
+        "quantity": "56 g",
+        "name": "Chopped yellow onion"
+      },
+      {
+        "quantity": "30 g",
+        "name": "Capers"
+      },
+      {
+        "quantity": "1/4 cup",
+        "name": "Parmesan cheese, shredded"
+      },
+      {
+        "quantity": "113 mL",
+        "name": "Cream"
+      },
+      {
+        "quantity": "1/4 cup",
+        "name": "Sun-dried tomato pesto"
+      },
+      {
+        "quantity": "4 tbsp",
+        "name": "White cooking wine (original recipe; replace for halal)"
+      },
+      {
+        "quantity": "1 tsp",
+        "name": "Garlic salt"
+      }
+    ],
+    "steps": [
+      "Cook fresh linguine in salted boiling water until just tender; reserve some pasta water.",
+      "Season halal chicken with garlic salt; sear in a hot skillet until golden and the centre reaches 74°C.",
+      "Soften chopped onion and baby tomatoes in the same pan with a little butter.",
+      "Add sun-dried tomato pesto, cream, capers and a splash of halal vegetable broth plus lemon juice instead of the original wine.",
+      "Stir in spinach until wilted, then toss through the linguine and Parmesan, adding pasta water as needed.",
+      "Slice chicken over creamy pasta. Original recipe uses cooking wine; this home substitution changes flavour and published nutrition."
+    ],
+    "halal": "Original HelloFresh recipe contains 4 tbsp WHITE COOKING WINE. Replace with halal vegetable broth and lemon juice. Use halal chicken and vegetarian/microbial-rennet Parmesan."
   }
 ]
