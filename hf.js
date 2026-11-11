@@ -16,7 +16,7 @@ function attachPhotos(root=document){
   let attempt=0;
   const next=()=>{
    if(attempt<candidates.length){img.src=candidates[attempt++];return;}
-   img.src='photo-unverified.svg';img.alt='Official HelloFresh dish photo unavailable';
+   img.removeEventListener('error',next);img.src='photo-unverified.svg';img.alt='Official HelloFresh dish photo unavailable';
    if(tag)tag.textContent='Image unavailable — official source linked';
   };
   img.addEventListener('error',next);
@@ -28,7 +28,7 @@ let allRecipes=[];
 function isSourceVerified(r){return !r.adapted}
 function hasNutrition(r){return !r.adapted&&Number.isFinite(r.protein)&&Number.isFinite(r.kcal)}
 function categoryFromName(r){return r.category||'Other'}
-function imageHTML(r){return '<div class="hf-card-image"><img data-hf-photo="'+r.id+'" alt="Photo for '+esc(r.title)+' (only shown if verified; otherwise a clearly labelled placeholder)" loading="lazy"><span class="hf-card-type" data-photo-status>Official photo</span></div>'}
+function imageHTML(r){return '<div class="hf-card-image"><img data-hf-photo="'+r.id+'" alt="Official HelloFresh Canada photo of '+esc(r.title)+'" loading="lazy"><span class="hf-card-type" data-photo-status>Official photo</span></div>'}
 function cardHTML(r){return '<article class="hf-card">'+
 imageHTML(r)+'<button class="hf-card-save '+(isFavorite(r.id)?'active':'')+'" type="button" data-fave="'+r.id+'" aria-label="'+(isFavorite(r.id)?'Remove from favourites':'Add to favourites')+'">♥</button>'+
 '<div class="hf-card-info"><div class="hf-card-category">'+esc(categoryFromName(r))+'</div><h3><a href="meal.html?id='+r.id+'">'+esc(r.title)+'</a></h3><div class="hf-card-bottom"><span>⏱ '+esc(r.minutes)+' min</span>'+(hasNutrition(r)?'<span>'+r.protein+'g protein</span><span>'+r.kcal+' kcal</span>':'')+'</div><p class="hf-card-adaptation">'+(r.adapted?'Unverified adaptation':'HelloFresh Canada recipe · summarized steps')+'</p></div></article>'}
