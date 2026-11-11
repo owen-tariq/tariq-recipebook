@@ -1584,66 +1584,6 @@
     "halal": "Check ginger and chili-garlic sauces for alcohol or other non-halal additions; use halal-suitable alternatives if needed."
   },
   {
-    "id": 83,
-    "title": "Honey-Garlic Shrimp",
-    "category": "Shrimp",
-    "minutes": 25,
-    "kcal": 670,
-    "protein": 31,
-    "adapted": false,
-    "verifiedSource": true,
-    "sourceType": "official-hellofresh-canada",
-    "photo": "https://media.hellofresh.com/q_78%2Cw_960%2Cf_auto%2Cc_limit%2Cfl_lossy/recipes/image/HF_Y24_R1011_W38_CA_RF154383-3_Main_2_low-3f55a612.jpg",
-    "source": "https://www.hellofresh.ca/recipes/honey-garlic-shrimp-669e16d1f062ed659bdaecdf",
-    "ingredients": [
-      {
-        "quantity": "285 g",
-        "name": "Shrimp"
-      },
-      {
-        "quantity": "4 tbsp",
-        "name": "Honey-garlic sauce"
-      },
-      {
-        "quantity": "1 tbsp",
-        "name": "Soy sauce"
-      },
-      {
-        "quantity": "1 tsp",
-        "name": "Garlic salt"
-      },
-      {
-        "quantity": "3/4 cup",
-        "name": "Basmati rice"
-      },
-      {
-        "quantity": "1",
-        "name": "Shanghai bok choy"
-      },
-      {
-        "quantity": "2 tbsp",
-        "name": "Ginger-garlic puree"
-      },
-      {
-        "quantity": "7 g",
-        "name": "Black sesame seeds"
-      },
-      {
-        "quantity": "1",
-        "name": "Sweet bell pepper"
-      }
-    ],
-    "steps": [
-      "Cook basmati rice in about 1¼ cups water with half the garlic salt for 12–14 minutes.",
-      "Pat shrimp dry, season with pepper and garlic salt and pan-cook until pink and cooked through; set aside.",
-      "Cut bell pepper and bok choy into bite-size pieces.",
-      "Stir-fry vegetables, then add ginger-garlic puree and some soy sauce.",
-      "Warm the honey-garlic sauce with remaining soy sauce until it coats a spoon lightly.",
-      "Fluff rice with butter and sesame seeds. Add vegetables, shrimp, warm sauce and remaining sesame."
-    ],
-    "halal": "HelloFresh's listed soy sauce can contain alcohol. Buy verified alcohol-free soy sauce; inspect honey-garlic and ginger-garlic sauces."
-  },
-  {
     "id": 84,
     "title": "Greek-Style Shrimp and Feta Bake",
     "category": "Shrimp",
@@ -1946,70 +1886,6 @@
       "Slice chicken over couscous and top with feta and lemon."
     ],
     "halal": "Use halal chicken and broth concentrate; check spice blends and feta's enzyme/rennet."
-  },
-  {
-    "id": 89,
-    "title": "SuperQuick Greek-Style Salmon",
-    "category": "Salmon",
-    "minutes": 15,
-    "kcal": 810,
-    "protein": 37,
-    "adapted": false,
-    "verifiedSource": true,
-    "sourceType": "official-hellofresh-canada",
-    "photo": "https://media.hellofresh.com/q_78%2Cw_960%2Cf_auto%2Cc_limit%2Cfl_lossy/recipes/image/HF_Y24_R1051_W44_CA_RS31445-1_MAIN__6low-10addd2c.jpg",
-    "source": "https://www.hellofresh.ca/recipes/superquick-greek-style-salmon-66d55f014af7e0a57fdff238",
-    "ingredients": [
-      {
-        "quantity": "250 g",
-        "name": "Skin-on salmon fillets"
-      },
-      {
-        "quantity": "3/4 cup",
-        "name": "Basmati rice"
-      },
-      {
-        "quantity": "1 tbsp",
-        "name": "Vegetable stock powder"
-      },
-      {
-        "quantity": "3 tbsp",
-        "name": "Yogurt sauce"
-      },
-      {
-        "quantity": "1/2 tbsp",
-        "name": "Red wine vinegar"
-      },
-      {
-        "quantity": "1 tbsp",
-        "name": "Garlic puree"
-      },
-      {
-        "quantity": "1",
-        "name": "Tomato"
-      },
-      {
-        "quantity": "1/4 cup",
-        "name": "Crumbled feta cheese"
-      },
-      {
-        "quantity": "56 g",
-        "name": "Spring mix"
-      },
-      {
-        "quantity": "1/2 tbsp",
-        "name": "Lemon-pepper seasoning"
-      }
-    ],
-    "steps": [
-      "Boil basmati rice with verified stock powder until tender; set aside covered.",
-      "Pat salmon dry and season with lemon-pepper seasoning and a little salt.",
-      "Sear salmon in hot oil until cooked to 70°C; add garlic puree near the end.",
-      "Dice tomato and combine with spring mix and feta.",
-      "Whisk vinegar, a little oil and sugar for a dressing; substitute lemon juice if avoiding wine vinegar.",
-      "Serve salmon with rice, dressed salad and yogurt sauce."
-    ],
-    "halal": "The original dressing uses red wine vinegar: substitute lemon juice or non-wine vinegar. Check yogurt sauce, stock and feta rennet."
   },
   {
     "id": 90,
@@ -2350,5 +2226,73 @@
       "Drizzle hot honey on top and finish with peanuts and remaining green onion."
     ],
     "halal": "Soy-mirin blend can contain mirin; replace with alcohol-free soy sauce, rice vinegar and a little sugar. Check mayonnaise, vinegar and tortillas."
+  },
+  {
+    "id": 95,
+    "title": "Spicy Korean-Inspired Chicken Tacos",
+    "category": "Chicken",
+    "minutes": 30,
+    "kcal": 750,
+    "protein": 49,
+    "adapted": false,
+    "verifiedSource": true,
+    "sourceType": "official-hellofresh-canada",
+    "source": "https://www.hellofresh.ca/recipes/spicy-korean-chicken-tacos-65ef9b72d4f9506890147379",
+    "photo": "https://media.hellofresh.com/q_78%2Cw_960%2Cf_auto%2Cc_limit%2Cfl_lossy/recipes/image/HF_Y25_R1023_W02_CA_RC155527-1_Main_low-6aae5c8f.jpg",
+    "ingredients": [
+      {
+        "quantity": "6",
+        "name": "Flour tortillas"
+      },
+      {
+        "quantity": "9 g",
+        "name": "Moo shu spice blend"
+      },
+      {
+        "quantity": "2 tbsp",
+        "name": "Brown sugar"
+      },
+      {
+        "quantity": "1 tbsp",
+        "name": "Soy sauce"
+      },
+      {
+        "quantity": "2 tbsp",
+        "name": "Gochujang"
+      },
+      {
+        "quantity": "170 g",
+        "name": "Coleslaw cabbage mix"
+      },
+      {
+        "quantity": "2 tbsp",
+        "name": "Mayonnaise"
+      },
+      {
+        "quantity": "1 tbsp",
+        "name": "Seasoned rice vinegar"
+      },
+      {
+        "quantity": "1 tbsp",
+        "name": "Sesame oil"
+      },
+      {
+        "quantity": "2",
+        "name": "Green onions"
+      },
+      {
+        "quantity": "310 g",
+        "name": "Chicken breast tenders"
+      }
+    ],
+    "steps": [
+      "Thinly slice green onions; pat chicken tenders dry and dust with moo shu seasoning.",
+      "Sear chicken in hot sesame oil until golden and cooked to 74°C.",
+      "Stir brown sugar, gochujang, soy sauce and a little water into the pan; simmer until chicken is coated.",
+      "Whisk mayonnaise, rice vinegar and remaining sesame oil into a dressing; mix with coleslaw and green onions.",
+      "Warm flour tortillas in the microwave or a covered skillet just before serving.",
+      "Divide chicken among tortillas, then top with creamy sesame slaw."
+    ],
+    "halal": "Choose halal chicken and check tortillas, mayonnaise and seasonings. HelloFresh's gochujang and soy sauce can contain alcohol; use halal-certified gochujang and alcohol-free soy sauce."
   }
 ]
