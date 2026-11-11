@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Can't decide what to cook? Pick a random recipe and reroll anytime.">
+<title>Pick for Me | Tariq's Recipe Book</title>
+<link rel="stylesheet" href="style.css?v=12"><link rel="stylesheet" href="lunch.css?v=3">
+<script>window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments)}</script>
+<script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+<header class="site-header"><a class="site-brand" href="index.html">Tariq's <span>Recipe Book</span></a>
+<nav class="site-nav" aria-label="Main navigation">
+<a href="index.html">Home</a><a href="recipes.html">All Recipes</a>
+<a href="lunch.html">Lunch Options</a><a href="hellofresh.html">Meal-Kit Collection</a>
+<a href="plan.html">Use What You Bought</a><a href="shopping.html">Shopping List</a>
+<a href="pick.html" class="site-random-link" aria-current="page">🎲 Pick for Me</a>
+</nav></header>
+<main class="pick-wrap">
+<div class="pick-heading">
+<p class="subtitle">CAN'T DECIDE WHAT TO COOK?</p>
+<h1>Pick for Me</h1>
+<p>One random meal, no overthinking. Choose it, or roll again. All recipes have an equal chance of being picked.</p>
+</div>
+<article class="pick-card" aria-labelledby="pickedTitle">
+<div class="pick-photo-wrap"><img id="pickedImage" src="photo-unverified.svg" alt="Loading a recipe photo"></div>
+<div class="pick-description">
+<span class="pick-origin" id="pickedSource">Finding a recipe…</span>
+<span class="lunch-tag" id="pickedCategory"></span>
+<h2 id="pickedTitle">What should we cook today?</h2>
+<p id="pickedDescription">Picking from your entire recipe book…</p>
+<p id="pickedDetails" class="pick-details"></p>
+<div class="lunch-actions">
+<a id="cookPicked" class="lunch-button lunch-button-primary" href="lunch.html">View Recipe</a>
+<button id="pickAgain" class="lunch-button lunch-button-outline" type="button">🎲 Pick Another</button>
+</div>
+</div>
+</article>
+<p id="pickStatus" class="sr-only" aria-live="polite"></p>
+<p id="pickWarning" class="lunch-warning" role="status" hidden></p>
+<p class="pick-bottom"><a href="lunch.html">Browse everything in random order</a> · <a href="plan.html">Plan meals around shared groceries</a></p>
+<noscript><p>JavaScript is needed for random selection. Browse <a href="lunch.html">Lunch Options</a> instead.</p></noscript>
+</main>
+<div class="footer-signature">Made with love by Tariq — 2026</div>
+<script src="discovery.js?v=1" defer></script>
+<script src="player.js?v=8"></script>
+</body></html>
